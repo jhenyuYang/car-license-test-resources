@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   駕駛人／車主－駕照與牌照處分重點整理
+  </title>
+  <style>
+   body {
+
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;
+
+  background:#f5f6f8;
+
+  color:#171717;
+
+  margin:0;
+
+  line-height:1.65
+
+}
+
+main {
+
+  max-width:1100px;
+
+  margin:auto;
+
+  padding:28px 18px 70px
+
+}
+
+h1 {
+
+  font-size:30px;
+
+  margin:0 0 6px
+
+}
+
+.sub {
+
+  color:#666;
+
+  margin-bottom:18px
+
+}
+
+.note {
+
+  background:#fff7e8;
+
+  border-left:4px solid #d28a00;
+
+  padding:12px 14px;
+
+  border-radius:8px;
+
+  margin:14px 0 22px
+
+}
+
+.quick {
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+  gap:10px;
+
+  margin:16px 0 26px
+
+}
+
+.qcard {
+
+  background:#fff;
+
+  border:1px solid #ddd;
+
+  border-radius:12px;
+
+  padding:12px 14px
+
+}
+
+.qcard b {
+
+  display:block;
+
+  color:#b40000;
+
+  margin-bottom:4px
+
+}
+
+section {
+
+  background:#fff;
+
+  border:1px solid #ddd;
+
+  border-radius:14px;
+
+  margin:16px 0;
+
+  padding:18px
+
+}
+
+h2 {
+
+  margin:0 0 12px;
+
+  font-size:21px
+
+}
+
+table {
+
+  width:100%;
+
+  border-collapse:collapse;
+
+  font-size:15px
+
+}
+
+th,td {
+
+  padding:10px 9px;
+
+  border-bottom:1px solid #eee;
+
+  vertical-align:top;
+
+  text-align:left
+
+}
+
+th {
+
+  background:#f7f7f7;
+
+  position:sticky;
+
+  top:0
+
+}
+
+.penalty { font-weight:700; color:#171717; }
+
+.ref {
+
+  white-space:nowrap;
+
+  color:#666;
+
+  font-size:13px
+
+}
+
+.chip {
+
+  display:inline-block;
+
+  border-radius:999px;
+
+  padding:3px 9px;
+
+  background:#f0f0f0;
+
+  margin:2px 4px 2px 0;
+
+  font-size:13px
+
+}
+
+.footer {
+
+  color:#666;
+
+  font-size:13px;
+
+  margin-top:20px
+
+}
+
+@media(max-width:720px) {
+
+  table {
+
+  font-size:14px
+
+}
+
+th:nth-child(3),td:nth-child(3) {
+
+  display:none
+
+}
+
+h1 {
+
+  font-size:25px
+
+}
+
+}
+
+@media print {
+
+  body {
+
+  background:#fff
+
+}
+
+main {
+
+  max-width:none;
+
+  padding:0
+
+}
+
+section,.qcard {
+
+  break-inside:avoid
+
+}
+
+.note {
+
+  border:1px solid #ccc
+
+}
+
+}
+
+/\* 四色處分標示 \*/
+
+
+
+/\* 黃色：吊扣駕照 \*/
+
+
+
+/\* 紅色：吊銷駕照 \*/
+
+
+
+/\* 深綠色：吊扣牌照 \*/
+
+
+
+/\* 紫色：吊銷牌照 \*/
+
+section.license-suspend h2 {
+
+  color:#9a7600;
+
+}
+
+section.license-revoke h2 {
+
+  color:#c40000;
+
+}
+
+section.plate-suspend h2 {
+
+  color:#0b5d1e;
+
+}
+
+section.plate-revoke h2 {
+
+  color:#6a1b9a;
+
+}
+
+  
+/* 四色處分文字：逐一標記，避免混合處分整格染錯色 */
+.c-license-suspend { color:#b58900; font-weight:700; }
+.c-license-revoke  { color:#c40000;  font-weight:700; }
+.c-plate-suspend   { color:#0b5d1e;   font-weight:700; }
+.c-plate-revoke    { color:#6a1b9a;    font-weight:700; }
+  </style>
+ </head>
+ <body>
+  <main>
+   <h1>
+    駕照／牌照處分重點整理
+   </h1>
+   <div class="quick">
+    <div class="qcard">
+     <b>
+      酒駕
+     </b>
+     超標：
+     <span class="c-license-suspend">
+      駕照吊扣
+     </span>
+     1～2 年<br>附載未滿12歲：
+     <span class="c-license-suspend">
+      駕照吊扣
+     </span>
+     2～4年<br>10年內第2次：
+     <span class="c-license-revoke">
+      吊銷駕照
+     </span>
+     <br>第3次以上：
+     <span class="c-license-revoke">
+      吊銷駕照
+     </span>
+     <br>拒測：
+     <span class="c-license-revoke">
+      吊銷駕照
+     </span>
+     <br>肇事重傷/死亡：
+     <span class="c-license-revoke">
+      吊銷駕照
+     </span>
+     終身+
+     <span class="c-plate-suspend">
+      吊扣牌照
+     </span>
+     2年
+    </div>
+    <div class="qcard">
+     <b>
+      事故
+     </b>
+     無人傷亡逃逸：
+     <span class="c-license-suspend">
+      吊扣駕照
+     </span>
+     1～3月<br>肇事重傷：
+     <span class="c-license-suspend">
+      吊扣駕照
+     </span>
+     3～6月<br>肇事死亡：
+     <span class="c-license-revoke">
+      吊銷駕照
+     </span>
+     <br>重傷/死亡逃逸：
+     <span class="c-license-revoke">
+      吊銷駕照
+     </span>
+     終身
+    </div>
+    <div class="qcard">
+     <b>
+      危險駕駛
+     </b>
+     蛇行：
+     <span class="c-plate-suspend">
+      吊扣牌照
+     </span>
+     6月<br>蛇行因而肇事：
+     <span class="c-license-revoke">
+      吊銷駕照
+     </span>
+     <br>競駛/競技：
+     <span class="c-license-revoke">
+      吊銷駕照
+     </span>
+     ＋
+     <span class="c-plate-suspend">
+      吊扣牌照
+     </span>
+     6月。
+    </div>
+    <div class="qcard">
+     <b>
+      平交道
+     </b>
+     超車／迴轉／倒車／臨停／停車：
+     <span class="c-license-suspend">
+      吊扣駕照
+     </span>
+     1年<br>強行闖越：
+     <span class="c-license-suspend">
+      吊扣駕照
+     </span>
+     。
+    </div>
+    <div class="qcard">
+     <b>
+      記點／記次
+     </b>
+     1年12點：
+     <span class="c-license-suspend">
+      吊扣駕照
+     </span>
+     <br>2年內已
+     <span class="c-license-suspend">
+      吊扣駕照
+     </span>
+     2次又再違規記點：
+     <span class="c-license-revoke">
+      吊銷駕照
+     </span>
+     <br>3個月違規記次3次：
+     <span class="c-plate-suspend">
+      吊扣牌照
+     </span>
+     1月。
+    </div>
+   </div>
+   <section class="license-suspend">
+    <h2>
+     駕駛人｜
+     <span class="c-license-suspend">
+      吊扣駕照
+     </span>
+    </h2>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        情況
+       </th>
+       <th>
+        處分
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        酒駕初犯／酒精濃度超標
+       </td>
+       <td class="penalty">
+        <span class="c-license-suspend">
+         吊扣駕照
+        </span>
+        1～2 年
+       </td>
+      </tr>
+      <tr>
+       <td>
+        酒駕且同車附載未滿 12 歲兒童
+       </td>
+       <td class="penalty">
+        <span class="c-license-suspend">
+         吊扣駕照
+        </span>
+        2～4 年
+       </td>
+      </tr>
+      <tr>
+       <td>
+        平交道超車、迴轉、倒車、臨停或停車
+       </td>
+       <td class="penalty">
+        <span class="c-license-suspend">
+         吊扣駕照
+        </span>
+        1 年
+       </td>
+      </tr>
+      <tr>
+       <td>
+        強行闖越鐵路平交道
+       </td>
+       <td class="penalty">
+        罰鍰並
+        <span class="c-license-suspend">
+         吊扣駕照
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        肇事無人傷亡，未依規定處置且逃逸
+       </td>
+       <td class="penalty">
+        <span class="c-license-suspend">
+         吊扣駕照
+        </span>
+        1～3 個月
+       </td>
+      </tr>
+      <tr>
+       <td>
+        違反交通規則肇事致人重傷
+       </td>
+       <td class="penalty">
+        <span class="c-license-suspend">
+         吊扣駕照
+        </span>
+        3～6 個月
+       </td>
+      </tr>
+      <tr>
+       <td>
+        闖紅燈並肇事致人重傷
+       </td>
+       <td class="penalty">
+        <span class="c-license-suspend">
+         吊扣駕照
+        </span>
+        3～6 個月
+       </td>
+      </tr>
+      <tr>
+       <td>
+        未停讓行人而肇事致人受傷
+       </td>
+       <td class="penalty">
+        <span class="c-license-suspend">
+         吊扣駕照
+        </span>
+        1～2 年＋道安講習
+       </td>
+      </tr>
+      <tr>
+       <td>
+        將自己的駕照借供他人駕車
+       </td>
+       <td class="penalty">
+        <span class="c-license-suspend">
+         吊扣駕照
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        允許無駕照者駕駛自己的車
+       </td>
+       <td class="penalty">
+        <span class="c-license-suspend">
+         吊扣駕照
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        1 年內違規記點每達 12 點
+       </td>
+       <td class="penalty">
+        <span class="c-license-suspend">
+         吊扣駕照
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        無正當理由不參加道安講習，經再通知逾期 6 個月仍不參加
+       </td>
+       <td class="penalty">
+        <span class="c-license-suspend">
+         吊扣駕照
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        拆除消音器造成噪音，1 年內再犯
+       </td>
+       <td class="penalty">
+        <span class="c-license-suspend">
+         吊扣駕照
+        </span>
+        6 個月
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </section>
+   <section class="license-revoke">
+    <h2>
+     駕駛人｜
+     <span class="c-license-revoke">
+      吊銷駕照
+     </span>
+    </h2>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        情況
+       </th>
+       <th>
+        處分
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        拒絕酒精濃度測試
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+        ＋18 萬元罰鍰＋移置保管車輛＋道安講習
+       </td>
+      </tr>
+      <tr>
+       <td>
+        10 年內第 2 次酒駕
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        10 年內第 3 次以上酒駕
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+        ＋按前次罰鍰加 9 萬元＋公布姓名
+       </td>
+      </tr>
+      <tr>
+       <td>
+        酒駕肇事致人重傷或死亡
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+        ，終身不得再考領
+       </td>
+      </tr>
+      <tr>
+       <td>
+        營業大客車酒後駕駛
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+        ，4 年內不得考領
+       </td>
+      </tr>
+      <tr>
+       <td>
+        蛇行／其他危險方式駕車且因而肇事
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+        ＋當場禁止駕駛
+       </td>
+      </tr>
+      <tr>
+       <td>
+        兩輛以上汽車競駛／競技
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+        ＋
+        <span class="c-plate-suspend">
+         吊扣汽車牌照
+        </span>
+        6 個月
+       </td>
+      </tr>
+      <tr>
+       <td>
+        聽聞消防、救護等緊急車輛警號未避讓
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+        ＋
+        <span class="c-plate-suspend">
+         吊扣該車牌照
+        </span>
+        6 個月
+       </td>
+      </tr>
+      <tr>
+       <td>
+        未避讓緊急車輛而致人死傷
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+        ＋
+        <span class="c-plate-revoke">
+         吊銷該汽車牌照
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        逃避公路橋樑繳費並致收費人員受傷或死亡
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        肇事致人重傷或死亡而逃逸
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+        ，並不得再考領
+       </td>
+      </tr>
+      <tr>
+       <td>
+        利用汽車犯罪，經判決有期徒刑以上確定
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        抗拒交通勤務取締而引起傷害或死亡
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+        ＋終身不得考領（符合特定條件者例外）
+       </td>
+      </tr>
+      <tr>
+       <td>
+        違反道路交通安全規則因而肇事致人死亡
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        <span class="c-license-suspend">
+         駕照吊扣
+        </span>
+        期間仍駕駛小型車
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+        ＋36,000～60,000 元＋移置保管汽車
+       </td>
+      </tr>
+      <tr>
+       <td>
+        2 年內因違規記點已
+        <span class="c-license-suspend">
+         吊扣駕照
+        </span>
+        2 次，再違反記點規定
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        高速公路未保持安全距離而肇事致人死亡
+       </td>
+       <td class="penalty">
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </section>
+   <section class="plate-suspend">
+    <h2>
+     車主／車輛｜
+     <span class="c-plate-suspend">
+      吊扣牌照
+     </span>
+    </h2>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        情況
+       </th>
+       <th>
+        處分
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        酒駕／毒駕所駕駛車輛
+       </td>
+       <td class="penalty">
+        <span class="c-plate-suspend">
+         吊扣汽機車牌照
+        </span>
+        2 年
+       </td>
+      </tr>
+      <tr>
+       <td>
+        駕駛他人車輛酒駕
+       </td>
+       <td class="penalty">
+        仍須
+        <span class="c-plate-suspend">
+         吊扣該車牌照
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        車主明知駕駛人酒駕、吸毒等而不禁止
+       </td>
+       <td class="penalty">
+        <span class="c-plate-suspend">
+         吊扣汽車牌照
+        </span>
+        2 年
+       </td>
+      </tr>
+      <tr>
+       <td>
+        連續駕車超過 8 小時，且責任歸於汽車所有人
+       </td>
+       <td class="penalty">
+        <span class="c-plate-suspend">
+         吊扣汽車牌照
+        </span>
+        3 個月
+       </td>
+      </tr>
+      <tr>
+       <td>
+        蛇行駕駛
+       </td>
+       <td class="penalty">
+        <span class="c-plate-suspend">
+         吊扣牌照
+        </span>
+        6 個月＋道安講習
+       </td>
+      </tr>
+      <tr>
+       <td>
+        兩車以上競駛／競技
+       </td>
+       <td class="penalty">
+        <span class="c-plate-suspend">
+         吊扣汽車牌照
+        </span>
+        6 個月（同時
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+        ）
+       </td>
+      </tr>
+      <tr>
+       <td>
+        3 個月內違規記次累計 3 次
+       </td>
+       <td class="penalty">
+        <span class="c-plate-suspend">
+         吊扣汽車牌照
+        </span>
+        1 個月
+       </td>
+      </tr>
+      <tr>
+       <td>
+        小型車駕照駕駛聯結車／大客車／大貨車
+       </td>
+       <td class="penalty">
+        汽車所有人及駕駛人各罰 4～8 萬元，並
+        <span class="c-plate-suspend">
+         吊扣汽車牌照
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        未立即避讓緊急車輛
+       </td>
+       <td class="penalty">
+        <span class="c-plate-suspend">
+         吊扣該汽車牌照
+        </span>
+        6 個月（同時
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+        ）
+       </td>
+      </tr>
+      <tr>
+       <td>
+        汽車定期檢驗逾期 1 個月以上
+       </td>
+       <td class="penalty">
+        罰鍰＋
+        <span class="c-plate-suspend">
+         吊扣牌照
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        肇事逃逸案件，車主經通知不到場說明或不提供駕駛人資料
+       </td>
+       <td class="penalty">
+        <span class="c-plate-suspend">
+         吊扣該汽車牌照
+        </span>
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </section>
+   <section class="plate-revoke">
+    <h2>
+     車主／車輛｜
+     <span class="c-plate-revoke">
+      吊銷牌照
+     </span>
+    </h2>
+    <table>
+     <thead>
+      <tr>
+       <th>
+        情況
+       </th>
+       <th>
+        處分
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>
+        牌照借供他車使用，或使用他車牌照行駛
+       </td>
+       <td class="penalty">
+        <span class="c-plate-revoke">
+         吊銷牌照
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        已領號牌但不懸掛或未依指定位置懸掛
+       </td>
+       <td class="penalty">
+        罰鍰＋移置保管汽車＋
+        <span class="c-plate-revoke">
+         吊銷牌照
+        </span>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        未避讓緊急車輛而致人死傷
+       </td>
+       <td class="penalty">
+        <span class="c-plate-revoke">
+         吊銷該汽車牌照
+        </span>
+        （同時
+        <span class="c-license-revoke">
+         吊銷駕照
+        </span>
+        ）
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </section>
+  </main>
+ </body>
+</html>

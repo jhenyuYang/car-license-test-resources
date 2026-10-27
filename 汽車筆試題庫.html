@@ -1,0 +1,1279 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>汽車筆試題庫｜數字題分類整理</title>
+<style>
+:root{--bg:#f4f6f8;--card:#fff;--text:#171717;--muted:#68707a;--line:#dfe3e8;--red:#c90000;--softred:#fff1f1;--nav:#20242a}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.7}
+header{background:var(--nav);color:white;padding:28px 20px 20px} .wrap{max-width:1100px;margin:auto}
+h1{font-size:28px;margin:0 0 8px} .subtitle{color:#d8dde4;font-size:14px}
+.notice{margin-top:14px;padding:12px 14px;background:#2d333b;border-radius:10px;font-size:14px;color:#eef2f6}
+.toolbar{position:sticky;top:0;z-index:10;background:rgba(244,246,248,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 16px}
+.toolbar-inner{max-width:1100px;margin:auto;display:flex;gap:10px;align-items:center}.nav-toggle{flex:0 0 auto;border:1px solid #cbd1d8;background:white;color:#262b30;border-radius:10px;padding:10px 13px;font-size:14px;font-weight:700;cursor:pointer}.nav-toggle:hover{background:#f0f2f4}.nav-toggle:focus-visible{outline:3px solid rgba(38,43,48,.22);outline-offset:2px} input{width:100%;font-size:16px;padding:11px 14px;border:1px solid #cbd1d8;border-radius:10px;background:white}
+#count{white-space:nowrap;color:var(--muted);font-size:14px}
+main{max-width:1100px;margin:22px auto;padding:0 16px 50px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:22px;transition:grid-template-columns .22s ease,gap .22s ease}main.nav-collapsed{grid-template-columns:0 minmax(0,1fr);gap:0}main.nav-collapsed nav{opacity:0;visibility:hidden;pointer-events:none;transform:translateX(-12px)}
+nav{position:sticky;top:76px;align-self:start;max-height:calc(100vh - 92px);overflow:auto;background:white;border:1px solid var(--line);border-radius:12px;padding:8px;opacity:1;visibility:visible;transform:translateX(0);transition:opacity .18s ease,transform .22s ease,visibility .18s ease}
+nav a{text-decoration:none;color:#262b30;display:flex;justify-content:space-between;gap:10px;padding:8px 10px;border-radius:8px;font-size:13px}nav a:hover{background:#f0f2f4}nav b{color:var(--muted)}
+.category{scroll-margin-top:78px;margin-bottom:34px}.cat-title{display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid #252a30;margin-bottom:12px}.cat-title h2{font-size:21px;margin:0;padding:8px 0}.cat-title span{color:var(--muted);font-size:13px}
+.question{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:12px 0;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px}.qid{font-weight:700;background:#262b30;color:white;padding:2px 9px;border-radius:999px;font-size:13px}
+.stem{font-weight:650;font-size:16px;margin-bottom:9px}.choices{list-style:none;margin:0;padding:0;display:grid;gap:5px}.choice{display:flex;gap:8px;align-items:flex-start;padding:6px 8px;border-radius:7px;color:#111}.choice.correct{color:var(--red);font-weight:700;background:var(--softred)}.choice-num{font-weight:700;flex:0 0 auto}
+.hidden{display:none!important} footer{text-align:center;color:var(--muted);font-size:12px;padding:20px}
+@media(max-width:800px){main{display:block}nav{position:static;max-height:none;margin-bottom:20px;display:grid;grid-template-columns:1fr 1fr}main.nav-collapsed nav{display:none}.toolbar{top:0}.nav-toggle{padding:10px 11px}}
+@media print{header,.toolbar,nav,footer{display:none}main{display:block;max-width:none;margin:0;padding:0}.question{break-inside:avoid;box-shadow:none}body{background:white}}
+</style></head>
+<body>
+<header><div class="wrap"><h1>汽車筆試題庫｜數字題分類整理</h1><div class="subtitle">依主題分類，共 298 題；保留原題目與全部選項，正確選項以紅色顯示。</div></div></header>
+<div class="toolbar"><div class="toolbar-inner"><button id="navToggle" class="nav-toggle" type="button" aria-controls="sideNav" aria-expanded="false">☰ 打開選單</button><input id="search" type="search" placeholder="搜尋題號、關鍵字、金額、年限…"><span id="count">顯示 298 題</span></div></div>
+<main id="mainLayout" class="nav-collapsed"><nav id="sideNav"><a href="#cat01"><span>酒駕、毒駕與酒測規定</span><b>32</b></a><a href="#cat02"><span>駕照、牌照、違規記點與考照</span><b>33</b></a><a href="#cat03"><span>高速／快速公路、超速與競駛</span><b>51</b></a><a href="#cat04"><span>一般行車、車道、超車與路權</span><b>52</b></a><a href="#cat05"><span>行人、路口、轉彎與闖紅燈</span><b>19</b></a><a href="#cat06"><span>停車、臨停、迴轉與倒車</span><b>14</b></a><a href="#cat07"><span>鐵路平交道與捷運通行</span><b>8</b></a><a href="#cat08"><span>兒童、乘客、安全帶與載人</span><b>5</b></a><a href="#cat09"><span>手機、疲勞、喇叭與危險駕駛</span><b>10</b></a><a href="#cat10"><span>肇事、事故處理、刑責與保險</span><b>13</b></a><a href="#cat11"><span>車輛檢驗、保養、輪胎與機件</span><b>19</b></a><a href="#cat12"><span>車輛裝載、尺寸、重量與車種規格</span><b>15</b></a><a href="#cat13"><span>車輛設備、燈光、隔熱紙與故障警示</span><b>6</b></a><a href="#cat14"><span>環保、噪音與排氣規定</span><b>5</b></a><a href="#cat15"><span>道安講習、裁決與行政期限</span><b>8</b></a><a href="#cat16"><span>其他數字型交通規定與駕駛常識</span><b>8</b></a></nav><div id="content"><section id="cat01" class="category">
+<div class="cat-title"><h2>01 酒駕、毒駕與酒測規定</h2><span>32 題</span></div>
+<article class="question" data-qid="16" data-search="完成酒駕防制教育或酒癮治療並經考驗合格後，拿到的駕照僅能開裝設有車輛點火自動鎖定裝置(酒精鎖)之汽車且強制使用時間為？ 半年。 1 年。 3 年。">
+<div class="qhead"><span class="qid">題號 16</span></div>
+<div class="stem">完成酒駕防制教育或酒癮治療並經考驗合格後，拿到的駕照僅能開裝設有車輛點火自動鎖定裝置(酒精鎖)之汽車且強制使用時間為？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>半年。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>1 年。</span></li><li class="choice"><span class="choice-num">(3)</span><span>3 年。</span></li></ol>
+</article><article class="question" data-qid="17" data-search="關於酒駕之規定，下列何者正確？ 酒測值標準是吐氣所含酒精濃度達每公升 0.25 毫克或血液中酒精濃度達 0.10%以上。 12 年內再犯酒駕，處新臺幣 120,000 元罰鍰。 酒駕拒測處新臺幣 180,000 元罰鍰，並當場移置保管該汽機車、吊銷其駕駛執照。">
+<div class="qhead"><span class="qid">題號 17</span></div>
+<div class="stem">關於酒駕之規定，下列何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>酒測值標準是吐氣所含酒精濃度達每公升 0.25 毫克或血液中酒精濃度達 0.10%以上。</span></li><li class="choice"><span class="choice-num">(2)</span><span>12 年內再犯酒駕，處新臺幣 120,000 元罰鍰。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>酒駕拒測處新臺幣 180,000 元罰鍰，並當場移置保管該汽機車、吊銷其駕駛執照。</span></li></ol>
+</article><article class="question" data-qid="18" data-search="汽車駕駛人，駕駛汽車經測試檢定吐氣所含酒精濃度達每公升 0.25 毫克或血液中酒精濃度達 0.05%以上，18 歲以上未滿 70 歲之同車乘客，倘無特殊原因，是否應受處罰，下列敘述何者正確？ 同車乘客應受處罰。 同車乘客無處罰機制。 同車乘客只要無飲酒即無須受處罰。">
+<div class="qhead"><span class="qid">題號 18</span></div>
+<div class="stem">汽車駕駛人，駕駛汽車經測試檢定吐氣所含酒精濃度達每公升 0.25 毫克或血液中酒精濃度達 0.05%以上，18 歲以上未滿 70 歲之同車乘客，倘無特殊原因，是否應受處罰，下列敘述何者正確？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>同車乘客應受處罰。</span></li><li class="choice"><span class="choice-num">(2)</span><span>同車乘客無處罰機制。</span></li><li class="choice"><span class="choice-num">(3)</span><span>同車乘客只要無飲酒即無須受處罰。</span></li></ol>
+</article><article class="question" data-qid="20" data-search="汽車駕駛人酒後駕車初犯，酒精濃度測試超過法規標準，下列何者正確？ 處新臺幣 1 萬 5 千至 9 萬元罰鍰。 處新臺幣 3 萬元至 12 萬元罰鍰，並吊扣駕照。 僅警告。">
+<div class="qhead"><span class="qid">題號 20</span></div>
+<div class="stem">汽車駕駛人酒後駕車初犯，酒精濃度測試超過法規標準，下列何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>處新臺幣 1 萬 5 千至 9 萬元罰鍰。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>處新臺幣 3 萬元至 12 萬元罰鍰，並吊扣駕照。</span></li><li class="choice"><span class="choice-num">(3)</span><span>僅警告。</span></li></ol>
+</article><article class="question" data-qid="21" data-search="汽車駕駛人 10 年內第 3 次以上酒駕，下列何者正確？ 僅增加罰鍰。 按前次處罰鍰金額加罰新臺幣 9 萬元並吊銷駕照，公布其姓名。 僅記違規點數。">
+<div class="qhead"><span class="qid">題號 21</span></div>
+<div class="stem">汽車駕駛人 10 年內第 3 次以上酒駕，下列何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>僅增加罰鍰。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>按前次處罰鍰金額加罰新臺幣 9 萬元並吊銷駕照，公布其姓名。</span></li><li class="choice"><span class="choice-num">(3)</span><span>僅記違規點數。</span></li></ol>
+</article><article class="question" data-qid="22" data-search="根據現行規定，若駕駛人遭遇警察攔檢並明確表示「拒絕接受酒精濃度測試」，其初次違規的處罰為何？ 視酒精濃度決定罰鍰金額高低，當場移置保管該汽機車及吊扣其駕駛執照，接受道路交通安全講習。 處新臺幣 9 萬元罰鍰，當場移置保管該汽機車及吊銷其駕駛執照，接受道路交通安全講習。 處新臺幣 18 萬元罰鍰，當場移置保管該汽機車及吊銷其駕駛執照，接受道路交通安全講習。">
+<div class="qhead"><span class="qid">題號 22</span></div>
+<div class="stem">根據現行規定，若駕駛人遭遇警察攔檢並明確表示「拒絕接受酒精濃度測試」，其初次違規的處罰為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>視酒精濃度決定罰鍰金額高低，當場移置保管該汽機車及吊扣其駕駛執照，接受道路交通安全講習。</span></li><li class="choice"><span class="choice-num">(2)</span><span>處新臺幣 9 萬元罰鍰，當場移置保管該汽機車及吊銷其駕駛執照，接受道路交通安全講習。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>處新臺幣 18 萬元罰鍰，當場移置保管該汽機車及吊銷其駕駛執照，接受道路交通安全講習。</span></li></ol>
+</article><article class="question" data-qid="23" data-search="關於酒駕「累犯」的加重處罰規定，若駕駛人在幾年內第二次違反酒駕規定，將會被視為累犯並處以最高額罰鍰，且其後每次違規都會按次加罰 9 萬元？ 5 年內。 10 年內。 終身計算，無期限限制。">
+<div class="qhead"><span class="qid">題號 23</span></div>
+<div class="stem">關於酒駕「累犯」的加重處罰規定，若駕駛人在幾年內第二次違反酒駕規定，將會被視為累犯並處以最高額罰鍰，且其後每次違規都會按次加罰 9 萬元？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>5 年內。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>10 年內。</span></li><li class="choice"><span class="choice-num">(3)</span><span>終身計算，無期限限制。</span></li></ol>
+</article><article class="question" data-qid="25" data-search="汽車駕駛人有酒駕毒駕之情形，除汽車駕駛人處罰鍰及吊扣(銷)駕照處分外，所駕駛之該車輛尚須？ 該車汽車所有人如非駕駛人，須接受口頭警告並參加講習。 吊扣該汽機車牌照二年，並於移置保管該汽機車時，扣繳其牌照。 吊銷該汽機車牌照六個月，並於移置保管該汽機車時，扣繳其牌照。">
+<div class="qhead"><span class="qid">題號 25</span></div>
+<div class="stem">汽車駕駛人有酒駕毒駕之情形，除汽車駕駛人處罰鍰及吊扣(銷)駕照處分外，所駕駛之該車輛尚須？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>該車汽車所有人如非駕駛人，須接受口頭警告並參加講習。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>吊扣該汽機車牌照二年，並於移置保管該汽機車時，扣繳其牌照。</span></li><li class="choice"><span class="choice-num">(3)</span><span>吊銷該汽機車牌照六個月，並於移置保管該汽機車時，扣繳其牌照。</span></li></ol>
+</article><article class="question" data-qid="26" data-search="關於汽機車駕駛人「酒測值超標」時，針對「同車乘客」之連坐處分，下列何種情況「免予處罰」？ 乘客聲稱並不知道駕駛人有飲酒者。 乘客為未滿 18 歲、或年滿 70 歲者。 乘客與駕駛人並無親屬關係者。">
+<div class="qhead"><span class="qid">題號 26</span></div>
+<div class="stem">關於汽機車駕駛人「酒測值超標」時，針對「同車乘客」之連坐處分，下列何種情況「免予處罰」？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>乘客聲稱並不知道駕駛人有飲酒者。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>乘客為未滿 18 歲、或年滿 70 歲者。</span></li><li class="choice"><span class="choice-num">(3)</span><span>乘客與駕駛人並無親屬關係者。</span></li></ol>
+</article><article class="question" data-qid="27" data-search="駕駛人酒精濃度超過規定標準，駕車肇事致人重傷或死亡者，除依刑法處置外，其行政處分為何？ 吊扣駕駛執照 2 年，並參加道路交通安全講習。 吊銷駕駛執照，並 3 年內不得考領。 吊銷駕駛執照，並終身不得再考領。">
+<div class="qhead"><span class="qid">題號 27</span></div>
+<div class="stem">駕駛人酒精濃度超過規定標準，駕車肇事致人重傷或死亡者，除依刑法處置外，其行政處分為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>吊扣駕駛執照 2 年，並參加道路交通安全講習。</span></li><li class="choice"><span class="choice-num">(2)</span><span>吊銷駕駛執照，並 3 年內不得考領。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>吊銷駕駛執照，並終身不得再考領。</span></li></ol>
+</article><article class="question" data-qid="28" data-search="汽車駕駛人酒精濃度超過規定標準，且同車附載未滿 12 歲兒童，依規定其處罰為何？ 處新臺幣 3 萬元以上至 12 萬元以下罰鍰，並吊扣其駕駛執照 2 年至 4 年 。 處新臺幣 3 萬元以上至 12 萬元以下罰鍰，並吊扣其駕駛執照 1 年至 2 年。 處最高新臺幣 12 萬元罰鍰並吊銷駕駛執照。">
+<div class="qhead"><span class="qid">題號 28</span></div>
+<div class="stem">汽車駕駛人酒精濃度超過規定標準，且同車附載未滿 12 歲兒童，依規定其處罰為何？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>處新臺幣 3 萬元以上至 12 萬元以下罰鍰，並吊扣其駕駛執照 2 年至 4 年 。</span></li><li class="choice"><span class="choice-num">(2)</span><span>處新臺幣 3 萬元以上至 12 萬元以下罰鍰，並吊扣其駕駛執照 1 年至 2 年。</span></li><li class="choice"><span class="choice-num">(3)</span><span>處最高新臺幣 12 萬元罰鍰並吊銷駕駛執照。</span></li></ol>
+</article><article class="question" data-qid="29" data-search="若駕駛人拒絕接受酒精濃度測試檢定，依現行法規應處以： 新臺幣 18 萬元罰鍰，且當場移置保管該車及吊銷駕照。 新臺幣 6 萬元罰鍰及吊扣汽車牌照 6 個月。 新臺幣 9 萬元罰鍰，並記違規點數 3 點。">
+<div class="qhead"><span class="qid">題號 29</span></div>
+<div class="stem">若駕駛人拒絕接受酒精濃度測試檢定，依現行法規應處以：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>新臺幣 18 萬元罰鍰，且當場移置保管該車及吊銷駕照。</span></li><li class="choice"><span class="choice-num">(2)</span><span>新臺幣 6 萬元罰鍰及吊扣汽車牌照 6 個月。</span></li><li class="choice"><span class="choice-num">(3)</span><span>新臺幣 9 萬元罰鍰，並記違規點數 3 點。</span></li></ol>
+</article><article class="question" data-qid="30" data-search="酒駕防制教育訓練課程內容含括道路交通法令、肇事預防處理及法律責任等，總時數共： 10 小時。 12 小時。 15 小時。">
+<div class="qhead"><span class="qid">題號 30</span></div>
+<div class="stem">酒駕防制教育訓練課程內容含括道路交通法令、肇事預防處理及法律責任等，總時數共：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>10 小時。</span></li><li class="choice"><span class="choice-num">(2)</span><span>12 小時。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>15 小時。</span></li></ol>
+</article><article class="question" data-qid="33" data-search="汽車駕駛人於幾年內第 2 次違反「酒精濃度超過規定標準」規定，依其駕駛車輛所定罰鍰最高額處罰之？ 5 年。 10 年。 15 年。">
+<div class="qhead"><span class="qid">題號 33</span></div>
+<div class="stem">汽車駕駛人於幾年內第 2 次違反「酒精濃度超過規定標準」規定，依其駕駛車輛所定罰鍰最高額處罰之？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>5 年。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>10 年。</span></li><li class="choice"><span class="choice-num">(3)</span><span>15 年。</span></li></ol>
+</article><article class="question" data-qid="34" data-search="汽車所有人明知汽車駕駛人有酒精濃度超過規定標準、吸食毒品、迷幻藥等情形，而不予禁止駕駛者，依道路交通管理處罰條例之規定，除處罰鍰外，將對該汽車採取何種處分？ 吊扣該汽車牌照 6 個月吊扣該汽車牌照 1 年吊扣該汽車牌照 2 年">
+<div class="qhead"><span class="qid">題號 34</span></div>
+<div class="stem">汽車所有人明知汽車駕駛人有酒精濃度超過規定標準、吸食毒品、迷幻藥等情形，而不予禁止駕駛者，依道路交通管理處罰條例之規定，除處罰鍰外，將對該汽車採取何種處分？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>吊扣該汽車牌照 6 個月</span></li><li class="choice"><span class="choice-num">(2)</span><span>吊扣該汽車牌照 1 年</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>吊扣該汽車牌照 2 年</span></li></ol>
+</article><article class="question" data-qid="35" data-search="汽車駕駛人酒後駕車經抽血檢測，血液中酒精濃度超過 0.05%，依照道路交通管理處罰條例下列何者為錯誤？ 同車年滿 18 歲乘客應受罰鍰。 同車年逾 70 歲或公車乘客不必受罰。 只有汽車駕駛人受罰。">
+<div class="qhead"><span class="qid">題號 35</span></div>
+<div class="stem">汽車駕駛人酒後駕車經抽血檢測，血液中酒精濃度超過 0.05%，依照道路交通管理處罰條例下列何者為錯誤？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>同車年滿 18 歲乘客應受罰鍰。</span></li><li class="choice"><span class="choice-num">(2)</span><span>同車年逾 70 歲或公車乘客不必受罰。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>只有汽車駕駛人受罰。</span></li></ol>
+</article><article class="question" data-qid="36" data-search="裝設車輛點火自動鎖定裝置(酒精鎖)之車輛，駕駛人啟動前須符合何種條件？ 插入鑰匙即可啟動。 吐氣酒精濃度檢測為 0。 經車主同意。">
+<div class="qhead"><span class="qid">題號 36</span></div>
+<div class="stem">裝設車輛點火自動鎖定裝置(酒精鎖)之車輛，駕駛人啟動前須符合何種條件？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>插入鑰匙即可啟動。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>吐氣酒精濃度檢測為 0。</span></li><li class="choice"><span class="choice-num">(3)</span><span>經車主同意。</span></li></ol>
+</article><article class="question" data-qid="42" data-search="汽車駕駛人拒絕接受酒精濃度測試檢定者，應處罰鍰新臺幣多少？ 6 萬元。 9 萬元。 18 萬元。">
+<div class="qhead"><span class="qid">題號 42</span></div>
+<div class="stem">汽車駕駛人拒絕接受酒精濃度測試檢定者，應處罰鍰新臺幣多少？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>6 萬元。</span></li><li class="choice"><span class="choice-num">(2)</span><span>9 萬元。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>18 萬元。</span></li></ol>
+</article><article class="question" data-qid="44" data-search="駕駛人酒精濃度超過規定標準，駕車肇事致人重傷或死亡者，其處分為何？ 吊銷駕駛執照，1 年內不得考領。 吊銷駕駛執照，2 年內不得考領。 吊銷駕駛執照，終身不得再考領。">
+<div class="qhead"><span class="qid">題號 44</span></div>
+<div class="stem">駕駛人酒精濃度超過規定標準，駕車肇事致人重傷或死亡者，其處分為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>吊銷駕駛執照，1 年內不得考領。</span></li><li class="choice"><span class="choice-num">(2)</span><span>吊銷駕駛執照，2 年內不得考領。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>吊銷駕駛執照，終身不得再考領。</span></li></ol>
+</article><article class="question" data-qid="47" data-search="汽車駕駛人於 10 年內第 2 次違反酒駕規定，其罰鍰金額為新臺幣？ 6 萬元。 9 萬元。 12 萬元。">
+<div class="qhead"><span class="qid">題號 47</span></div>
+<div class="stem">汽車駕駛人於 10 年內第 2 次違反酒駕規定，其罰鍰金額為新臺幣？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>6 萬元。</span></li><li class="choice"><span class="choice-num">(2)</span><span>9 萬元。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>12 萬元。</span></li></ol>
+</article><article class="question" data-qid="53" data-search="汽車駕駛人酒精濃度超過規定標準者，處新臺幣多少元罰鍰？ 1,200 元~2,400 元。 6,000 元~1 萬 2,000 元。 3 萬元~12 萬元。">
+<div class="qhead"><span class="qid">題號 53</span></div>
+<div class="stem">汽車駕駛人酒精濃度超過規定標準者，處新臺幣多少元罰鍰？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>1,200 元~2,400 元。</span></li><li class="choice"><span class="choice-num">(2)</span><span>6,000 元~1 萬 2,000 元。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>3 萬元~12 萬元。</span></li></ol>
+</article><article class="question" data-qid="68" data-search="駕駛人赴宴飲酒後，自覺僅喝了一點且頭腦清醒，同行友人亦表示看不出異狀，下列觀念何者正確？ 飲酒後即使自覺清醒，酒精仍會影響反應與判斷能力，應改搭計程車或代駕。 經同行友人觀察確認並無異狀，且自覺意識清楚，可自行駕車返家。 先在車內休息 30 分鐘待酒精消退後，即可安全駕車上路。">
+<div class="qhead"><span class="qid">題號 68</span></div>
+<div class="stem">駕駛人赴宴飲酒後，自覺僅喝了一點且頭腦清醒，同行友人亦表示看不出異狀，下列觀念何者正確？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>飲酒後即使自覺清醒，酒精仍會影響反應與判斷能力，應改搭計程車或代駕。</span></li><li class="choice"><span class="choice-num">(2)</span><span>經同行友人觀察確認並無異狀，且自覺意識清楚，可自行駕車返家。</span></li><li class="choice"><span class="choice-num">(3)</span><span>先在車內休息 30 分鐘待酒精消退後，即可安全駕車上路。</span></li></ol>
+</article><article class="question" data-qid="70" data-search="汽機車駕駛人酒後駕車，其吐氣酒精濃度超過規定標準但未涉刑事處罰者，應處： 移送法院依刑法判刑。 罰鍰並當場移置保管該汽車及吊扣其駕駛執照 1 至 2 年、吊扣牌照 2 年。 吊銷駕駛執照。">
+<div class="qhead"><span class="qid">題號 70</span></div>
+<div class="stem">汽機車駕駛人酒後駕車，其吐氣酒精濃度超過規定標準但未涉刑事處罰者，應處：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>移送法院依刑法判刑。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>罰鍰並當場移置保管該汽車及吊扣其駕駛執照 1 至 2 年、吊扣牌照 2 年。</span></li><li class="choice"><span class="choice-num">(3)</span><span>吊銷駕駛執照。</span></li></ol>
+</article><article class="question" data-qid="72" data-search="酒醉駕車或行經行人穿越道不讓行人優先通行因而致人傷亡，如應負刑責者： 加重其刑至二分之一。 不須處罰。 仍按原來刑度處罰。">
+<div class="qhead"><span class="qid">題號 72</span></div>
+<div class="stem">酒醉駕車或行經行人穿越道不讓行人優先通行因而致人傷亡，如應負刑責者：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>加重其刑至二分之一。</span></li><li class="choice"><span class="choice-num">(2)</span><span>不須處罰。</span></li><li class="choice"><span class="choice-num">(3)</span><span>仍按原來刑度處罰。</span></li></ol>
+</article><article class="question" data-qid="74" data-search="駕車酒精濃度超過規定標準，除當場移置保管該汽機車及吊扣其駕駛執照 1 至 2 年，並處罰鍰新臺幣： 機車 15,000 ~90,000 元、汽車 30,000~120,000 元。 機車 10,000~90,000 元、汽車 30,000 元~90,000 元。 機車 6,000 ~ 12,000 元、汽車 30,000 元~90,000 元。">
+<div class="qhead"><span class="qid">題號 74</span></div>
+<div class="stem">駕車酒精濃度超過規定標準，除當場移置保管該汽機車及吊扣其駕駛執照 1 至 2 年，並處罰鍰新臺幣：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>機車 15,000 ~90,000 元、汽車 30,000~120,000 元。</span></li><li class="choice"><span class="choice-num">(2)</span><span>機車 10,000~90,000 元、汽車 30,000 元~90,000 元。</span></li><li class="choice"><span class="choice-num">(3)</span><span>機車 6,000 ~ 12,000 元、汽車 30,000 元~90,000 元。</span></li></ol>
+</article><article class="question" data-qid="75" data-search="酒精濃度超過規定標準駕車之違規人，於 10 年內第 2 次違反酒後駕車之規定，除處罰鍰新臺幣 120,000 元，及當場移置保管該汽車，並應施以道路交通安全講習： 吊扣其牌照。 吊銷其駕駛執照。 吊扣其駕駛執照。">
+<div class="qhead"><span class="qid">題號 75</span></div>
+<div class="stem">酒精濃度超過規定標準駕車之違規人，於 10 年內第 2 次違反酒後駕車之規定，除處罰鍰新臺幣 120,000 元，及當場移置保管該汽車，並應施以道路交通安全講習：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>吊扣其牌照。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>吊銷其駕駛執照。</span></li><li class="choice"><span class="choice-num">(3)</span><span>吊扣其駕駛執照。</span></li></ol>
+</article><article class="question" data-qid="77" data-search="汽車駕駛人若拒絕接受酒精濃度測試檢定者，除處罰鍰新臺幣 180,000 元，並應施以道路交通安全講習： 吊銷其駕駛執照。 吊扣其駕駛執照。 吊扣其牌照。">
+<div class="qhead"><span class="qid">題號 77</span></div>
+<div class="stem">汽車駕駛人若拒絕接受酒精濃度測試檢定者，除處罰鍰新臺幣 180,000 元，並應施以道路交通安全講習：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>吊銷其駕駛執照。</span></li><li class="choice"><span class="choice-num">(2)</span><span>吊扣其駕駛執照。</span></li><li class="choice"><span class="choice-num">(3)</span><span>吊扣其牌照。</span></li></ol>
+</article><article class="question" data-qid="79" data-search="汽車駕駛人無照駕駛或酒醉駕車因而致人受傷或死亡，依法應負刑事責任者，加重其刑至： 三分之一。 二分之一。 一倍。">
+<div class="qhead"><span class="qid">題號 79</span></div>
+<div class="stem">汽車駕駛人無照駕駛或酒醉駕車因而致人受傷或死亡，依法應負刑事責任者，加重其刑至：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>三分之一。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>二分之一。</span></li><li class="choice"><span class="choice-num">(3)</span><span>一倍。</span></li></ol>
+</article><article class="question" data-qid="80" data-search="汽機車駕駛人，駕駛汽機車經酒精濃度測試檢定超過標準值，除罰鍰、 當場移置保管該汽機車外，並吊扣其駕駛執照： 3 個月。 6 個月。 1 至 2 年。">
+<div class="qhead"><span class="qid">題號 80</span></div>
+<div class="stem">汽機車駕駛人，駕駛汽機車經酒精濃度測試檢定超過標準值，除罰鍰、 當場移置保管該汽機車外，並吊扣其駕駛執照：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>3 個月。</span></li><li class="choice"><span class="choice-num">(2)</span><span>6 個月。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>1 至 2 年。</span></li></ol>
+</article><article class="question" data-qid="85" data-search="汽車駕駛人駕駛汽車經測試檢定，其吐氣所含酒精濃度不得達每公升： 0.15 毫克。 0.25 毫克。 0.55 毫克。">
+<div class="qhead"><span class="qid">題號 85</span></div>
+<div class="stem">汽車駕駛人駕駛汽車經測試檢定，其吐氣所含酒精濃度不得達每公升：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>0.15 毫克。</span></li><li class="choice"><span class="choice-num">(2)</span><span>0.25 毫克。</span></li><li class="choice"><span class="choice-num">(3)</span><span>0.55 毫克。</span></li></ol>
+</article><article class="question" data-qid="90" data-search="汽車駕駛人駕駛營業大客車，因酒後駕駛應吊銷其駕駛執照，並： 2 年內不得考領。 3 年內不得考領。 4 年內不得考領。">
+<div class="qhead"><span class="qid">題號 90</span></div>
+<div class="stem">汽車駕駛人駕駛營業大客車，因酒後駕駛應吊銷其駕駛執照，並：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>2 年內不得考領。</span></li><li class="choice"><span class="choice-num">(2)</span><span>3 年內不得考領。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>4 年內不得考領。</span></li></ol>
+</article><article class="question" data-qid="159" data-search="受限制駕駛人不依規定駕駛安裝「車輛點火自動鎖定裝置(酒精鎖)」之車輛者，除處罰鍰外， 該車輛應如何處置？ 當場移置保管該汽車。 吊扣該汽車牌照一年。 沒入該汽車輛並公開拍賣。">
+<div class="qhead"><span class="qid">題號 159</span></div>
+<div class="stem">受限制駕駛人不依規定駕駛安裝「車輛點火自動鎖定裝置(酒精鎖)」之車輛者，除處罰鍰外， 該車輛應如何處置？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>當場移置保管該汽車。</span></li><li class="choice"><span class="choice-num">(2)</span><span>吊扣該汽車牌照一年。</span></li><li class="choice"><span class="choice-num">(3)</span><span>沒入該汽車輛並公開拍賣。</span></li></ol>
+</article>
+</section><section id="cat02" class="category">
+<div class="cat-title"><h2>02 駕照、牌照、違規記點與考照</h2><span>33 題</span></div>
+<article class="question" data-qid="52" data-search="汽車駕駛人在 1 年內違規記點每達 12 點者，除施以道安講習，並處： 吊銷駕照。 罰鍰。 吊扣駕照。">
+<div class="qhead"><span class="qid">題號 52</span></div>
+<div class="stem">汽車駕駛人在 1 年內違規記點每達 12 點者，除施以道安講習，並處：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>吊銷駕照。</span></li><li class="choice"><span class="choice-num">(2)</span><span>罰鍰。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>吊扣駕照。</span></li></ol>
+</article><article class="question" data-qid="167" data-search="汽車駕駛人在一年內違規記點共達多少點時，應施以道路交通安全講習？ 9 點。 12 點。 15 點。">
+<div class="qhead"><span class="qid">題號 167</span></div>
+<div class="stem">汽車駕駛人在一年內違規記點共達多少點時，應施以道路交通安全講習？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>9 點。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>12 點。</span></li><li class="choice"><span class="choice-num">(3)</span><span>15 點。</span></li></ol>
+</article><article class="question" data-qid="169" data-search="未滿 60 歲之職業駕駛人之職業駕駛執照，應自發照之日起，應每滿幾年審驗 1 次？ 每 1 年審驗 1 次。 每 2 年審驗 1 次。 每 3 年審驗 1 次。">
+<div class="qhead"><span class="qid">題號 169</span></div>
+<div class="stem">未滿 60 歲之職業駕駛人之職業駕駛執照，應自發照之日起，應每滿幾年審驗 1 次？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>每 1 年審驗 1 次。</span></li><li class="choice"><span class="choice-num">(2)</span><span>每 2 年審驗 1 次。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>每 3 年審驗 1 次。</span></li></ol>
+</article><article class="question" data-qid="174" data-search="自民國 96 年 2 月起，已領有大貨車駕照「直接晉級」考領聯結車駕照者，其駕駛資格為何？ 得駕駛大客車。 不得駕駛大客車。 僅得在夜間駕駛大客車。">
+<div class="qhead"><span class="qid">題號 174</span></div>
+<div class="stem">自民國 96 年 2 月起，已領有大貨車駕照「直接晉級」考領聯結車駕照者，其駕駛資格為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>得駕駛大客車。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>不得駕駛大客車。</span></li><li class="choice"><span class="choice-num">(3)</span><span>僅得在夜間駕駛大客車。</span></li></ol>
+</article><article class="question" data-qid="175" data-search="自民國 112 年 6 月 30 日起，新考領大貨車駕駛執照者，依規定得駕駛下列哪種車輛？ 小型車。 普通輕型機車。 曳引車。">
+<div class="qhead"><span class="qid">題號 175</span></div>
+<div class="stem">自民國 112 年 6 月 30 日起，新考領大貨車駕駛執照者，依規定得駕駛下列哪種車輛？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>小型車。</span></li><li class="choice"><span class="choice-num">(2)</span><span>普通輕型機車。</span></li><li class="choice"><span class="choice-num">(3)</span><span>曳引車。</span></li></ol>
+</article><article class="question" data-qid="200" data-search="汽車在 3 個月內因違規記次累計 3 次，應受何種處分？ 吊扣汽車牌照 1 個月。 吊銷汽車牌照。 吊扣車主駕照 1 個月。">
+<div class="qhead"><span class="qid">題號 200</span></div>
+<div class="stem">汽車在 3 個月內因違規記次累計 3 次，應受何種處分？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>吊扣汽車牌照 1 個月。</span></li><li class="choice"><span class="choice-num">(2)</span><span>吊銷汽車牌照。</span></li><li class="choice"><span class="choice-num">(3)</span><span>吊扣車主駕照 1 個月。</span></li></ol>
+</article><article class="question" data-qid="213" data-search="下列何者為是？ 車輛所有人允許無駕照之人駕駛其車輛，吊扣牌照 1 個月。 未成年無照駕駛，須吊扣其監護人駕照。 汽車駕駛人允許無駕照之人駕駛其車輛者，須吊扣其駕駛執照。">
+<div class="qhead"><span class="qid">題號 213</span></div>
+<div class="stem">下列何者為是？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>車輛所有人允許無駕照之人駕駛其車輛，吊扣牌照 1 個月。</span></li><li class="choice"><span class="choice-num">(2)</span><span>未成年無照駕駛，須吊扣其監護人駕照。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>汽車駕駛人允許無駕照之人駕駛其車輛者，須吊扣其駕駛執照。</span></li></ol>
+</article><article class="question" data-qid="220" data-search="持有職業駕駛執照未滿 60 歳之駕駛人，其職業駕駛執照，應自發照之日起： 每滿 1 年審驗 1 次。 每滿 3 年審驗 1 次。 每滿 5 年審驗 1 次。">
+<div class="qhead"><span class="qid">題號 220</span></div>
+<div class="stem">持有職業駕駛執照未滿 60 歳之駕駛人，其職業駕駛執照，應自發照之日起：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>每滿 1 年審驗 1 次。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>每滿 3 年審驗 1 次。</span></li><li class="choice"><span class="choice-num">(3)</span><span>每滿 5 年審驗 1 次。</span></li></ol>
+</article><article class="question" data-qid="225" data-search="自下列何者時間起，新考領汽車駕照者不得駕駛輕型機車？ 110 年 6 月 30 日。 111 年 6 月 30 日。 112 年 6 月 30 日。">
+<div class="qhead"><span class="qid">題號 225</span></div>
+<div class="stem">自下列何者時間起，新考領汽車駕照者不得駕駛輕型機車？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>110 年 6 月 30 日。</span></li><li class="choice"><span class="choice-num">(2)</span><span>111 年 6 月 30 日。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>112 年 6 月 30 日。</span></li></ol>
+</article><article class="question" data-qid="226" data-search="有關小型車職業駕駛人，職業年齡至多可延長至幾歲，年滿後即應依規定申請換發同等車類之普通駕駛執照？ 65 歲。 68 歲。 70 歲。">
+<div class="qhead"><span class="qid">題號 226</span></div>
+<div class="stem">有關小型車職業駕駛人，職業年齡至多可延長至幾歲，年滿後即應依規定申請換發同等車類之普通駕駛執照？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>65 歲。</span></li><li class="choice"><span class="choice-num">(2)</span><span>68 歲。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>70 歲。</span></li></ol>
+</article><article class="question" data-qid="240" data-search="汽車駕駛人領有小型車駕駛執照，駕駛聯結車、大客車或大貨車者，其處罰規定為何？ 處罰駕駛人新臺幣 3 萬 6,000 元以上 6 萬元以下罰鍰，並記該車違規紀錄 1 次。 處罰汽車所有人新臺幣 3 萬 6,000 元以上 6 萬元以下罰鍰。 汽車所有人及駕駛人各處新臺幣 4 萬~8 萬元罰鍰，並吊扣汽車牌照。">
+<div class="qhead"><span class="qid">題號 240</span></div>
+<div class="stem">汽車駕駛人領有小型車駕駛執照，駕駛聯結車、大客車或大貨車者，其處罰規定為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>處罰駕駛人新臺幣 3 萬 6,000 元以上 6 萬元以下罰鍰，並記該車違規紀錄 1 次。</span></li><li class="choice"><span class="choice-num">(2)</span><span>處罰汽車所有人新臺幣 3 萬 6,000 元以上 6 萬元以下罰鍰。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>汽車所有人及駕駛人各處新臺幣 4 萬~8 萬元罰鍰，並吊扣汽車牌照。</span></li></ol>
+</article><article class="question" data-qid="243" data-search="汽車駕駛人聽聞消防車、救護車、警備車、工程救險車、毒性化學物質災害事故應變車之警號時，不立即避讓，依據道路交通管理處罰條例，將會受到何種處罰？ 處新臺幣 1,200 元以上 2,400 元以下罰鍰，並吊扣駕照。 處新臺幣 3,600 元以上，3 萬元以下罰鍰，並吊扣駕照。 處新臺幣 6,000 元以上，3 萬元以下罰鍰，並吊銷駕駛執照及吊扣該汽車牌照 6 個月。">
+<div class="qhead"><span class="qid">題號 243</span></div>
+<div class="stem">汽車駕駛人聽聞消防車、救護車、警備車、工程救險車、毒性化學物質災害事故應變車之警號時，不立即避讓，依據道路交通管理處罰條例，將會受到何種處罰？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>處新臺幣 1,200 元以上 2,400 元以下罰鍰，並吊扣駕照。</span></li><li class="choice"><span class="choice-num">(2)</span><span>處新臺幣 3,600 元以上，3 萬元以下罰鍰，並吊扣駕照。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>處新臺幣 6,000 元以上，3 萬元以下罰鍰，並吊銷駕駛執照及吊扣該汽車牌照 6 個月。</span></li></ol>
+</article><article class="question" data-qid="244" data-search="關於駕駛人聞消防車、救護車等緊急車輛警號而未避讓之處罰，下列敘述何者正確？ 未避讓但未造成事故者，處新臺幣 3,600 元罰鍰並記違規點數 1 點；若因而致人死傷，加重為處新臺幣 6,000 元至 3 萬元罰鍰並吊扣駕照。 無論是否造成事故，一律處新臺幣 1 萬元至 10 萬元罰鍰並吊銷駕照，以嚇阻駕駛人心存僥倖。 未避讓而未肇事者，處新臺幣 6,000 元以上 3 萬以下罰鍰；若因而致人死傷，加重為處新臺幣 1 萬元至 10 萬元罰緩，並吊銷駕駛執照及該汽車牌照。">
+<div class="qhead"><span class="qid">題號 244</span></div>
+<div class="stem">關於駕駛人聞消防車、救護車等緊急車輛警號而未避讓之處罰，下列敘述何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>未避讓但未造成事故者，處新臺幣 3,600 元罰鍰並記違規點數 1 點；若因而致人死傷，加重為處新臺幣 6,000 元至 3 萬元罰鍰並吊扣駕照。</span></li><li class="choice"><span class="choice-num">(2)</span><span>無論是否造成事故，一律處新臺幣 1 萬元至 10 萬元罰鍰並吊銷駕照，以嚇阻駕駛人心存僥倖。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>未避讓而未肇事者，處新臺幣 6,000 元以上 3 萬以下罰鍰；若因而致人死傷，加重為處新臺幣 1 萬元至 10 萬元罰緩，並吊銷駕駛執照及該汽車牌照。</span></li></ol>
+</article><article class="question" data-qid="253" data-search="自中華民國 112 年 6 月 30 日起，新考領之汽車駕駛執照，關於駕駛輕型機車之規定為何？ 仍可憑汽車駕駛執照駕駛輕型機車。 不得駕駛輕型機車。 僅限於偏遠地區可以駕駛輕型機車。">
+<div class="qhead"><span class="qid">題號 253</span></div>
+<div class="stem">自中華民國 112 年 6 月 30 日起，新考領之汽車駕駛執照，關於駕駛輕型機車之規定為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>仍可憑汽車駕駛執照駕駛輕型機車。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>不得駕駛輕型機車。</span></li><li class="choice"><span class="choice-num">(3)</span><span>僅限於偏遠地區可以駕駛輕型機車。</span></li></ol>
+</article><article class="question" data-qid="255" data-search="年滿 68 歲小型車職業駕駛人，若欲延長其職業駕駛執照有效期間至年滿 70 歲止，下列規定何者正確？ 只要依規定體格檢查判定合格，不論前一年是否有受處分紀錄，均可直接延長。 須前一年內未受吊扣駕駛執照處分，且體格檢查合格、檢附通過認知功能測驗或無失智症證明文件，得每年辦理換發或加註延長。 僅需檢附無患有失智症證明文件，即可一次換發有效期間為兩年之職業駕駛執照。">
+<div class="qhead"><span class="qid">題號 255</span></div>
+<div class="stem">年滿 68 歲小型車職業駕駛人，若欲延長其職業駕駛執照有效期間至年滿 70 歲止，下列規定何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>只要依規定體格檢查判定合格，不論前一年是否有受處分紀錄，均可直接延長。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>須前一年內未受吊扣駕駛執照處分，且體格檢查合格、檢附通過認知功能測驗或無失智症證明文件，得每年辦理換發或加註延長。</span></li><li class="choice"><span class="choice-num">(3)</span><span>僅需檢附無患有失智症證明文件，即可一次換發有效期間為兩年之職業駕駛執照。</span></li></ol>
+</article><article class="question" data-qid="256" data-search="未領有汽車駕駛執照之人，若違反道路交通管理處罰條例規定，而應受「吊扣」駕駛執照處分時，關於其考領執照之規定為何？ 只要繳清罰鍰，即可立即參加駕駛執照考驗。 在所規定之最長吊扣期間內，不得考領駕駛執照。 須接受違規再教育 1 個月後，方可參加駕駛執照考驗。">
+<div class="qhead"><span class="qid">題號 256</span></div>
+<div class="stem">未領有汽車駕駛執照之人，若違反道路交通管理處罰條例規定，而應受「吊扣」駕駛執照處分時，關於其考領執照之規定為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>只要繳清罰鍰，即可立即參加駕駛執照考驗。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>在所規定之最長吊扣期間內，不得考領駕駛執照。</span></li><li class="choice"><span class="choice-num">(3)</span><span>須接受違規再教育 1 個月後，方可參加駕駛執照考驗。</span></li></ol>
+</article><article class="question" data-qid="258" data-search="受吊銷駕駛執照終身不得考領處分者，須先完成違規教育講習（重新申請考驗班）後，始得參加駕照考驗。請問汽車班應接受之講習時數為何？ 2 天，共 15 小時。 2.5 天，共 18 小時。 3 天，共 24 小時。">
+<div class="qhead"><span class="qid">題號 258</span></div>
+<div class="stem">受吊銷駕駛執照終身不得考領處分者，須先完成違規教育講習（重新申請考驗班）後，始得參加駕照考驗。請問汽車班應接受之講習時數為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>2 天，共 15 小時。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>2.5 天，共 18 小時。</span></li><li class="choice"><span class="choice-num">(3)</span><span>3 天，共 24 小時。</span></li></ol>
+</article><article class="question" data-qid="264" data-search="癲癇疾病患者，檢具醫療院所醫師出具最近 2 年以上未發作診斷證明書者？ 仍不得報考駕照。 僅得報考機車駕照。 得報考機車及普通小型車駕照。">
+<div class="qhead"><span class="qid">題號 264</span></div>
+<div class="stem">癲癇疾病患者，檢具醫療院所醫師出具最近 2 年以上未發作診斷證明書者？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>仍不得報考駕照。</span></li><li class="choice"><span class="choice-num">(2)</span><span>僅得報考機車駕照。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>得報考機車及普通小型車駕照。</span></li></ol>
+</article><article class="question" data-qid="266" data-search="駕駛執照考驗，路考之及格分數為？ 60 分。 70 分。 80 分。">
+<div class="qhead"><span class="qid">題號 266</span></div>
+<div class="stem">駕駛執照考驗，路考之及格分數為？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>60 分。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>70 分。</span></li><li class="choice"><span class="choice-num">(3)</span><span>80 分。</span></li></ol>
+</article><article class="question" data-qid="274" data-search="汽車行駛應繳費之公路橋樑逃避繳費，並有致收費人員受傷或死亡者之情事者，應？ 扣留其車輛牌照 6 個月。 吊扣其駕駛執照 6 個月。 吊銷其駕駛執照。">
+<div class="qhead"><span class="qid">題號 274</span></div>
+<div class="stem">汽車行駛應繳費之公路橋樑逃避繳費，並有致收費人員受傷或死亡者之情事者，應？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>扣留其車輛牌照 6 個月。</span></li><li class="choice"><span class="choice-num">(2)</span><span>吊扣其駕駛執照 6 個月。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>吊銷其駕駛執照。</span></li></ol>
+</article><article class="question" data-qid="282" data-search="汽車駕駛人肇事致人重傷或死亡而逃逸，其駕照處分為何？ 吊扣駕照 1 年。 吊銷駕照， 且不得再考領，但符合特定條件者除外。 僅處罰鍰，不影響駕照。">
+<div class="qhead"><span class="qid">題號 282</span></div>
+<div class="stem">汽車駕駛人肇事致人重傷或死亡而逃逸，其駕照處分為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>吊扣駕照 1 年。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>吊銷駕照， 且不得再考領，但符合特定條件者除外。</span></li><li class="choice"><span class="choice-num">(3)</span><span>僅處罰鍰，不影響駕照。</span></li></ol>
+</article><article class="question" data-qid="298" data-search="參加汽車駕駛執照考驗時，筆試（交通規則）之及格標準為幾分？ 80 分。 85 分。 90 分。">
+<div class="qhead"><span class="qid">題號 298</span></div>
+<div class="stem">參加汽車駕駛執照考驗時，筆試（交通規則）之及格標準為幾分？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>80 分。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>85 分。</span></li><li class="choice"><span class="choice-num">(3)</span><span>90 分。</span></li></ol>
+</article><article class="question" data-qid="330" data-search="未滿 60 歲職業汽車駕駛人之職業駕駛執照，應自發照之日起，每滿幾年審驗 1 次： 1 年。 2 年。 3 年。">
+<div class="qhead"><span class="qid">題號 330</span></div>
+<div class="stem">未滿 60 歲職業汽車駕駛人之職業駕駛執照，應自發照之日起，每滿幾年審驗 1 次：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>1 年。</span></li><li class="choice"><span class="choice-num">(2)</span><span>2 年。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>3 年。</span></li></ol>
+</article><article class="question" data-qid="333" data-search="因患病、出國等事由，職業駕駛執照未能按時審驗時，可持原照及有關證明，向當地公路監理機關申請補辦審驗，但須在病癒或回國後： 1 個月內。 3 個月內。 6 個月內。">
+<div class="qhead"><span class="qid">題號 333</span></div>
+<div class="stem">因患病、出國等事由，職業駕駛執照未能按時審驗時，可持原照及有關證明，向當地公路監理機關申請補辦審驗，但須在病癒或回國後：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>1 個月內。</span></li><li class="choice"><span class="choice-num">(2)</span><span>3 個月內。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>6 個月內。</span></li></ol>
+</article><article class="question" data-qid="334" data-search="應考小型車普通駕駛執照者，須有學習駕駛多少時間之經歷： 6 個月以上。 3 個月以上。 2 個月以上。">
+<div class="qhead"><span class="qid">題號 334</span></div>
+<div class="stem">應考小型車普通駕駛執照者，須有學習駕駛多少時間之經歷：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>6 個月以上。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>3 個月以上。</span></li><li class="choice"><span class="choice-num">(3)</span><span>2 個月以上。</span></li></ol>
+</article><article class="question" data-qid="335" data-search="應考小型車職業駕駛執照者，須有學習駕駛經歷： 6 個月以上或領有小型車普通駕駛執照 3 個月以上。 9 個月以上。 10 個月。">
+<div class="qhead"><span class="qid">題號 335</span></div>
+<div class="stem">應考小型車職業駕駛執照者，須有學習駕駛經歷：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>6 個月以上或領有小型車普通駕駛執照 3 個月以上。</span></li><li class="choice"><span class="choice-num">(2)</span><span>9 個月以上。</span></li><li class="choice"><span class="choice-num">(3)</span><span>10 個月。</span></li></ol>
+</article><article class="question" data-qid="336" data-search="託人代考駕照者，單就報考人之處分為： 取消報考人之考試資格，註銷已領有之駕駛執照，且自查獲之日起 5 年內不能再行報考。 3 個月內不准再報考。 半年內不准再報考。">
+<div class="qhead"><span class="qid">題號 336</span></div>
+<div class="stem">託人代考駕照者，單就報考人之處分為：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>取消報考人之考試資格，註銷已領有之駕駛執照，且自查獲之日起 5 年內不能再行報考。</span></li><li class="choice"><span class="choice-num">(2)</span><span>3 個月內不准再報考。</span></li><li class="choice"><span class="choice-num">(3)</span><span>半年內不准再報考。</span></li></ol>
+</article><article class="question" data-qid="337" data-search="癲癇疾病患者，檢具醫療院所醫師出具最近二年以上未發作診斷證明書者： 得參加駕駛執照考驗。 不可參加普通駕駛執照考驗。 沒有特別規定。">
+<div class="qhead"><span class="qid">題號 337</span></div>
+<div class="stem">癲癇疾病患者，檢具醫療院所醫師出具最近二年以上未發作診斷證明書者：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>得參加駕駛執照考驗。</span></li><li class="choice"><span class="choice-num">(2)</span><span>不可參加普通駕駛執照考驗。</span></li><li class="choice"><span class="choice-num">(3)</span><span>沒有特別規定。</span></li></ol>
+</article><article class="question" data-qid="356" data-search="小型車駕駛執照吊扣期間駕駛小型車者，除處新臺幣 36,000～60,000 元罰鍰，並當場移置保管該汽車外，並應： 再吊扣其行照。 再吊扣其駕照。 吊銷其駕照。">
+<div class="qhead"><span class="qid">題號 356</span></div>
+<div class="stem">小型車駕駛執照吊扣期間駕駛小型車者，除處新臺幣 36,000～60,000 元罰鍰，並當場移置保管該汽車外，並應：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>再吊扣其行照。</span></li><li class="choice"><span class="choice-num">(2)</span><span>再吊扣其駕照。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>吊銷其駕照。</span></li></ol>
+</article><article class="question" data-qid="362" data-search="汽車駕駛人因違規記點，2 年內經吊扣駕駛執照 2 次，再違反記點規定者，處以： 吊扣其駕駛執照。 吊銷其駕駛執照。 罰鍰。">
+<div class="qhead"><span class="qid">題號 362</span></div>
+<div class="stem">汽車駕駛人因違規記點，2 年內經吊扣駕駛執照 2 次，再違反記點規定者，處以：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>吊扣其駕駛執照。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>吊銷其駕駛執照。</span></li><li class="choice"><span class="choice-num">(3)</span><span>罰鍰。</span></li></ol>
+</article><article class="question" data-qid="396" data-search="經終身吊銷汽車駕駛執照之受處分人，如為肇事致人死亡案件，經吊銷駕駛執照處分執行已逾幾年，得向公路主管機關申請考領駕駛執照： 8 年。 10 年。 12 年。">
+<div class="qhead"><span class="qid">題號 396</span></div>
+<div class="stem">經終身吊銷汽車駕駛執照之受處分人，如為肇事致人死亡案件，經吊銷駕駛執照處分執行已逾幾年，得向公路主管機關申請考領駕駛執照：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>8 年。</span></li><li class="choice"><span class="choice-num">(2)</span><span>10 年。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>12 年。</span></li></ol>
+</article><article class="question" data-qid="588" data-search="汽車駕駛人於路口左轉時，未禮讓對向直行車先行，依應受何種處罰？ 處罰鍰並吊扣牌照。 處新臺幣 600～1,800 元罰鍰。 處罰鍰並吊銷駕照。">
+<div class="qhead"><span class="qid">題號 588</span></div>
+<div class="stem">汽車駕駛人於路口左轉時，未禮讓對向直行車先行，依應受何種處罰？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>處罰鍰並吊扣牌照。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>處新臺幣 600～1,800 元罰鍰。</span></li><li class="choice"><span class="choice-num">(3)</span><span>處罰鍰並吊銷駕照。</span></li></ol>
+</article><article class="question" data-qid="594" data-search="未領有汽車駕照駕駛小型車者應處罰鍰新臺幣： 300～600 元。 3,600～7,200 元。 36,000～60,000 元。">
+<div class="qhead"><span class="qid">題號 594</span></div>
+<div class="stem">未領有汽車駕照駕駛小型車者應處罰鍰新臺幣：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>300～600 元。</span></li><li class="choice"><span class="choice-num">(2)</span><span>3,600～7,200 元。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>36,000～60,000 元。</span></li></ol>
+</article>
+</section><section id="cat03" class="category">
+<div class="cat-title"><h2>03 高速／快速公路、超速與競駛</h2><span>51 題</span></div>
+<article class="question" data-qid="5" data-search="駕駛配備有 level 2 等級先進駕駛輔助系統 (adas) 的新車行駛於國道。關於在駕駛過程中的行為與認知，下列哪一項最符合安全規範並能有效預防事故？ 認知到目前的系統對 「靜止工程車」辨識有限制，行經施工路段時應主動介入駕駛，而非依賴系統。 系統會自動跟車與修正方向盤，可以趁機滑手機或閉目養神。 因為系統能辨識車道線，所以行駛於大雨或大霧路段時，交給電腦操作比人工駕駛更安全。">
+<div class="qhead"><span class="qid">題號 5</span></div>
+<div class="stem">駕駛配備有 Level 2 等級先進駕駛輔助系統 (ADAS) 的新車行駛於國道。關於在駕駛過程中的行為與認知，下列哪一項最符合安全規範並能有效預防事故？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>認知到目前的系統對 「靜止工程車」辨識有限制，行經施工路段時應主動介入駕駛，而非依賴系統。</span></li><li class="choice"><span class="choice-num">(2)</span><span>系統會自動跟車與修正方向盤，可以趁機滑手機或閉目養神。</span></li><li class="choice"><span class="choice-num">(3)</span><span>因為系統能辨識車道線，所以行駛於大雨或大霧路段時，交給電腦操作比人工駕駛更安全。</span></li></ol>
+</article><article class="question" data-qid="11" data-search="汽車駕駛人行駛於高速公路、快速公路，以變換燈光、連續密集按鳴喇叭迫使前車讓道，下列何者正確？ 提醒前車讓路並無違規。 處新臺幣 3,000 元以上；6,000 元以下罰鍰。 只要未發生事故不處罰。">
+<div class="qhead"><span class="qid">題號 11</span></div>
+<div class="stem">汽車駕駛人行駛於高速公路、快速公路，以變換燈光、連續密集按鳴喇叭迫使前車讓道，下列何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>提醒前車讓路並無違規。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>處新臺幣 3,000 元以上；6,000 元以下罰鍰。</span></li><li class="choice"><span class="choice-num">(3)</span><span>只要未發生事故不處罰。</span></li></ol>
+</article><article class="question" data-qid="71" data-search="汽車駕駛人，行車速度超過規定之最高時速 40 公里以上者，處罰鍰新臺幣： 1,200～ 2,400 元。 2,400～6,000 元。 6,000～ 36,000 元。">
+<div class="qhead"><span class="qid">題號 71</span></div>
+<div class="stem">汽車駕駛人，行車速度超過規定之最高時速 40 公里以上者，處罰鍰新臺幣：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>1,200～ 2,400 元。</span></li><li class="choice"><span class="choice-num">(2)</span><span>2,400～6,000 元。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>6,000～ 36,000 元。</span></li></ol>
+</article><article class="question" data-qid="76" data-search="兩輛以上之汽車在道路上競駛或競技者，除處罰汽車駕駛人新台幣 30,000~90,000 元罰鍰， 及當場禁止其駕駛，並應： 吊扣其駕駛執照。 吊銷其牌照。 吊銷其駕駛執照，並吊扣汽車牌照 6 個月。">
+<div class="qhead"><span class="qid">題號 76</span></div>
+<div class="stem">兩輛以上之汽車在道路上競駛或競技者，除處罰汽車駕駛人新台幣 30,000~90,000 元罰鍰， 及當場禁止其駕駛，並應：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>吊扣其駕駛執照。</span></li><li class="choice"><span class="choice-num">(2)</span><span>吊銷其牌照。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>吊銷其駕駛執照，並吊扣汽車牌照 6 個月。</span></li></ol>
+</article><article class="question" data-qid="89" data-search="汽車駕駛人行車速度，超過規定之最高時速多少公里以上者，處新臺幣 6,000～36,000 元罰鍰，並當場禁止其駕駛： 40 公里。 50 公里。 60 公里。">
+<div class="qhead"><span class="qid">題號 89</span></div>
+<div class="stem">汽車駕駛人行車速度，超過規定之最高時速多少公里以上者，處新臺幣 6,000～36,000 元罰鍰，並當場禁止其駕駛：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>40 公里。</span></li><li class="choice"><span class="choice-num">(2)</span><span>50 公里。</span></li><li class="choice"><span class="choice-num">(3)</span><span>60 公里。</span></li></ol>
+</article><article class="question" data-qid="157" data-search="在國道行車時，常會看到後方裝有大型黃色緩衝裝置的「緩撞車」(或緩撞拖車)。關於緩撞車的功能與認知，下列敘述何者正確？ 它是為了加強防護施工人員及事故處理者，避免遭分心駕駛車輛直接撞擊並吸收大量撞擊動能、保護施工人員的「防護盾牌」。 緩撞車只會出現在夜間施工路段。 緩撞車可以百分之百吸收撞擊力，撞上去也沒關係。">
+<div class="qhead"><span class="qid">題號 157</span></div>
+<div class="stem">在國道行車時，常會看到後方裝有大型黃色緩衝裝置的「緩撞車」(或緩撞拖車)。關於緩撞車的功能與認知，下列敘述何者正確？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>它是為了加強防護施工人員及事故處理者，避免遭分心駕駛車輛直接撞擊並吸收大量撞擊動能、保護施工人員的「防護盾牌」。</span></li><li class="choice"><span class="choice-num">(2)</span><span>緩撞車只會出現在夜間施工路段。</span></li><li class="choice"><span class="choice-num">(3)</span><span>緩撞車可以百分之百吸收撞擊力，撞上去也沒關係。</span></li></ol>
+</article><article class="question" data-qid="178" data-search="汽缸總排氣量在 1,200 立方公分(ｃ.ｃ.)以下之汽車在高速或快速公路行駛有無限制？ 有行駛時間限制。 出廠 10 年以上的車禁止行駛。 無限制。">
+<div class="qhead"><span class="qid">題號 178</span></div>
+<div class="stem">汽缸總排氣量在 1,200 立方公分(Ｃ.Ｃ.)以下之汽車在高速或快速公路行駛有無限制？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>有行駛時間限制。</span></li><li class="choice"><span class="choice-num">(2)</span><span>出廠 10 年以上的車禁止行駛。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>無限制。</span></li></ol>
+</article><article class="question" data-qid="180" data-search="在高速公路服務區、休息站內停放之車輛，其停放時間最多以多久為限？ 4 小時。 12 小時。 並無時間限制，但不得超過該服務區營業時間。">
+<div class="qhead"><span class="qid">題號 180</span></div>
+<div class="stem">在高速公路服務區、休息站內停放之車輛，其停放時間最多以多久為限？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>4 小時。</span></li><li class="choice"><span class="choice-num">(2)</span><span>12 小時。</span></li><li class="choice"><span class="choice-num">(3)</span><span>並無時間限制，但不得超過該服務區營業時間。</span></li></ol>
+</article><article class="question" data-qid="195" data-search="汽車行駛高速公路及快速公路，遇有濃霧、濃煙、強風、大雨或其他特殊狀況，致能見度甚低時，其時速應低於幾公里? 60 公里。 50 公里。 40 公里。">
+<div class="qhead"><span class="qid">題號 195</span></div>
+<div class="stem">汽車行駛高速公路及快速公路，遇有濃霧、濃煙、強風、大雨或其他特殊狀況，致能見度甚低時，其時速應低於幾公里?</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>60 公里。</span></li><li class="choice"><span class="choice-num">(2)</span><span>50 公里。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>40 公里。</span></li></ol>
+</article><article class="question" data-qid="209" data-search="駕駛人行駛高速公路，發現應從前方匝道駛出，但目前所在車道與外側出口車道之間繪有白色雙實線「禁止變換車道線」，應如何處置？ 開啟方向燈並確認安全後，即可跨越白色雙實線變換至出口車道。 不得跨越白色雙實線，應繼續前行至下一交流道再繞回。 減速至低於 40 公里後，可短暫跨越白色雙實線駛入出口車道。">
+<div class="qhead"><span class="qid">題號 209</span></div>
+<div class="stem">駕駛人行駛高速公路，發現應從前方匝道駛出，但目前所在車道與外側出口車道之間繪有白色雙實線「禁止變換車道線」，應如何處置？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>開啟方向燈並確認安全後，即可跨越白色雙實線變換至出口車道。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>不得跨越白色雙實線，應繼續前行至下一交流道再繞回。</span></li><li class="choice"><span class="choice-num">(3)</span><span>減速至低於 40 公里後，可短暫跨越白色雙實線駛入出口車道。</span></li></ol>
+</article><article class="question" data-qid="219" data-search="關於駕駛自動排檔車輛上高速公路的敘述，使用檔位下列何者正確？ l2 檔。 l 檔。 d 檔。">
+<div class="qhead"><span class="qid">題號 219</span></div>
+<div class="stem">關於駕駛自動排檔車輛上高速公路的敘述，使用檔位下列何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>L2 檔。</span></li><li class="choice"><span class="choice-num">(2)</span><span>L 檔。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>D 檔。</span></li></ol>
+</article><article class="question" data-qid="229" data-search="汽車行駛高速公路，在正常天候狀況下，行駛速率為每小時 100 公里時，前後兩車間之最小行車安全距離？ 大型車為 80 公尺，小型車為 50 公尺。 大型車為 90 公尺，小型車為 50 公尺。 大型車為 80 公尺，小型車為 60 公尺。">
+<div class="qhead"><span class="qid">題號 229</span></div>
+<div class="stem">汽車行駛高速公路，在正常天候狀況下，行駛速率為每小時 100 公里時，前後兩車間之最小行車安全距離？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>大型車為 80 公尺，小型車為 50 公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>大型車為 90 公尺，小型車為 50 公尺。</span></li><li class="choice"><span class="choice-num">(3)</span><span>大型車為 80 公尺，小型車為 60 公尺。</span></li></ol>
+</article><article class="question" data-qid="234" data-search="汽缸總排氣量達 550 立方公分以上之大型重型機車，行駛於高速公路及快速公路時，下列何者不符合規定？ 應配戴全面式或露臉式安全帽。 應全天候開啟頭燈。 附載乘客以一人為限。">
+<div class="qhead"><span class="qid">題號 234</span></div>
+<div class="stem">汽缸總排氣量達 550 立方公分以上之大型重型機車，行駛於高速公路及快速公路時，下列何者不符合規定？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>應配戴全面式或露臉式安全帽。</span></li><li class="choice"><span class="choice-num">(2)</span><span>應全天候開啟頭燈。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>附載乘客以一人為限。</span></li></ol>
+</article><article class="question" data-qid="245" data-search="汽車行駛於非高、快速公路之一般道路上，若駕駛人或乘客未繫安全帶，應處駕駛人多少罰鍰？ 新臺幣 3,000 元。 新臺幣 1,000 元。 新臺幣 1,500 元。">
+<div class="qhead"><span class="qid">題號 245</span></div>
+<div class="stem">汽車行駛於非高、快速公路之一般道路上，若駕駛人或乘客未繫安全帶，應處駕駛人多少罰鍰？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>新臺幣 3,000 元。</span></li><li class="choice"><span class="choice-num">(2)</span><span>新臺幣 1,000 元。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>新臺幣 1,500 元。</span></li></ol>
+</article><article class="question" data-qid="251" data-search="在國道行駛時，看到交流道出口預告標誌下方標示「2,000m」或「2km」，代表什麼意義？ 代表該標誌至交流道出口之減速距離。 代表交流道的編號。 代表該標誌與前方交流道出口距離為 2,000 公尺。">
+<div class="qhead"><span class="qid">題號 251</span></div>
+<div class="stem">在國道行駛時，看到交流道出口預告標誌下方標示「2,000m」或「2km」，代表什麼意義？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>代表該標誌至交流道出口之減速距離。</span></li><li class="choice"><span class="choice-num">(2)</span><span>代表交流道的編號。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>代表該標誌與前方交流道出口距離為 2,000 公尺。</span></li></ol>
+</article><article class="question" data-qid="267" data-search="汽缸總排氣量未滿多少之機車不得行駛高速公路？ 未滿 450 立方公分。 未滿 550 立方公分。 未滿 650 立方公分。">
+<div class="qhead"><span class="qid">題號 267</span></div>
+<div class="stem">汽缸總排氣量未滿多少之機車不得行駛高速公路？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>未滿 450 立方公分。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>未滿 550 立方公分。</span></li><li class="choice"><span class="choice-num">(3)</span><span>未滿 650 立方公分。</span></li></ol>
+</article><article class="question" data-qid="365" data-search="逕行舉發汽車超速行駛時，其違規地點相距： 14 公里以上。 8 公里以上。 6 公里以上。 得連續舉發之，但其違規地點在隧道內者，不在此限。">
+<div class="qhead"><span class="qid">題號 365</span></div>
+<div class="stem">逕行舉發汽車超速行駛時，其違規地點相距：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>14 公里以上。</span></li><li class="choice"><span class="choice-num">(2)</span><span>8 公里以上。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>6 公里以上。 得連續舉發之，但其違規地點在隧道內者，不在此限。</span></li></ol>
+</article><article class="question" data-qid="374" data-search="駕駛汽車行駛於高速公路或快速公路，汽車駕駛人、前座或小型車後座乘客未繫安全帶者， 將處駕駛人罰鍰新臺幣： 1,000～ 2,000 元。 1,500～3,000 元。 3,000～6,000 元。">
+<div class="qhead"><span class="qid">題號 374</span></div>
+<div class="stem">駕駛汽車行駛於高速公路或快速公路，汽車駕駛人、前座或小型車後座乘客未繫安全帶者， 將處駕駛人罰鍰新臺幣：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>1,000～ 2,000 元。</span></li><li class="choice"><span class="choice-num">(2)</span><span>1,500～3,000 元。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>3,000～6,000 元。</span></li></ol>
+</article><article class="question" data-qid="376" data-search="逕行舉發汽車超速行駛時，其： 違規時間相隔 4 分鐘以上或行駛經過 1 個路口以上。 違規時間相隔 5 分鐘以上或行駛經過 1 個路口以上。 違規地點相距 6 公里以上、違規時間相隔 6 分鐘以上或行駛經過 1 個路口以上。 得連續舉發之。但其違規地點在隧道內者，不在此限。">
+<div class="qhead"><span class="qid">題號 376</span></div>
+<div class="stem">逕行舉發汽車超速行駛時，其：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>違規時間相隔 4 分鐘以上或行駛經過 1 個路口以上。</span></li><li class="choice"><span class="choice-num">(2)</span><span>違規時間相隔 5 分鐘以上或行駛經過 1 個路口以上。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>違規地點相距 6 公里以上、違規時間相隔 6 分鐘以上或行駛經過 1 個路口以上。 得連續舉發之。但其違規地點在隧道內者，不在此限。</span></li></ol>
+</article><article class="question" data-qid="380" data-search="高速或快速公路匝道上速度限制每小時為： 20 公里。 30 公里。 應依速限標誌指示。">
+<div class="qhead"><span class="qid">題號 380</span></div>
+<div class="stem">高速或快速公路匝道上速度限制每小時為：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>20 公里。</span></li><li class="choice"><span class="choice-num">(2)</span><span>30 公里。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>應依速限標誌指示。</span></li></ol>
+</article><article class="question" data-qid="381" data-search="在高速公路最高速限每小時 90 公里以上之路段，行駛速率低於每小時： 60 公里。 70 公里。 80 公里。 之較慢速小型車，應行駛於外側車道。">
+<div class="qhead"><span class="qid">題號 381</span></div>
+<div class="stem">在高速公路最高速限每小時 90 公里以上之路段，行駛速率低於每小時：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>60 公里。</span></li><li class="choice"><span class="choice-num">(2)</span><span>70 公里。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>80 公里。 之較慢速小型車，應行駛於外側車道。</span></li></ol>
+</article><article class="question" data-qid="382" data-search="在高速或快速公路同一車道上行駛之小型車輛時速在 70 公里時，前後兩車間最少距離應為： 15 公尺。 25 公尺。 35 公尺。">
+<div class="qhead"><span class="qid">題號 382</span></div>
+<div class="stem">在高速或快速公路同一車道上行駛之小型車輛時速在 70 公里時，前後兩車間最少距離應為：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>15 公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>25 公尺。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>35 公尺。</span></li></ol>
+</article><article class="question" data-qid="385" data-search="正常天候下，高速或快速公路之最高行車速度限制為： 120 公里/小時。 110 公里/小時。 應依速限標誌指示。">
+<div class="qhead"><span class="qid">題號 385</span></div>
+<div class="stem">正常天候下，高速或快速公路之最高行車速度限制為：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>120 公里/小時。</span></li><li class="choice"><span class="choice-num">(2)</span><span>110 公里/小時。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>應依速限標誌指示。</span></li></ol>
+</article><article class="question" data-qid="386" data-search="濃霧、濃煙、大雨、強風，致能見度甚低時在高速或快速公路行駛之車輛時速： 應保持最低速度限制 60 公里以上。 應以低於 40 公里行駛或暫停路肩，並顯示危險警告燈。 應維持正常速度行車。">
+<div class="qhead"><span class="qid">題號 386</span></div>
+<div class="stem">濃霧、濃煙、大雨、強風，致能見度甚低時在高速或快速公路行駛之車輛時速：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>應保持最低速度限制 60 公里以上。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>應以低於 40 公里行駛或暫停路肩，並顯示危險警告燈。</span></li><li class="choice"><span class="choice-num">(3)</span><span>應維持正常速度行車。</span></li></ol>
+</article><article class="question" data-qid="394" data-search="小客車行駛於高速公路時，以多少時速行駛，耗油最少? 80～ 90 公里。 50～60 公里。 110～120 公里。">
+<div class="qhead"><span class="qid">題號 394</span></div>
+<div class="stem">小客車行駛於高速公路時，以多少時速行駛，耗油最少?</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>80～ 90 公里。</span></li><li class="choice"><span class="choice-num">(2)</span><span>50～60 公里。</span></li><li class="choice"><span class="choice-num">(3)</span><span>110～120 公里。</span></li></ol>
+</article><article class="question" data-qid="413" data-search="汽缸總排氣量 550 立方公分以上大型重型機車行駛高速公路，其駕駛人應有汽缸總排氣量 550 立方公分以上大型重型機車駕駛執照 1 年以上小型車以上之駕駛執照以上皆必備。">
+<div class="qhead"><span class="qid">題號 413</span></div>
+<div class="stem">汽缸總排氣量 550 立方公分以上大型重型機車行駛高速公路，其駕駛人應有</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>汽缸總排氣量 550 立方公分以上大型重型機車駕駛執照 1 年以上</span></li><li class="choice"><span class="choice-num">(2)</span><span>小型車以上之駕駛執照</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>以上皆必備。</span></li></ol>
+</article><article class="question" data-qid="634" data-search="在正常天候狀況下，車輛行駛高速公路或快速公路，行車速率為每小時 90 公里時，車輛與前車之安全距離為： 大型車 45 公尺、小型車 70 公尺。 大型車 70 公尺、小型車 45 公尺。 大、小型車都是 70 公尺。">
+<div class="qhead"><span class="qid">題號 634</span></div>
+<div class="stem">在正常天候狀況下，車輛行駛高速公路或快速公路，行車速率為每小時 90 公里時，車輛與前車之安全距離為：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>大型車 45 公尺、小型車 70 公尺。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>大型車 70 公尺、小型車 45 公尺。</span></li><li class="choice"><span class="choice-num">(3)</span><span>大、小型車都是 70 公尺。</span></li></ol>
+</article><article class="question" data-qid="710" data-search="行車速度，依速限標誌或標線之規定，無標誌或標線者，在設有快慢車道分隔線之「慢車道」 行駛，其最高時速限制為何？ 行車時速不得超過 30 公里。 行車時速不得超過 40 公里。 行車時速不得超過 50 公里。">
+<div class="qhead"><span class="qid">題號 710</span></div>
+<div class="stem">行車速度，依速限標誌或標線之規定，無標誌或標線者，在設有快慢車道分隔線之「慢車道」 行駛，其最高時速限制為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>行車時速不得超過 30 公里。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>行車時速不得超過 40 公里。</span></li><li class="choice"><span class="choice-num">(3)</span><span>行車時速不得超過 50 公里。</span></li></ol>
+</article><article class="question" data-qid="718" data-search="以下有關交流道的敘述何者錯誤？ 指高速公路與快速公路相互間，高速公路或快速公路與其他道路連接，以匝道構成立體相交之部份。 速限一般為 40~60 公里/小時。 指設於主線入口最右側，供汽車駛進主線前加速之車道。">
+<div class="qhead"><span class="qid">題號 718</span></div>
+<div class="stem">以下有關交流道的敘述何者錯誤？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>指高速公路與快速公路相互間，高速公路或快速公路與其他道路連接，以匝道構成立體相交之部份。</span></li><li class="choice"><span class="choice-num">(2)</span><span>速限一般為 40~60 公里/小時。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>指設於主線入口最右側，供汽車駛進主線前加速之車道。</span></li></ol>
+</article><article class="question" data-qid="724" data-search="關於國道高速公路之最高速限規定，下列敘述何者正確？ 每小時 120 公里。 依速限標誌指示。 每小時 110 公里。">
+<div class="qhead"><span class="qid">題號 724</span></div>
+<div class="stem">關於國道高速公路之最高速限規定，下列敘述何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>每小時 120 公里。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>依速限標誌指示。</span></li><li class="choice"><span class="choice-num">(3)</span><span>每小時 110 公里。</span></li></ol>
+</article><article class="question" data-qid="729" data-search="高速公路速限 90 公里以上路段，時速低於 80 公里的小型車應行駛於？ 內側車道。 外側車道。 以上均可。">
+<div class="qhead"><span class="qid">題號 729</span></div>
+<div class="stem">高速公路速限 90 公里以上路段，時速低於 80 公里的小型車應行駛於？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>內側車道。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>外側車道。</span></li><li class="choice"><span class="choice-num">(3)</span><span>以上均可。</span></li></ol>
+</article><article class="question" data-qid="749" data-search="在正常天候狀況下，汽車行駛於高速或快速公路時，小型車車速為每小時 90 公里，前後兩車之間應保持之最小行車安全距離為何？ 30 公尺以上。 45 公尺以上。 60 公尺以上。">
+<div class="qhead"><span class="qid">題號 749</span></div>
+<div class="stem">在正常天候狀況下，汽車行駛於高速或快速公路時，小型車車速為每小時 90 公里，前後兩車之間應保持之最小行車安全距離為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>30 公尺以上。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>45 公尺以上。</span></li><li class="choice"><span class="choice-num">(3)</span><span>60 公尺以上。</span></li></ol>
+</article><article class="question" data-qid="751" data-search="小型車行駛高速公路及快速公路，前後兩車間之行車安全距離，在正常天候狀況下，下列何者正確？ 車輛速率之每小時公里數值除以 2(單位為公尺)。 車輛速率之每小時公里數值減 20(單位公尺)。 安全距離靠自己衡量，沒有規定。">
+<div class="qhead"><span class="qid">題號 751</span></div>
+<div class="stem">小型車行駛高速公路及快速公路，前後兩車間之行車安全距離，在正常天候狀況下，下列何者正確？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>車輛速率之每小時公里數值除以 2(單位為公尺)。</span></li><li class="choice"><span class="choice-num">(2)</span><span>車輛速率之每小時公里數值減 20(單位公尺)。</span></li><li class="choice"><span class="choice-num">(3)</span><span>安全距離靠自己衡量，沒有規定。</span></li></ol>
+</article><article class="question" data-qid="764" data-search="汽缸總排氣量 550 立方公分以上之大型重型機車，於高速公路或快速公路行駛時？ 只要保持安全距離，即可於同車道併駛或超車。 應依規定於同一車道內依次行駛，不得併駛或於同車道內超車。 車流量較少時，得於同車道併駛或超車。">
+<div class="qhead"><span class="qid">題號 764</span></div>
+<div class="stem">汽缸總排氣量 550 立方公分以上之大型重型機車，於高速公路或快速公路行駛時？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>只要保持安全距離，即可於同車道併駛或超車。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>應依規定於同一車道內依次行駛，不得併駛或於同車道內超車。</span></li><li class="choice"><span class="choice-num">(3)</span><span>車流量較少時，得於同車道併駛或超車。</span></li></ol>
+</article><article class="question" data-qid="768" data-search="大客車行駛於高速公路或快速公路時，關於車內人員繫安全帶之規定，下列何者正確？ 僅駕駛人及前座乘客必須繫安全帶。 駕駛人及乘載之 4 歲以上乘客均應繫安全帶。 僅駕駛人必須繫安全帶，乘客則視個人意願。">
+<div class="qhead"><span class="qid">題號 768</span></div>
+<div class="stem">大客車行駛於高速公路或快速公路時，關於車內人員繫安全帶之規定，下列何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>僅駕駛人及前座乘客必須繫安全帶。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>駕駛人及乘載之 4 歲以上乘客均應繫安全帶。</span></li><li class="choice"><span class="choice-num">(3)</span><span>僅駕駛人必須繫安全帶，乘客則視個人意願。</span></li></ol>
+</article><article class="question" data-qid="780" data-search="汽車行駛於高速公路、快速公路或設站管制之道路，若未依規定保持行車安全距離，下列何者為正確處分？ 處新臺幣 1,200～2,400 元罰鍰，並吊扣駕駛執照 1 個月。 處新臺幣 3,000～6,000 元罰鍰。 處新臺幣 6,000～12,000 元罰鍰，並當場吊銷駕駛執照。">
+<div class="qhead"><span class="qid">題號 780</span></div>
+<div class="stem">汽車行駛於高速公路、快速公路或設站管制之道路，若未依規定保持行車安全距離，下列何者為正確處分？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>處新臺幣 1,200～2,400 元罰鍰，並吊扣駕駛執照 1 個月。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>處新臺幣 3,000～6,000 元罰鍰。</span></li><li class="choice"><span class="choice-num">(3)</span><span>處新臺幣 6,000～12,000 元罰鍰，並當場吊銷駕駛執照。</span></li></ol>
+</article><article class="question" data-qid="806" data-search="在高速公路行車時突然發現車輛性能低落，車速無法達到 60 公里時應： 迅即進入最近交流道離開高速公路，以免被他車追撞危險。 應即停車修理。 仍繼續行駛。">
+<div class="qhead"><span class="qid">題號 806</span></div>
+<div class="stem">在高速公路行車時突然發現車輛性能低落，車速無法達到 60 公里時應：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>迅即進入最近交流道離開高速公路，以免被他車追撞危險。</span></li><li class="choice"><span class="choice-num">(2)</span><span>應即停車修理。</span></li><li class="choice"><span class="choice-num">(3)</span><span>仍繼續行駛。</span></li></ol>
+</article><article class="question" data-qid="840" data-search="汽缸總排氣量 550 立方公分以上之大型重型機車行駛於快速公路，何時應開亮頭燈？ 只需在夜間。 只需在遇濃霧、雨、雪、天色昏暗或視線不清時。 全天。">
+<div class="qhead"><span class="qid">題號 840</span></div>
+<div class="stem">汽缸總排氣量 550 立方公分以上之大型重型機車行駛於快速公路，何時應開亮頭燈？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>只需在夜間。</span></li><li class="choice"><span class="choice-num">(2)</span><span>只需在遇濃霧、雨、雪、天色昏暗或視線不清時。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>全天。</span></li></ol>
+</article><article class="question" data-qid="863" data-search="載重貨車行駛於高速公路或快速公路所設置之地磅站時，若裝載貨物超過核定之總重量、總聯結重量逾 20％且無法當場卸貨分裝，經舉發後，駕駛人仍不依責令改正繼續行駛者，依法應如何處置？ 僅能舉發 1 次，後續路程不得重複開罰。 得連續舉發處罰。 吊銷駕駛人駕照並沒入車輛。 應立即">
+<div class="qhead"><span class="qid">題號 863</span></div>
+<div class="stem">載重貨車行駛於高速公路或快速公路所設置之地磅站時，若裝載貨物超過核定之總重量、總聯結重量逾 20％且無法當場卸貨分裝，經舉發後，駕駛人仍不依責令改正繼續行駛者，依法應如何處置？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>僅能舉發 1 次，後續路程不得重複開罰。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>得連續舉發處罰。</span></li><li class="choice"><span class="choice-num">(3)</span><span>應立即吊銷駕駛人駕照並沒入車輛。</span></li></ol>
+</article><article class="question" data-qid="888" data-search="汽車於國道高速公路發生事故或其他緊急情況無法繼續行駛時，如車輛無法滑離車道，除顯示危險警告燈外，為防範二次事故，應於車輛後方多少公尺處設置車輛故障標誌？ 30 至 50 公尺。 50 至 100 公尺。 100 公尺以上。">
+<div class="qhead"><span class="qid">題號 888</span></div>
+<div class="stem">汽車於國道高速公路發生事故或其他緊急情況無法繼續行駛時，如車輛無法滑離車道，除顯示危險警告燈外，為防範二次事故，應於車輛後方多少公尺處設置車輛故障標誌？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>30 至 50 公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>50 至 100 公尺。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>100 公尺以上。</span></li></ol>
+</article><article class="question" data-qid="891" data-search="在國道高速公路上開車時，車輛突然故障無法移動停止於車道上，在開啟警示燈並將車輛停妥後，應該在車後方大約多少公尺處放置車輛故障標誌（三角牌），以符合法規並有效提醒後車？ 30 到 50 公尺。 500 公尺以上。 100 公尺以上。">
+<div class="qhead"><span class="qid">題號 891</span></div>
+<div class="stem">在國道高速公路上開車時，車輛突然故障無法移動停止於車道上，在開啟警示燈並將車輛停妥後，應該在車後方大約多少公尺處放置車輛故障標誌（三角牌），以符合法規並有效提醒後車？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>30 到 50 公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>500 公尺以上。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>100 公尺以上。</span></li></ol>
+</article><article class="question" data-qid="893" data-search="關於高速公路的「路肩使用」與「故障應變」，下列哪一種情境處理方式是正確且能有效預防二次事故的？ 為了趕時間，若前方主線塞車，可以暫時行駛路肩，以維持車流順暢。 車輛若在行駛中發生故障，應緩慢駛向路肩停靠，並在車後方 50~100 公尺處放置車輛故障標誌，且人員應到護欄外等待救援。 發生事故後，為了保護車輛財產，所有乘客應留在車內並反鎖車門，直到拖吊車抵達。">
+<div class="qhead"><span class="qid">題號 893</span></div>
+<div class="stem">關於高速公路的「路肩使用」與「故障應變」，下列哪一種情境處理方式是正確且能有效預防二次事故的？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>為了趕時間，若前方主線塞車，可以暫時行駛路肩，以維持車流順暢。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>車輛若在行駛中發生故障，應緩慢駛向路肩停靠，並在車後方 50~100 公尺處放置車輛故障標誌，且人員應到護欄外等待救援。</span></li><li class="choice"><span class="choice-num">(3)</span><span>發生事故後，為了保護車輛財產，所有乘客應留在車內並反鎖車門，直到拖吊車抵達。</span></li></ol>
+</article><article class="question" data-qid="899" data-search="行駛於高快速公路之隧道內，因緊急情況無法繼續行駛，應先停車待援，並在故障車輛後方幾公尺處設置車輛故障標誌警示？ 10 公尺。 50 公尺。 100 公尺。">
+<div class="qhead"><span class="qid">題號 899</span></div>
+<div class="stem">行駛於高快速公路之隧道內，因緊急情況無法繼續行駛，應先停車待援，並在故障車輛後方幾公尺處設置車輛故障標誌警示？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>10 公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>50 公尺。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>100 公尺。</span></li></ol>
+</article><article class="question" data-qid="900" data-search="駕駛人行駛於高速公路或快速公路時，若因車輛故障或其他緊急情況無法繼續行駛，其處置方式下列何者不正確？ 應將車輛滑離主車道，停放於路肩等待救援待援期間應開啟危險警告燈，並於車輛後方設置車輛故障標誌警示故障車輛停放於路肩時間不得超過 4 小時">
+<div class="qhead"><span class="qid">題號 900</span></div>
+<div class="stem">駕駛人行駛於高速公路或快速公路時，若因車輛故障或其他緊急情況無法繼續行駛，其處置方式下列何者不正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>應將車輛滑離主車道，停放於路肩等待救援</span></li><li class="choice"><span class="choice-num">(2)</span><span>待援期間應開啟危險警告燈，並於車輛後方設置車輛故障標誌警示</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>故障車輛停放於路肩時間不得超過 4 小時</span></li></ol>
+</article><article class="question" data-qid="906" data-search="在高速公路發生交通事故或車輛故障時，若需透過專責客服系統通報並請求協助，應撥打下列哪一專線？ 1968 app(警政報案)。 1996。 1999。">
+<div class="qhead"><span class="qid">題號 906</span></div>
+<div class="stem">在高速公路發生交通事故或車輛故障時，若需透過專責客服系統通報並請求協助，應撥打下列哪一專線？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>1968 APP(警政報案)。</span></li><li class="choice"><span class="choice-num">(2)</span><span>1996。</span></li><li class="choice"><span class="choice-num">(3)</span><span>1999。</span></li></ol>
+</article><article class="question" data-qid="942" data-search="行駛高速公路前，應注意收聽電台廣播及利用： 104。 117。 1968。 電話之路況報導，掌握即時道路交通狀況，彈性調整行駛路線。">
+<div class="qhead"><span class="qid">題號 942</span></div>
+<div class="stem">行駛高速公路前，應注意收聽電台廣播及利用：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>104。</span></li><li class="choice"><span class="choice-num">(2)</span><span>117。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>1968。 電話之路況報導，掌握即時道路交通狀況，彈性調整行駛路線。</span></li></ol>
+</article><article class="question" data-qid="950" data-search="汽缸總排氣量 550 立方公分以上之大型重型機車行駛於快速公路途中，因機件故障或其他緊急情況無法繼續行駛時滑離車道，應顯示危險警告燈，牽移離開車道，在故障車輛後方： 50 公尺處。 100 公尺處。 200 公尺處。設置車輛故障警示設施。">
+<div class="qhead"><span class="qid">題號 950</span></div>
+<div class="stem">汽缸總排氣量 550 立方公分以上之大型重型機車行駛於快速公路途中，因機件故障或其他緊急情況無法繼續行駛時滑離車道，應顯示危險警告燈，牽移離開車道，在故障車輛後方：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>50 公尺處。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>100 公尺處。</span></li><li class="choice"><span class="choice-num">(3)</span><span>200 公尺處。設置車輛故障警示設施。</span></li></ol>
+</article><article class="question" data-qid="965" data-search="汽車於高速公路發生交通事故後： 有人受傷或死亡時，應保持現場完整，並撥打 110、 1968 或 1968app報請警察機關或該管公路管理機關協助處理。 與我無關趕快駛離。 據理力爭，以脫責任。">
+<div class="qhead"><span class="qid">題號 965</span></div>
+<div class="stem">汽車於高速公路發生交通事故後：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>有人受傷或死亡時，應保持現場完整，並撥打 110、 1968 或 1968App報請警察機關或該管公路管理機關協助處理。</span></li><li class="choice"><span class="choice-num">(2)</span><span>與我無關趕快駛離。</span></li><li class="choice"><span class="choice-num">(3)</span><span>據理力爭，以脫責任。</span></li></ol>
+</article><article class="question" data-qid="966" data-search="汽車於高速公路發生交通事故後，無人受傷或死亡且汽車尚能行駛，應優先： 等待警察前來處理。 將汽車位置標繪後，撥打 110、1968 或 1968app報請警察機關或該管公路管理機關協助處理，並迅速移置路邊。 通知保險公司。">
+<div class="qhead"><span class="qid">題號 966</span></div>
+<div class="stem">汽車於高速公路發生交通事故後，無人受傷或死亡且汽車尚能行駛，應優先：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>等待警察前來處理。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>將汽車位置標繪後，撥打 110、1968 或 1968App報請警察機關或該管公路管理機關協助處理，並迅速移置路邊。</span></li><li class="choice"><span class="choice-num">(3)</span><span>通知保險公司。</span></li></ol>
+</article><article class="question" data-qid="968" data-search="汽車於高速公路發生道路交通事故，應於車後方多少公尺處放置車輛故障標誌： 10 公尺。 50 公尺。 100 公尺。">
+<div class="qhead"><span class="qid">題號 968</span></div>
+<div class="stem">汽車於高速公路發生道路交通事故，應於車後方多少公尺處放置車輛故障標誌：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>10 公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>50 公尺。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>100 公尺。</span></li></ol>
+</article><article class="question" data-qid="1010" data-search="汽缸總排氣量 550 立方公分以上之大型重型機車行駛高速公路及快速公路時，應妥為檢查車輛，在行駛途中輪胎胎紋深度不得有下列情形？ 任一點不足 1 公釐。 任一點不足 1.5 公釐。 任一點不足 1.6 公釐。">
+<div class="qhead"><span class="qid">題號 1010</span></div>
+<div class="stem">汽缸總排氣量 550 立方公分以上之大型重型機車行駛高速公路及快速公路時，應妥為檢查車輛，在行駛途中輪胎胎紋深度不得有下列情形？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>任一點不足 1 公釐。</span></li><li class="choice"><span class="choice-num">(2)</span><span>任一點不足 1.5 公釐。</span></li><li class="choice"><span class="choice-num">(3)</span><span>任一點不足 1.6 公釐。</span></li></ol>
+</article>
+</section><section id="cat04" class="category">
+<div class="cat-title"><h2>04 一般行車、車道、超車與路權</h2><span>52 題</span></div>
+<article class="question" data-qid="7" data-search="駕駛人行駛至交岔路口，其行進、轉彎時，下列規定何者正確？ 由慢車道右轉彎時應於距交岔路口 20 至 40 公尺處，換入慢車道 。 右轉彎時，應距交岔路口 50 公尺前顯示方向燈。 於外側車道右轉彎時，應距交岔路口 30 公尺前顯示方向燈。">
+<div class="qhead"><span class="qid">題號 7</span></div>
+<div class="stem">駕駛人行駛至交岔路口，其行進、轉彎時，下列規定何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>由慢車道右轉彎時應於距交岔路口 20 至 40 公尺處，換入慢車道 。</span></li><li class="choice"><span class="choice-num">(2)</span><span>右轉彎時，應距交岔路口 50 公尺前顯示方向燈。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>於外側車道右轉彎時，應距交岔路口 30 公尺前顯示方向燈。</span></li></ol>
+</article><article class="question" data-qid="9" data-search="汽車在同向二車道以上之道路，除應依標誌或標線之指示行駛外，下列何種行為正確？ 變換車道時，應讓直行車先行並注意安全距離。 小型汽車行駛速度較慢時，應在外側車道行駛，但可任意變換車道。 執行任務中之救護車，應行駛內側車道。">
+<div class="qhead"><span class="qid">題號 9</span></div>
+<div class="stem">汽車在同向二車道以上之道路，除應依標誌或標線之指示行駛外，下列何種行為正確？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>變換車道時，應讓直行車先行並注意安全距離。</span></li><li class="choice"><span class="choice-num">(2)</span><span>小型汽車行駛速度較慢時，應在外側車道行駛，但可任意變換車道。</span></li><li class="choice"><span class="choice-num">(3)</span><span>執行任務中之救護車，應行駛內側車道。</span></li></ol>
+</article><article class="question" data-qid="58" data-search="小型汽車在同向二車道以上道路行駛時，下列何者敘述正確？ 內外側車道均可行駛。 行駛速度較慢時，應靠內側車道行駛。 可任意變換車道。">
+<div class="qhead"><span class="qid">題號 58</span></div>
+<div class="stem">小型汽車在同向二車道以上道路行駛時，下列何者敘述正確？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>內外側車道均可行駛。</span></li><li class="choice"><span class="choice-num">(2)</span><span>行駛速度較慢時，應靠內側車道行駛。</span></li><li class="choice"><span class="choice-num">(3)</span><span>可任意變換車道。</span></li></ol>
+</article><article class="question" data-qid="257" data-search="執行任務中的消防車、救護車、警備車、工程救險車，在同向二車道以上之道路行駛時可行駛何處? 限駕內側車道。 限駕外側車道。 內外側車道均可行駛。">
+<div class="qhead"><span class="qid">題號 257</span></div>
+<div class="stem">執行任務中的消防車、救護車、警備車、工程救險車，在同向二車道以上之道路行駛時可行駛何處?</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>限駕內側車道。</span></li><li class="choice"><span class="choice-num">(2)</span><span>限駕外側車道。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>內外側車道均可行駛。</span></li></ol>
+</article><article class="question" data-qid="271" data-search="道路入口處設有「禁止四輪以上汽車進入」標誌，下列何種車輛可進入該路段？ 自用小客車，因屬小型車輛，不在管制範圍內。 普通重型機車，因非屬四輪以上之汽車。 小型貨車，因以載貨為目的，與一般汽車性質不同。">
+<div class="qhead"><span class="qid">題號 271</span></div>
+<div class="stem">道路入口處設有「禁止四輪以上汽車進入」標誌，下列何種車輛可進入該路段？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>自用小客車，因屬小型車輛，不在管制範圍內。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>普通重型機車，因非屬四輪以上之汽車。</span></li><li class="choice"><span class="choice-num">(3)</span><span>小型貨車，因以載貨為目的，與一般汽車性質不同。</span></li></ol>
+</article><article class="question" data-qid="316" data-search="根據國際 oecd研究，汽車與行人、機車或自行車發生碰撞時，當撞擊速度由時速 30 公里提高至時速 50 公里，被撞用路人之死亡機率變化為何？ 由約 10%增加至約 30%，速度增加之影響呈線性比例。 由約 10%大幅增加至約 80%，速度增加之影響呈非線性陡升。 由約 20%增加至約 50%，速度增加之影響相對溫和。。">
+<div class="qhead"><span class="qid">題號 316</span></div>
+<div class="stem">根據國際 OECD研究，汽車與行人、機車或自行車發生碰撞時，當撞擊速度由時速 30 公里提高至時速 50 公里，被撞用路人之死亡機率變化為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>由約 10%增加至約 30%，速度增加之影響呈線性比例。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>由約 10%大幅增加至約 80%，速度增加之影響呈非線性陡升。</span></li><li class="choice"><span class="choice-num">(3)</span><span>由約 20%增加至約 50%，速度增加之影響相對溫和。。</span></li></ol>
+</article><article class="question" data-qid="450" data-search="所謂二段式開門方法，是： 將車門分兩次開，不必確認前後方有無來車及行人。 先打開車門少許，並確認前後方無來車及行人後再打開。 以上皆是。。">
+<div class="qhead"><span class="qid">題號 450</span></div>
+<div class="stem">所謂二段式開門方法，是：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>將車門分兩次開，不必確認前後方有無來車及行人。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>先打開車門少許，並確認前後方無來車及行人後再打開。</span></li><li class="choice"><span class="choice-num">(3)</span><span>以上皆是。。</span></li></ol>
+</article><article class="question" data-qid="459" data-search="行經無號誌且未劃分支幹道的路口時，若汽車駕駛人要左轉，而對向有一輛右轉車同時要進入同一個車道，以下敘述何者正確？ 體積較大的車輛優先通行，體積小的應禮讓。 左轉彎車應禮讓右轉彎車先行。 右轉彎車應禮讓左轉彎車先行。">
+<div class="qhead"><span class="qid">題號 459</span></div>
+<div class="stem">行經無號誌且未劃分支幹道的路口時，若汽車駕駛人要左轉，而對向有一輛右轉車同時要進入同一個車道，以下敘述何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>體積較大的車輛優先通行，體積小的應禮讓。</span></li><li class="choice"><span class="choice-num">(2)</span><span>左轉彎車應禮讓右轉彎車先行。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>右轉彎車應禮讓左轉彎車先行。</span></li></ol>
+</article><article class="question" data-qid="460" data-search="在無號誌交岔路口，橫線有分向標線、縱線未劃設分向標線，但同為雙向各有 1 車道之道路， 兩車皆為轉彎車，請問要如何行駛？ 行駛於未劃設分向標線者應停讓有分向標線者先行。 少線道車應主動停讓多線道車先行。 左方車應停讓右方車先行。">
+<div class="qhead"><span class="qid">題號 460</span></div>
+<div class="stem">在無號誌交岔路口，橫線有分向標線、縱線未劃設分向標線，但同為雙向各有 1 車道之道路， 兩車皆為轉彎車，請問要如何行駛？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>行駛於未劃設分向標線者應停讓有分向標線者先行。</span></li><li class="choice"><span class="choice-num">(2)</span><span>少線道車應主動停讓多線道車先行。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>左方車應停讓右方車先行。</span></li></ol>
+</article><article class="question" data-qid="462" data-search="汽車駕駛人在多車道路段行駛，準備在路口左轉。下列哪一種駕駛行為是錯誤且具有危險性？ 進入路口中心點處再行轉彎，不占用對向車道。 從外側第二車道直接「大迴轉」或橫跨車道左轉。 在設有左轉專用道時，提早切換進入專用道等候。">
+<div class="qhead"><span class="qid">題號 462</span></div>
+<div class="stem">汽車駕駛人在多車道路段行駛，準備在路口左轉。下列哪一種駕駛行為是錯誤且具有危險性？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>進入路口中心點處再行轉彎，不占用對向車道。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>從外側第二車道直接「大迴轉」或橫跨車道左轉。</span></li><li class="choice"><span class="choice-num">(3)</span><span>在設有左轉專用道時，提早切換進入專用道等候。</span></li></ol>
+</article><article class="question" data-qid="478" data-search="汽車準備右轉彎前，應於多少距離前換入最右側車道並顯示方向燈？ 10 公尺。 30 公尺。 到達路口再換。">
+<div class="qhead"><span class="qid">題號 478</span></div>
+<div class="stem">汽車準備右轉彎前，應於多少距離前換入最右側車道並顯示方向燈？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>10 公尺。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>30 公尺。</span></li><li class="choice"><span class="choice-num">(3)</span><span>到達路口再換。</span></li></ol>
+</article><article class="question" data-qid="483" data-search="有關行車速度，依速限標誌或標線之規定，無速限標誌或標線者，下列敘述何者錯誤？ 行車時速不得超過 50 公里，設有快慢車道分隔線之慢車道亦同。 未劃設車道線、行車分向線或分向限制線之道路，時速不得超過 30 公里。 行經設有彎道、隧道、學校、醫院標誌之路段、無號誌之交岔路口及其他人車擁擠處所，均應減速慢行，作隨時停車之準備。">
+<div class="qhead"><span class="qid">題號 483</span></div>
+<div class="stem">有關行車速度，依速限標誌或標線之規定，無速限標誌或標線者，下列敘述何者錯誤？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>行車時速不得超過 50 公里，設有快慢車道分隔線之慢車道亦同。</span></li><li class="choice"><span class="choice-num">(2)</span><span>未劃設車道線、行車分向線或分向限制線之道路，時速不得超過 30 公里。</span></li><li class="choice"><span class="choice-num">(3)</span><span>行經設有彎道、隧道、學校、醫院標誌之路段、無號誌之交岔路口及其他人車擁擠處所，均應減速慢行，作隨時停車之準備。</span></li></ol>
+</article><article class="question" data-qid="484" data-search="兩輛汽車從不同方向，同時抵達無號誌路口且進入路口行向車道數相同，關於通行的優先權， 下列何者正確？ 左方為直行車，右方為轉彎車，左方車應讓右方車先行。 兩車均為直行車，左方車應讓右方車先行。 兩車均為直行車，右方車應讓左方車先行。">
+<div class="qhead"><span class="qid">題號 484</span></div>
+<div class="stem">兩輛汽車從不同方向，同時抵達無號誌路口且進入路口行向車道數相同，關於通行的優先權， 下列何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>左方為直行車，右方為轉彎車，左方車應讓右方車先行。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>兩車均為直行車，左方車應讓右方車先行。</span></li><li class="choice"><span class="choice-num">(3)</span><span>兩車均為直行車，右方車應讓左方車先行。</span></li></ol>
+</article><article class="question" data-qid="504" data-search="汽車駕駛人行駛至交岔路口轉彎時應： 多車道路口可以由外側車道直接左轉。 左轉彎時，距交岔路口 30 公尺前顯示方向燈，換入內車道或左轉車道。 多車道路口內側車道車輛，可以直接右轉。">
+<div class="qhead"><span class="qid">題號 504</span></div>
+<div class="stem">汽車駕駛人行駛至交岔路口轉彎時應：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>多車道路口可以由外側車道直接左轉。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>左轉彎時，距交岔路口 30 公尺前顯示方向燈，換入內車道或左轉車道。</span></li><li class="choice"><span class="choice-num">(3)</span><span>多車道路口內側車道車輛，可以直接右轉。</span></li></ol>
+</article><article class="question" data-qid="554" data-search="對向行駛之左右轉彎車輛，已轉彎須進入同一車道時應讓： 右轉彎車輛先行。 左轉彎車輛先行。 同時前進。">
+<div class="qhead"><span class="qid">題號 554</span></div>
+<div class="stem">對向行駛之左右轉彎車輛，已轉彎須進入同一車道時應讓：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>右轉彎車輛先行。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>左轉彎車輛先行。</span></li><li class="choice"><span class="choice-num">(3)</span><span>同時前進。</span></li></ol>
+</article><article class="question" data-qid="585" data-search="有關汽車行駛至交岔路口，其行進、轉彎之規定，以下敘述何者錯誤？ 由同向二車道進入一車道，無直行車道者，內車道之車輛應讓外車道之車輛先行。 由同向二車道進入一車道，應讓直行車道之車輛先行。 在交通壅塞時，內、外側車道車輛應互為禮讓，逐車交互輪流行駛，並保持安全距離及間隔。">
+<div class="qhead"><span class="qid">題號 585</span></div>
+<div class="stem">有關汽車行駛至交岔路口，其行進、轉彎之規定，以下敘述何者錯誤？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>由同向二車道進入一車道，無直行車道者，內車道之車輛應讓外車道之車輛先行。</span></li><li class="choice"><span class="choice-num">(2)</span><span>由同向二車道進入一車道，應讓直行車道之車輛先行。</span></li><li class="choice"><span class="choice-num">(3)</span><span>在交通壅塞時，內、外側車道車輛應互為禮讓，逐車交互輪流行駛，並保持安全距離及間隔。</span></li></ol>
+</article><article class="question" data-qid="586" data-search="車輛轉彎時，下列何者不正確： 汽車在同向二車道以上之道路，除準備左轉彎外，不得在內側車道行駛。 設有左右轉彎專用車道之交岔路口，直行車不得占用轉彎專用車道。 於無號誌管制路口且車道數相同時，轉彎車應暫停讓直行車先行。">
+<div class="qhead"><span class="qid">題號 586</span></div>
+<div class="stem">車輛轉彎時，下列何者不正確：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>汽車在同向二車道以上之道路，除準備左轉彎外，不得在內側車道行駛。</span></li><li class="choice"><span class="choice-num">(2)</span><span>設有左右轉彎專用車道之交岔路口，直行車不得占用轉彎專用車道。</span></li><li class="choice"><span class="choice-num">(3)</span><span>於無號誌管制路口且車道數相同時，轉彎車應暫停讓直行車先行。</span></li></ol>
+</article><article class="question" data-qid="587" data-search="有關汽車駕駛人轉彎或變換車道時之規定，以下敘述何者正確？ 行經交岔路口未達中心處，占用來車道搶先左轉彎，處新臺幣 600～1,800 元。 設有左、右轉彎專用車道之交岔路口，直行車可行駛在專用車道上。 多車道左轉彎，不得駛入內側車道。">
+<div class="qhead"><span class="qid">題號 587</span></div>
+<div class="stem">有關汽車駕駛人轉彎或變換車道時之規定，以下敘述何者正確？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>行經交岔路口未達中心處，占用來車道搶先左轉彎，處新臺幣 600～1,800 元。</span></li><li class="choice"><span class="choice-num">(2)</span><span>設有左、右轉彎專用車道之交岔路口，直行車可行駛在專用車道上。</span></li><li class="choice"><span class="choice-num">(3)</span><span>多車道左轉彎，不得駛入內側車道。</span></li></ol>
+</article><article class="question" data-qid="614" data-search="在內側車道行駛之車輛，欲在交岔路口左轉彎時，應該： 在交岔路口 30 公尺前顯示方向燈，行至交岔路口中心處左轉。 行至交岔路口處即行左轉。 顯示右方向燈左轉。">
+<div class="qhead"><span class="qid">題號 614</span></div>
+<div class="stem">在內側車道行駛之車輛，欲在交岔路口左轉彎時，應該：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>在交岔路口 30 公尺前顯示方向燈，行至交岔路口中心處左轉。</span></li><li class="choice"><span class="choice-num">(2)</span><span>行至交岔路口處即行左轉。</span></li><li class="choice"><span class="choice-num">(3)</span><span>顯示右方向燈左轉。</span></li></ol>
+</article><article class="question" data-qid="619" data-search="大型汽車在同向三車道以上之道路，除準備左轉彎外，不得行駛： 內側車道。 中線車道。 外側車道。">
+<div class="qhead"><span class="qid">題號 619</span></div>
+<div class="stem">大型汽車在同向三車道以上之道路，除準備左轉彎外，不得行駛：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>內側車道。</span></li><li class="choice"><span class="choice-num">(2)</span><span>中線車道。</span></li><li class="choice"><span class="choice-num">(3)</span><span>外側車道。</span></li></ol>
+</article><article class="question" data-qid="620" data-search="對向行駛之汽車，左右轉彎進入二車道以上之道路時： 左轉彎車應進入外側車道，右轉彎車進入內側車道。 右轉彎車應進入外側車道，左轉彎車應進入內側車道。 任意行駛不受限制。">
+<div class="qhead"><span class="qid">題號 620</span></div>
+<div class="stem">對向行駛之汽車，左右轉彎進入二車道以上之道路時：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>左轉彎車應進入外側車道，右轉彎車進入內側車道。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>右轉彎車應進入外側車道，左轉彎車應進入內側車道。</span></li><li class="choice"><span class="choice-num">(3)</span><span>任意行駛不受限制。</span></li></ol>
+</article><article class="question" data-qid="698" data-search="下列敘述何者錯誤？ 大型汽車在同向 3 車道以上之道路，除準備左轉彎外，不得在內側車道行駛。 小型汽車內外側車道均可行駛，行駛速度較慢時，應在外側車道行駛，且得任意變換車道。 除準備停車或臨時停車外，不得駛出路面邊線或跨越兩條車道行駛。">
+<div class="qhead"><span class="qid">題號 698</span></div>
+<div class="stem">下列敘述何者錯誤？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>大型汽車在同向 3 車道以上之道路，除準備左轉彎外，不得在內側車道行駛。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>小型汽車內外側車道均可行駛，行駛速度較慢時，應在外側車道行駛，且得任意變換車道。</span></li><li class="choice"><span class="choice-num">(3)</span><span>除準備停車或臨時停車外，不得駛出路面邊線或跨越兩條車道行駛。</span></li></ol>
+</article><article class="question" data-qid="699" data-search="汽車行駛中，欲超越同一車道之前車時應顯示左方向燈並與前車左側保持多少距離以上之間隔超過，行至安全距離後，再顯示右方向燈駛入原行路線： 0.5 公尺。 1 公尺。 2 公尺">
+<div class="qhead"><span class="qid">題號 699</span></div>
+<div class="stem">汽車行駛中，欲超越同一車道之前車時應顯示左方向燈並與前車左側保持多少距離以上之間隔超過，行至安全距離後，再顯示右方向燈駛入原行路線：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>0.5 公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>1 公尺。</span></li><li class="choice"><span class="choice-num">(3)</span><span>2 公尺</span></li></ol>
+</article><article class="question" data-qid="700" data-search="在未設有快慢車道分隔島之道路，四輪以上汽車及大型重型機車在劃有快慢車道分隔線之道路行駛，下列何種行為不得行駛慢車道？ 起駛。 準備轉彎。 超車。">
+<div class="qhead"><span class="qid">題號 700</span></div>
+<div class="stem">在未設有快慢車道分隔島之道路，四輪以上汽車及大型重型機車在劃有快慢車道分隔線之道路行駛，下列何種行為不得行駛慢車道？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>起駛。</span></li><li class="choice"><span class="choice-num">(2)</span><span>準備轉彎。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>超車。</span></li></ol>
+</article><article class="question" data-qid="720" data-search="關於「路寬變更線」之功能，下列敘述何者正確？ 以黃色虛線標繪，警告前方道路正在施工，應減速慢行。 警告車輛駕駛人路寬縮減或車道數減少，應謹慎行車，並禁止超車。其線型為雙黃實線或黃虛線與黃實線並列，線寬與間隔均為 10 公分。 以雙白實線標繪於車道減少處，禁止車輛跨越變換車道。。">
+<div class="qhead"><span class="qid">題號 720</span></div>
+<div class="stem">關於「路寬變更線」之功能，下列敘述何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>以黃色虛線標繪，警告前方道路正在施工，應減速慢行。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>警告車輛駕駛人路寬縮減或車道數減少，應謹慎行車，並禁止超車。其線型為雙黃實線或黃虛線與黃實線並列，線寬與間隔均為 10 公分。</span></li><li class="choice"><span class="choice-num">(3)</span><span>以雙白實線標繪於車道減少處，禁止車輛跨越變換車道。。</span></li></ol>
+</article><article class="question" data-qid="737" data-search="欲超越同一車道之前車時，應如何處理？ 只要有足夠安全距離，就可以直接加速超車。 先鳴喇叭 2 單響或變換燈光 1 次，俟前車減速靠邊或以手勢表示允讓後，始得超越。 只需靠近前車並閃大燈告知即可超車，不需等待回應。">
+<div class="qhead"><span class="qid">題號 737</span></div>
+<div class="stem">欲超越同一車道之前車時，應如何處理？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>只要有足夠安全距離，就可以直接加速超車。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>先鳴喇叭 2 單響或變換燈光 1 次，俟前車減速靠邊或以手勢表示允讓後，始得超越。</span></li><li class="choice"><span class="choice-num">(3)</span><span>只需靠近前車並閃大燈告知即可超車，不需等待回應。</span></li></ol>
+</article><article class="question" data-qid="738" data-search="汽車行駛於未劃設慢車道之雙向二車道，在劃有行車分向線之直線路段，有關超車的敘述，下列何者正確？ 禁止超車，也不得駛越行車分向線。 超車時得駛越行車分向線，但不能並行競駛。 超車時得駛越行車分向線，也可並行競駛。">
+<div class="qhead"><span class="qid">題號 738</span></div>
+<div class="stem">汽車行駛於未劃設慢車道之雙向二車道，在劃有行車分向線之直線路段，有關超車的敘述，下列何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>禁止超車，也不得駛越行車分向線。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>超車時得駛越行車分向線，但不能並行競駛。</span></li><li class="choice"><span class="choice-num">(3)</span><span>超車時得駛越行車分向線，也可並行競駛。</span></li></ol>
+</article><article class="question" data-qid="741" data-search="依速限標誌或標線之規定，在無標誌或標線下，行車速度不得超過多少公里？ 70 公里。 60 公里。 50 公里。">
+<div class="qhead"><span class="qid">題號 741</span></div>
+<div class="stem">依速限標誌或標線之規定，在無標誌或標線下，行車速度不得超過多少公里？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>70 公里。</span></li><li class="choice"><span class="choice-num">(2)</span><span>60 公里。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>50 公里。</span></li></ol>
+</article><article class="question" data-qid="762" data-search="汽車在劃有分向限制線雙向二車道之路段行駛？ 對向車道無車時，可駛入對向車道超車。 禁止駛入對向車道。 可任意行駛於任何車道。">
+<div class="qhead"><span class="qid">題號 762</span></div>
+<div class="stem">汽車在劃有分向限制線雙向二車道之路段行駛？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>對向車道無車時，可駛入對向車道超車。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>禁止駛入對向車道。</span></li><li class="choice"><span class="choice-num">(3)</span><span>可任意行駛於任何車道。</span></li></ol>
+</article><article class="question" data-qid="763" data-search="同向車道間繪有白色雙實線「雙邊禁止變換車道線」，最常設置於下列何種路段？ 接近路口處、匝道出入口或事故易發路段，防止車輛任意變換車道影響交通安全。 車流量較低之郊區直線路段，提醒駕駛人保持於同一車道行駛。 所有設有中央分隔島之道路，用以區分對向車流方向。">
+<div class="qhead"><span class="qid">題號 763</span></div>
+<div class="stem">同向車道間繪有白色雙實線「雙邊禁止變換車道線」，最常設置於下列何種路段？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>接近路口處、匝道出入口或事故易發路段，防止車輛任意變換車道影響交通安全。</span></li><li class="choice"><span class="choice-num">(2)</span><span>車流量較低之郊區直線路段，提醒駕駛人保持於同一車道行駛。</span></li><li class="choice"><span class="choice-num">(3)</span><span>所有設有中央分隔島之道路，用以區分對向車流方向。</span></li></ol>
+</article><article class="question" data-qid="776" data-search="駕駛人行駛於劃有黃色雙實線「分向限制線」之路段，欲左轉進入對向之巷道，應如何處置？ 開啟左轉方向燈後即可跨越雙黃實線左轉駛入巷道。 不得跨越雙黃實線，應另尋適當合法路口迴轉或繞道前往。 於車速低於 20 公里時，可短暫跨越雙黃實線左轉進入。">
+<div class="qhead"><span class="qid">題號 776</span></div>
+<div class="stem">駕駛人行駛於劃有黃色雙實線「分向限制線」之路段，欲左轉進入對向之巷道，應如何處置？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>開啟左轉方向燈後即可跨越雙黃實線左轉駛入巷道。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>不得跨越雙黃實線，應另尋適當合法路口迴轉或繞道前往。</span></li><li class="choice"><span class="choice-num">(3)</span><span>於車速低於 20 公里時，可短暫跨越雙黃實線左轉進入。</span></li></ol>
+</article><article class="question" data-qid="784" data-search="在雙向二車道上〝欲〞超越前行車，發現對向有來車，你應該： 立即減速放棄超車。 馬上加速搶先超越。 按鳴喇叭，促來車減速或避讓。">
+<div class="qhead"><span class="qid">題號 784</span></div>
+<div class="stem">在雙向二車道上〝欲〞超越前行車，發現對向有來車，你應該：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>立即減速放棄超車。</span></li><li class="choice"><span class="choice-num">(2)</span><span>馬上加速搶先超越。</span></li><li class="choice"><span class="choice-num">(3)</span><span>按鳴喇叭，促來車減速或避讓。</span></li></ol>
+</article><article class="question" data-qid="787" data-search="行車速度，依速限標誌或標線之規定，無標誌或標線者，行車時速不得超過 50 公里。但在未劃設車道線、行車分向線或分向限制線之道路，時速不得超過： 40 公里。 50 公里。 30 公里。">
+<div class="qhead"><span class="qid">題號 787</span></div>
+<div class="stem">行車速度，依速限標誌或標線之規定，無標誌或標線者，行車時速不得超過 50 公里。但在未劃設車道線、行車分向線或分向限制線之道路，時速不得超過：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>40 公里。</span></li><li class="choice"><span class="choice-num">(2)</span><span>50 公里。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>30 公里。</span></li></ol>
+</article><article class="question" data-qid="790" data-search="汽車在同向二車道以上道路，速度較慢之小型汽車，應行駛： 內側車道。 外側車道。 慢車道。">
+<div class="qhead"><span class="qid">題號 790</span></div>
+<div class="stem">汽車在同向二車道以上道路，速度較慢之小型汽車，應行駛：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>內側車道。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>外側車道。</span></li><li class="choice"><span class="choice-num">(3)</span><span>慢車道。</span></li></ol>
+</article><article class="question" data-qid="791" data-search="在同向二車道以上之道路，小型車應行駛於： 內側車道。 外側車道。 內外側車道均可，但不得任意變換車道。">
+<div class="qhead"><span class="qid">題號 791</span></div>
+<div class="stem">在同向二車道以上之道路，小型車應行駛於：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>內側車道。</span></li><li class="choice"><span class="choice-num">(2)</span><span>外側車道。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>內外側車道均可，但不得任意變換車道。</span></li></ol>
+</article><article class="question" data-qid="794" data-search="汽車在同一車道行駛時，後車與前車之間，應保持： 1 公尺以上。 5 公尺以上。 隨時可以煞停之距離。">
+<div class="qhead"><span class="qid">題號 794</span></div>
+<div class="stem">汽車在同一車道行駛時，後車與前車之間，應保持：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>1 公尺以上。</span></li><li class="choice"><span class="choice-num">(2)</span><span>5 公尺以上。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>隨時可以煞停之距離。</span></li></ol>
+</article><article class="question" data-qid="800" data-search="汽車在雙向二車道並劃有分向限制線之路段： 不得駛入來車之車道內。 可以駛入來車之車道內。 如前無來車，即可駛入來車之車道內。">
+<div class="qhead"><span class="qid">題號 800</span></div>
+<div class="stem">汽車在雙向二車道並劃有分向限制線之路段：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>不得駛入來車之車道內。</span></li><li class="choice"><span class="choice-num">(2)</span><span>可以駛入來車之車道內。</span></li><li class="choice"><span class="choice-num">(3)</span><span>如前無來車，即可駛入來車之車道內。</span></li></ol>
+</article><article class="question" data-qid="801" data-search="汽車會車時，相互之間隔，不得少於： 2 公尺。 1 公尺。 半公尺。">
+<div class="qhead"><span class="qid">題號 801</span></div>
+<div class="stem">汽車會車時，相互之間隔，不得少於：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>2 公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>1 公尺。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>半公尺。</span></li></ol>
+</article><article class="question" data-qid="819" data-search="行駛於長度 4 公里以上或經管理機關公告之隧道時小型車應保持： 40 公尺。 50 公尺。 60 公尺。以上之行車安全距離。">
+<div class="qhead"><span class="qid">題號 819</span></div>
+<div class="stem">行駛於長度 4 公里以上或經管理機關公告之隧道時小型車應保持：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>40 公尺。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>50 公尺。</span></li><li class="choice"><span class="choice-num">(3)</span><span>60 公尺。以上之行車安全距離。</span></li></ol>
+</article><article class="question" data-qid="820" data-search="汽車行駛於長度 4 公里以上或經管理機關公告之隧道內因隧道壅塞、事故導致車速低於每小時 20 公里或停止時，仍應保持： 20 公尺。 30 公尺。 50 公尺。 以上之安全距離。">
+<div class="qhead"><span class="qid">題號 820</span></div>
+<div class="stem">汽車行駛於長度 4 公里以上或經管理機關公告之隧道內因隧道壅塞、事故導致車速低於每小時 20 公里或停止時，仍應保持：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>20 公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>30 公尺。</span></li><li class="choice"><span class="choice-num">(3)</span><span>50 公尺。 以上之安全距離。</span></li></ol>
+</article><article class="question" data-qid="821" data-search="行駛郊區道路，該路段如未設有速限標誌： 可隨自己喜好開車。 趕時間可超速行駛。 時速不得超過 50 公里。">
+<div class="qhead"><span class="qid">題號 821</span></div>
+<div class="stem">行駛郊區道路，該路段如未設有速限標誌：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>可隨自己喜好開車。</span></li><li class="choice"><span class="choice-num">(2)</span><span>趕時間可超速行駛。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>時速不得超過 50 公里。</span></li></ol>
+</article><article class="question" data-qid="825" data-search="行駛於長度 4 公里以上或經管理機關公告之隧道時大型車應保持： 40 公尺。 50 公尺。 100 公尺。 以上之行車安全距離。">
+<div class="qhead"><span class="qid">題號 825</span></div>
+<div class="stem">行駛於長度 4 公里以上或經管理機關公告之隧道時大型車應保持：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>40 公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>50 公尺。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>100 公尺。 以上之行車安全距離。</span></li></ol>
+</article><article class="question" data-qid="826" data-search="汽車駕駛人行駛於快車道，若有微型電動二輪車靠近時應? 不予理會繼續行駛長按喇叭，以資警惕減速並注意其行車動向。">
+<div class="qhead"><span class="qid">題號 826</span></div>
+<div class="stem">汽車駕駛人行駛於快車道，若有微型電動二輪車靠近時應?</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>不予理會繼續行駛</span></li><li class="choice"><span class="choice-num">(2)</span><span>長按喇叭，以資警惕</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>減速並注意其行車動向。</span></li></ol>
+</article><article class="question" data-qid="831" data-search="汽車駕駛人行駛在設有「慢車道」的同向二車道上，準備右轉進入路口前，必須先從快車道變換至慢車道。下列何項駕駛行為正確？ 只要慢車道沒車，可以不打方向燈直接快速切入， 以免擋到後方快車道的車流。 慢車道屬於次要車道，快車道車輛擁有優先路權，變換車道時不須注意安全距離。 應先顯示右方向燈，主動讓慢車道上的直行車（如機車、自行車） 優先通行，並在保持安全距離後變換車道。">
+<div class="qhead"><span class="qid">題號 831</span></div>
+<div class="stem">汽車駕駛人行駛在設有「慢車道」的同向二車道上，準備右轉進入路口前，必須先從快車道變換至慢車道。下列何項駕駛行為正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>只要慢車道沒車，可以不打方向燈直接快速切入， 以免擋到後方快車道的車流。</span></li><li class="choice"><span class="choice-num">(2)</span><span>慢車道屬於次要車道，快車道車輛擁有優先路權，變換車道時不須注意安全距離。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>應先顯示右方向燈，主動讓慢車道上的直行車（如機車、自行車） 優先通行，並在保持安全距離後變換車道。</span></li></ol>
+</article><article class="question" data-qid="833" data-search="車輛行駛於外側車道欲右轉彎時，應距交岔路口幾公尺前顯示方向燈或手勢？ 30 公尺。 50 公尺。 40 公尺。">
+<div class="qhead"><span class="qid">題號 833</span></div>
+<div class="stem">車輛行駛於外側車道欲右轉彎時，應距交岔路口幾公尺前顯示方向燈或手勢？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>30 公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>50 公尺。</span></li><li class="choice"><span class="choice-num">(3)</span><span>40 公尺。</span></li></ol>
+</article><article class="question" data-qid="839" data-search="行車欲超越前方車輛，除顯示方向燈外，應如何行駛才正確? 與前車右側保持半公尺以上之間隔。 與前車左側保持半公尺以上之間隔。 與前車左側保持 1 公尺以上之間隔。">
+<div class="qhead"><span class="qid">題號 839</span></div>
+<div class="stem">行車欲超越前方車輛，除顯示方向燈外，應如何行駛才正確?</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>與前車右側保持半公尺以上之間隔。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>與前車左側保持半公尺以上之間隔。</span></li><li class="choice"><span class="choice-num">(3)</span><span>與前車左側保持 1 公尺以上之間隔。</span></li></ol>
+</article><article class="question" data-qid="841" data-search="汽車起駛前，下列處置何者正確？ 不必顯示方向燈。 應按鳴喇叭 3 短聲。 應顯示方向燈。">
+<div class="qhead"><span class="qid">題號 841</span></div>
+<div class="stem">汽車起駛前，下列處置何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>不必顯示方向燈。</span></li><li class="choice"><span class="choice-num">(2)</span><span>應按鳴喇叭 3 短聲。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>應顯示方向燈。</span></li></ol>
+</article><article class="question" data-qid="849" data-search="汽車起駛前，應： 不必顯示方向燈。 按鳴喇叭 3 短聲。 顯示方向燈。">
+<div class="qhead"><span class="qid">題號 849</span></div>
+<div class="stem">汽車起駛前，應：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>不必顯示方向燈。</span></li><li class="choice"><span class="choice-num">(2)</span><span>按鳴喇叭 3 短聲。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>顯示方向燈。</span></li></ol>
+</article><article class="question" data-qid="852" data-search="夜間駕駛汽車行駛市區及會車或跟前車距離在 100 公尺以內時，為求安全： 戴有色眼鏡。 使用遠光燈。 使用近光燈。">
+<div class="qhead"><span class="qid">題號 852</span></div>
+<div class="stem">夜間駕駛汽車行駛市區及會車或跟前車距離在 100 公尺以內時，為求安全：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>戴有色眼鏡。</span></li><li class="choice"><span class="choice-num">(2)</span><span>使用遠光燈。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>使用近光燈。</span></li></ol>
+</article><article class="question" data-qid="916" data-search="汽車於速限超過每小時 40 公里之路段發生故障無法行駛時，應如何處置？？ 僅開啟危險警告燈即可。 於車後 30-100 公尺之路面上設置車輛故障標誌。 將車輛留在原地並立即離開。">
+<div class="qhead"><span class="qid">題號 916</span></div>
+<div class="stem">汽車於速限超過每小時 40 公里之路段發生故障無法行駛時，應如何處置？？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>僅開啟危險警告燈即可。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>於車後 30-100 公尺之路面上設置車輛故障標誌。</span></li><li class="choice"><span class="choice-num">(3)</span><span>將車輛留在原地並立即離開。</span></li></ol>
+</article><article class="question" data-qid="931" data-search="在行車時速 40 公里之路段汽車拋錨無法移置時： 應在車身後方 5-30 公尺之路面上，豎立車輛故障標誌。 開亮所有車燈，並時常連續按鳴喇叭。 顯示前後燈即可。">
+<div class="qhead"><span class="qid">題號 931</span></div>
+<div class="stem">在行車時速 40 公里之路段汽車拋錨無法移置時：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>應在車身後方 5-30 公尺之路面上，豎立車輛故障標誌。</span></li><li class="choice"><span class="choice-num">(2)</span><span>開亮所有車燈，並時常連續按鳴喇叭。</span></li><li class="choice"><span class="choice-num">(3)</span><span>顯示前後燈即可。</span></li></ol>
+</article><article class="question" data-qid="944" data-search="在同向二車道行車時，如遇機車行駛於與你同一車道的前方，你應： 鳴喇叭促其駛回慢車道。 直接併行超越之。 跟隨其後或從內側車道予以超車。">
+<div class="qhead"><span class="qid">題號 944</span></div>
+<div class="stem">在同向二車道行車時，如遇機車行駛於與你同一車道的前方，你應：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>鳴喇叭促其駛回慢車道。</span></li><li class="choice"><span class="choice-num">(2)</span><span>直接併行超越之。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>跟隨其後或從內側車道予以超車。</span></li></ol>
+</article>
+</section><section id="cat05" class="category">
+<div class="cat-title"><h2>05 行人、路口、轉彎與闖紅燈</h2><span>19 題</span></div>
+<article class="question" data-qid="165" data-search="汽車行駛至鐵路平交道，警鈴已噹噹響起，鐵路平交道號誌雙紅燈閃爍，此時若車輛因故停留於軌道區且無法駛離時，駕駛人最重要的保命處置程序為何？ 留在車上猛踩油門試圖脫困。 儘速按下「緊急按鈕」、或以手機撥打免付費緊急通報電話「1933」通知相關單位。 先下車尋找附近民眾幫忙將車輛推離。">
+<div class="qhead"><span class="qid">題號 165</span></div>
+<div class="stem">汽車行駛至鐵路平交道，警鈴已噹噹響起，鐵路平交道號誌雙紅燈閃爍，此時若車輛因故停留於軌道區且無法駛離時，駕駛人最重要的保命處置程序為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>留在車上猛踩油門試圖脫困。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>儘速按下「緊急按鈕」、或以手機撥打免付費緊急通報電話「1933」通知相關單位。</span></li><li class="choice"><span class="choice-num">(3)</span><span>先下車尋找附近民眾幫忙將車輛推離。</span></li></ol>
+</article><article class="question" data-qid="302" data-search="汽車駕駛人行至有燈光號誌管制之交岔路口闖紅燈，並因而肇事致人重傷時，關於駕駛執照處分下列何者正確？ 無須另為駕駛執照處分。 除依闖紅燈規定處罰外，並吊扣其駕駛執照 3 個月至 6 個月。 一律吊銷其駕駛執照，並終身不得再考領。">
+<div class="qhead"><span class="qid">題號 302</span></div>
+<div class="stem">汽車駕駛人行至有燈光號誌管制之交岔路口闖紅燈，並因而肇事致人重傷時，關於駕駛執照處分下列何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>無須另為駕駛執照處分。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>除依闖紅燈規定處罰外，並吊扣其駕駛執照 3 個月至 6 個月。</span></li><li class="choice"><span class="choice-num">(3)</span><span>一律吊銷其駕駛執照，並終身不得再考領。</span></li></ol>
+</article><article class="question" data-qid="448" data-search="綠燈時，開車行經行人穿越道，若遇行人不依號誌擅自穿越，下列敘述何者錯誤？ 行人處新臺幣 500 元罰鍰。 駕駛人若未停讓處新臺幣 1200 元罰鍰。 若導致駕駛人來不及反應而發生車禍，行人仍有責任。">
+<div class="qhead"><span class="qid">題號 448</span></div>
+<div class="stem">綠燈時，開車行經行人穿越道，若遇行人不依號誌擅自穿越，下列敘述何者錯誤？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>行人處新臺幣 500 元罰鍰。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>駕駛人若未停讓處新臺幣 1200 元罰鍰。</span></li><li class="choice"><span class="choice-num">(3)</span><span>若導致駕駛人來不及反應而發生車禍，行人仍有責任。</span></li></ol>
+</article><article class="question" data-qid="457" data-search="汽車駕駛人行近路口，未停讓行人穿越道上行人先行通過者，以下何者為錯誤？ 因而肇事致人重傷或死亡者，記違規點數 2 點。 處新臺幣 1,200 元至 6,000 元罰鍰。 不讓攜帶白色手杖或導盲犬之視障者先行通過,處新臺幣 2,400 元至 7,200 元罰鍰。">
+<div class="qhead"><span class="qid">題號 457</span></div>
+<div class="stem">汽車駕駛人行近路口，未停讓行人穿越道上行人先行通過者，以下何者為錯誤？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>因而肇事致人重傷或死亡者，記違規點數 2 點。</span></li><li class="choice"><span class="choice-num">(2)</span><span>處新臺幣 1,200 元至 6,000 元罰鍰。</span></li><li class="choice"><span class="choice-num">(3)</span><span>不讓攜帶白色手杖或導盲犬之視障者先行通過,處新臺幣 2,400 元至 7,200 元罰鍰。</span></li></ol>
+</article><article class="question" data-qid="458" data-search="汽車駕駛人在路口看到綠燈亮起準備左轉，此時行人穿越道線上仍有行人正緩慢過馬路，下列行為何項正確？ 在行人前方約 3 公尺處停車，保持完全靜止直到行人通過。 緩慢滑行靠近行人，趁行人過到分向線，可從行人後方加速穿越。 只要行人還沒走進自己的行車路徑， 就可以維持車速轉彎。">
+<div class="qhead"><span class="qid">題號 458</span></div>
+<div class="stem">汽車駕駛人在路口看到綠燈亮起準備左轉，此時行人穿越道線上仍有行人正緩慢過馬路，下列行為何項正確？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>在行人前方約 3 公尺處停車，保持完全靜止直到行人通過。</span></li><li class="choice"><span class="choice-num">(2)</span><span>緩慢滑行靠近行人，趁行人過到分向線，可從行人後方加速穿越。</span></li><li class="choice"><span class="choice-num">(3)</span><span>只要行人還沒走進自己的行車路徑， 就可以維持車速轉彎。</span></li></ol>
+</article><article class="question" data-qid="464" data-search="汽車駕駛人，駕駛汽車行近行人穿越道或其他依法可供行人穿越之交岔路口，不暫停讓行人先行通過，因而肇事致人受傷者，處新臺幣 18,000～36,000 元罰鍰，且其駕駛執照： 吊銷。 吊扣 6 個月～1 年。 吊扣 1～2 年。">
+<div class="qhead"><span class="qid">題號 464</span></div>
+<div class="stem">汽車駕駛人，駕駛汽車行近行人穿越道或其他依法可供行人穿越之交岔路口，不暫停讓行人先行通過，因而肇事致人受傷者，處新臺幣 18,000～36,000 元罰鍰，且其駕駛執照：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>吊銷。</span></li><li class="choice"><span class="choice-num">(2)</span><span>吊扣 6 個月～1 年。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>吊扣 1～2 年。</span></li></ol>
+</article><article class="question" data-qid="467" data-search="汽車駕駛人，駕駛汽車行近行人穿越道或其他依法可供行人穿越之交岔路口，遇有攜帶白手杖或導盲犬之視覺功能障礙者時，不暫停讓其先行通過者，處新臺幣： 600-1,800 元罰鍰。 1,200-6,000 元罰鍰。 2,400-7,200 元罰鍰。">
+<div class="qhead"><span class="qid">題號 467</span></div>
+<div class="stem">汽車駕駛人，駕駛汽車行近行人穿越道或其他依法可供行人穿越之交岔路口，遇有攜帶白手杖或導盲犬之視覺功能障礙者時，不暫停讓其先行通過者，處新臺幣：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>600-1,800 元罰鍰。</span></li><li class="choice"><span class="choice-num">(2)</span><span>1,200-6,000 元罰鍰。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>2,400-7,200 元罰鍰。</span></li></ol>
+</article><article class="question" data-qid="470" data-search="駕駛人行近行人穿越道未依規定停讓行人，導致行人受傷或死亡，其法律責任為何？ 須繳納罰鍰並參加講習。 罰鍰並吊扣駕駛執照 1 至 2 年。 罰鍰、吊扣/吊銷其駕駛執照， 依法負刑事責任，並加重其刑至二分之一。">
+<div class="qhead"><span class="qid">題號 470</span></div>
+<div class="stem">駕駛人行近行人穿越道未依規定停讓行人，導致行人受傷或死亡，其法律責任為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>須繳納罰鍰並參加講習。</span></li><li class="choice"><span class="choice-num">(2)</span><span>罰鍰並吊扣駕駛執照 1 至 2 年。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>罰鍰、吊扣/吊銷其駕駛執照， 依法負刑事責任，並加重其刑至二分之一。</span></li></ol>
+</article><article class="question" data-qid="494" data-search="汽車左轉時，若超越停止線前燈號已轉換為紅燈，下列敘述何者正確？ 屬「左轉彎未依規定」，處新臺幣 600 元罰鍰。 屬「闖紅燈」，因其超越停止線瞬間燈號為紅燈。 視為 「路口餘裕通行」，不予處罰。">
+<div class="qhead"><span class="qid">題號 494</span></div>
+<div class="stem">汽車左轉時，若超越停止線前燈號已轉換為紅燈，下列敘述何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>屬「左轉彎未依規定」，處新臺幣 600 元罰鍰。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>屬「闖紅燈」，因其超越停止線瞬間燈號為紅燈。</span></li><li class="choice"><span class="choice-num">(3)</span><span>視為 「路口餘裕通行」，不予處罰。</span></li></ol>
+</article><article class="question" data-qid="507" data-search="當汽車行近行人穿越道，行人穿越道上已有行人通行，汽車應與行人保持多少距離才不違規？ 應至少保持 3 公尺之距離。 應保持 1 公尺之安全避讓距離。 只要車輛不與行人發生碰撞，並無特定距離限制。">
+<div class="qhead"><span class="qid">題號 507</span></div>
+<div class="stem">當汽車行近行人穿越道，行人穿越道上已有行人通行，汽車應與行人保持多少距離才不違規？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>應至少保持 3 公尺之距離。</span></li><li class="choice"><span class="choice-num">(2)</span><span>應保持 1 公尺之安全避讓距離。</span></li><li class="choice"><span class="choice-num">(3)</span><span>只要車輛不與行人發生碰撞，並無特定距離限制。</span></li></ol>
+</article><article class="question" data-qid="512" data-search="汽車駕駛人行至有燈光號誌管制之大眾捷運系統車輛共用通行交岔路口，紅燈右轉者，處罰鍰新臺幣多少 ？ 600~1,800 元。 900~2,700 元。 1,200~3,600 元。">
+<div class="qhead"><span class="qid">題號 512</span></div>
+<div class="stem">汽車駕駛人行至有燈光號誌管制之大眾捷運系統車輛共用通行交岔路口，紅燈右轉者，處罰鍰新臺幣多少 ？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>600~1,800 元。</span></li><li class="choice"><span class="choice-num">(2)</span><span>900~2,700 元。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>1,200~3,600 元。</span></li></ol>
+</article><article class="question" data-qid="558" data-search="汽車駕駛人行經有燈光號誌管制之交岔路口闖紅燈，經當場舉發者： 罰鍰新臺幣 3,600~5,400 元。 吊扣駕照 1 個月。 罰鍰新臺幣 1,800~5,400 元並予違規記點。">
+<div class="qhead"><span class="qid">題號 558</span></div>
+<div class="stem">汽車駕駛人行經有燈光號誌管制之交岔路口闖紅燈，經當場舉發者：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>罰鍰新臺幣 3,600~5,400 元。</span></li><li class="choice"><span class="choice-num">(2)</span><span>吊扣駕照 1 個月。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>罰鍰新臺幣 1,800~5,400 元並予違規記點。</span></li></ol>
+</article><article class="question" data-qid="559" data-search="汽車駕駛人，駕車闖紅燈，經當場舉發，除罰鍰外並記違規點數： 1 點。 2 點。 3 點。">
+<div class="qhead"><span class="qid">題號 559</span></div>
+<div class="stem">汽車駕駛人，駕車闖紅燈，經當場舉發，除罰鍰外並記違規點數：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>1 點。</span></li><li class="choice"><span class="choice-num">(2)</span><span>2 點。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>3 點。</span></li></ol>
+</article><article class="question" data-qid="564" data-search="汽車駕駛人，行經有燈光號誌管制之大眾捷運系統車輛共用通行交岔路口闖紅燈，經當場舉發者： 罰鍰新臺幣 1,800～5,400 元並予違規記點。 吊扣駕照 1 個月。 罰鍰新臺幣 3,600～10,800 元並予違規記點。">
+<div class="qhead"><span class="qid">題號 564</span></div>
+<div class="stem">汽車駕駛人，行經有燈光號誌管制之大眾捷運系統車輛共用通行交岔路口闖紅燈，經當場舉發者：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>罰鍰新臺幣 1,800～5,400 元並予違規記點。</span></li><li class="choice"><span class="choice-num">(2)</span><span>吊扣駕照 1 個月。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>罰鍰新臺幣 3,600～10,800 元並予違規記點。</span></li></ol>
+</article><article class="question" data-qid="568" data-search="汽車駕駛人，駕駛汽車行近行人穿越道或其他依法可供行人穿越之交岔路口，有行人穿越時，不暫停讓行人先行通過，經當場舉發者，處： 罰鍰新臺幣 1,200~3,600 元並違規記點。 罰鍰新臺幣 1,200~6,000 元並違規記點及參加道安講習。 罰鍰新臺幣 1,800~5,400 元並違規記點。">
+<div class="qhead"><span class="qid">題號 568</span></div>
+<div class="stem">汽車駕駛人，駕駛汽車行近行人穿越道或其他依法可供行人穿越之交岔路口，有行人穿越時，不暫停讓行人先行通過，經當場舉發者，處：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>罰鍰新臺幣 1,200~3,600 元並違規記點。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>罰鍰新臺幣 1,200~6,000 元並違規記點及參加道安講習。</span></li><li class="choice"><span class="choice-num">(3)</span><span>罰鍰新臺幣 1,800~5,400 元並違規記點。</span></li></ol>
+</article><article class="question" data-qid="569" data-search="汽車駕駛人，駕駛汽車行近行人穿越道或其他依法可供行人穿越之交岔路口，有行人穿越時，不暫停讓行人先行通過，因而肇事致人受傷者，處： 罰鍰新臺幣 1,200~6,000 元並違規記點。 罰鍰新臺幣 7,200~24,000 元並吊扣駕照 1 年。 罰鍰新臺幣 18,000~36,000 元並吊扣駕照 1 年至 2 年及參加道安講習。">
+<div class="qhead"><span class="qid">題號 569</span></div>
+<div class="stem">汽車駕駛人，駕駛汽車行近行人穿越道或其他依法可供行人穿越之交岔路口，有行人穿越時，不暫停讓行人先行通過，因而肇事致人受傷者，處：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>罰鍰新臺幣 1,200~6,000 元並違規記點。</span></li><li class="choice"><span class="choice-num">(2)</span><span>罰鍰新臺幣 7,200~24,000 元並吊扣駕照 1 年。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>罰鍰新臺幣 18,000~36,000 元並吊扣駕照 1 年至 2 年及參加道安講習。</span></li></ol>
+</article><article class="question" data-qid="847" data-search="汽車行駛至交岔路口欲轉彎時，應距交岔路口多少公尺前顯示方向燈： 10 公尺。 20 公尺。 30 公尺。">
+<div class="qhead"><span class="qid">題號 847</span></div>
+<div class="stem">汽車行駛至交岔路口欲轉彎時，應距交岔路口多少公尺前顯示方向燈：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>10 公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>20 公尺。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>30 公尺。</span></li></ol>
+</article><article class="question" data-qid="1089" data-search="駕駛自小客車接近路口，號誌轉為紅燈，前方枕木紋行人穿越道上有行人正在通行。下列關於停車等候位置的敘述，何者最正確？ 只要車輛前輪未壓到第一條白色枕木紋標線即可。 車輛前緣應停在行人穿越道前方至少 3 公尺以上處，約相當於一個車道寬或四條枕木紋以上的距離。 將車輛停在行人穿越道的枕木紋標線之間等候，以便綠燈時能最快起步。">
+<div class="qhead"><span class="qid">題號 1089</span></div>
+<div class="stem">駕駛自小客車接近路口，號誌轉為紅燈，前方枕木紋行人穿越道上有行人正在通行。下列關於停車等候位置的敘述，何者最正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>只要車輛前輪未壓到第一條白色枕木紋標線即可。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>車輛前緣應停在行人穿越道前方至少 3 公尺以上處，約相當於一個車道寬或四條枕木紋以上的距離。</span></li><li class="choice"><span class="choice-num">(3)</span><span>將車輛停在行人穿越道的枕木紋標線之間等候，以便綠燈時能最快起步。</span></li></ol>
+</article><article class="question" data-qid="1090" data-search="駕車行經無號誌路口，發現前方設有枕木紋行人穿越道，行人正踏上穿越道準備過馬路。下列何種處置最為安全？ 行人剛踏上穿越道，尚未走到車輛行經的車道範圍，可維持原速通過。 輕按喇叭提醒行人注意後加速通過，以避免雙方在穿越道上交會。 立即減速，在行人穿越道前方保持至少 3 公尺（約四條枕木紋寬度）的距離停車，待行人完全通過後再起步。">
+<div class="qhead"><span class="qid">題號 1090</span></div>
+<div class="stem">駕車行經無號誌路口，發現前方設有枕木紋行人穿越道，行人正踏上穿越道準備過馬路。下列何種處置最為安全？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>行人剛踏上穿越道，尚未走到車輛行經的車道範圍，可維持原速通過。</span></li><li class="choice"><span class="choice-num">(2)</span><span>輕按喇叭提醒行人注意後加速通過，以避免雙方在穿越道上交會。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>立即減速，在行人穿越道前方保持至少 3 公尺（約四條枕木紋寬度）的距離停車，待行人完全通過後再起步。</span></li></ol>
+</article>
+</section><section id="cat06" class="category">
+<div class="cat-title"><h2>06 停車、臨停、迴轉與倒車</h2><span>14 題</span></div>
+<article class="question" data-qid="43" data-search="關於路側劃設之「紅色實線」（禁止臨時停車線），其禁止臨時停車之時間原則為何？ 僅限於每日上午 7 時至晚間 8 時。 除另有規定外，原則上為全天 24 小時。 僅限於夜間時段以維護交通安全。">
+<div class="qhead"><span class="qid">題號 43</span></div>
+<div class="stem">關於路側劃設之「紅色實線」（禁止臨時停車線），其禁止臨時停車之時間原則為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>僅限於每日上午 7 時至晚間 8 時。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>除另有規定外，原則上為全天 24 小時。</span></li><li class="choice"><span class="choice-num">(3)</span><span>僅限於夜間時段以維護交通安全。</span></li></ol>
+</article><article class="question" data-qid="46" data-search="下列哪一項敘述是錯誤的？ 設有禁止停車之標誌路段，可以臨時停車。 設有禁止停車之標誌路段，不可以臨時停車。 設有禁止停車之標線路段，如無其他標誌、標線規定，夜間 8 時以後至隔日清晨 7 時以前可以停車、臨時停車。">
+<div class="qhead"><span class="qid">題號 46</span></div>
+<div class="stem">下列哪一項敘述是錯誤的？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>設有禁止停車之標誌路段，可以臨時停車。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>設有禁止停車之標誌路段，不可以臨時停車。</span></li><li class="choice"><span class="choice-num">(3)</span><span>設有禁止停車之標線路段，如無其他標誌、標線規定，夜間 8 時以後至隔日清晨 7 時以前可以停車、臨時停車。</span></li></ol>
+</article><article class="question" data-qid="94" data-search="禁止停車路段，其禁止時間為每日之： 上午 7 時至晚間 8 時。 下午 7 時至上午 8 時。 全天 24 小時。如有延長或縮短之必要時，應以標誌及附牌標示之。">
+<div class="qhead"><span class="qid">題號 94</span></div>
+<div class="stem">禁止停車路段，其禁止時間為每日之：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>上午 7 時至晚間 8 時。</span></li><li class="choice"><span class="choice-num">(2)</span><span>下午 7 時至上午 8 時。</span></li><li class="choice"><span class="choice-num">(3)</span><span>全天 24 小時。如有延長或縮短之必要時，應以標誌及附牌標示之。</span></li></ol>
+</article><article class="question" data-qid="95" data-search="禁止臨時停車路段，其禁止時間為每日之： 上午 7 時至晚間 8 時。 下午 7 時至上午 8 時。 全天 24 小時。如有縮短之必要時，應以標誌及附牌標示之。">
+<div class="qhead"><span class="qid">題號 95</span></div>
+<div class="stem">禁止臨時停車路段，其禁止時間為每日之：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>上午 7 時至晚間 8 時。</span></li><li class="choice"><span class="choice-num">(2)</span><span>下午 7 時至上午 8 時。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>全天 24 小時。如有縮短之必要時，應以標誌及附牌標示之。</span></li></ol>
+</article><article class="question" data-qid="207" data-search="臨時停車時若車上有 6 歲以下小孩，何者正確？ 臨停 3 分鐘內可把小孩單獨留在車內，離座時應取下鑰匙並上鎖，始可遠離車輛，但不可超過 20 分鐘。 不可單獨將小孩留在車內。 車內有 2 位小孩作伴可留在車內，離座時應取下鑰匙並上鎖，始可遠離車輛，但不可超過 20 分鐘。">
+<div class="qhead"><span class="qid">題號 207</span></div>
+<div class="stem">臨時停車時若車上有 6 歲以下小孩，何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>臨停 3 分鐘內可把小孩單獨留在車內，離座時應取下鑰匙並上鎖，始可遠離車輛，但不可超過 20 分鐘。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>不可單獨將小孩留在車內。</span></li><li class="choice"><span class="choice-num">(3)</span><span>車內有 2 位小孩作伴可留在車內，離座時應取下鑰匙並上鎖，始可遠離車輛，但不可超過 20 分鐘。</span></li></ol>
+</article><article class="question" data-qid="338" data-search="臨時停車停止時間： 未滿 3 分鐘。 未滿 5 分鐘。 未滿 10 分鐘。">
+<div class="qhead"><span class="qid">題號 338</span></div>
+<div class="stem">臨時停車停止時間：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>未滿 3 分鐘。</span></li><li class="choice"><span class="choice-num">(2)</span><span>未滿 5 分鐘。</span></li><li class="choice"><span class="choice-num">(3)</span><span>未滿 10 分鐘。</span></li></ol>
+</article><article class="question" data-qid="344" data-search="消防栓、消防車出入口，多少距離以內不得臨時停車： 10 公尺。 5 公尺。 15 公尺。">
+<div class="qhead"><span class="qid">題號 344</span></div>
+<div class="stem">消防栓、消防車出入口，多少距離以內不得臨時停車：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>10 公尺。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>5 公尺。</span></li><li class="choice"><span class="choice-num">(3)</span><span>15 公尺。</span></li></ol>
+</article><article class="question" data-qid="375" data-search="違規停車經舉發後仍未改正，每逾： 1 小時。 2 小時。 半小時。得連續舉發。">
+<div class="qhead"><span class="qid">題號 375</span></div>
+<div class="stem">違規停車經舉發後仍未改正，每逾：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>1 小時。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>2 小時。</span></li><li class="choice"><span class="choice-num">(3)</span><span>半小時。得連續舉發。</span></li></ol>
+</article><article class="question" data-qid="377" data-search="汽車駕駛人違規併排停車將處罰鍰新臺幣： 1,200 元以上 3,000 元以下。 1,800 元以上 3,000 元以下。 2,400 元以上 3,000 元以下。。">
+<div class="qhead"><span class="qid">題號 377</span></div>
+<div class="stem">汽車駕駛人違規併排停車將處罰鍰新臺幣：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>1,200 元以上 3,000 元以下。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>1,800 元以上 3,000 元以下。</span></li><li class="choice"><span class="choice-num">(3)</span><span>2,400 元以上 3,000 元以下。。</span></li></ol>
+</article><article class="question" data-qid="616" data-search="汽車迴車前應： 暫停並顯示左轉燈光或手勢，看清無來往車輛，並注意行人通過，始得迴轉。 左右擺頭，看清無來車，即可迴轉。 只要按鳴 3 聲喇叭，即可迴轉。">
+<div class="qhead"><span class="qid">題號 616</span></div>
+<div class="stem">汽車迴車前應：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>暫停並顯示左轉燈光或手勢，看清無來往車輛，並注意行人通過，始得迴轉。</span></li><li class="choice"><span class="choice-num">(2)</span><span>左右擺頭，看清無來車，即可迴轉。</span></li><li class="choice"><span class="choice-num">(3)</span><span>只要按鳴 3 聲喇叭，即可迴轉。</span></li></ol>
+</article><article class="question" data-qid="647" data-search="車輛暫停於路邊時，下列規定何者有誤？ 禁止臨時停車處所，只要不妨礙其他人車通行， 可以暫停。 機場、車站、碼頭、學校、娛樂、展覽、競技、市場或其他公共場所出、入口及消防栓之前，不得停車。 停車時應依車輛順行方向緊靠道路邊緣，其前後輪胎外側距離緣石或路面邊緣不得逾 40 公分。">
+<div class="qhead"><span class="qid">題號 647</span></div>
+<div class="stem">車輛暫停於路邊時，下列規定何者有誤？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>禁止臨時停車處所，只要不妨礙其他人車通行， 可以暫停。</span></li><li class="choice"><span class="choice-num">(2)</span><span>機場、車站、碼頭、學校、娛樂、展覽、競技、市場或其他公共場所出、入口及消防栓之前，不得停車。</span></li><li class="choice"><span class="choice-num">(3)</span><span>停車時應依車輛順行方向緊靠道路邊緣，其前後輪胎外側距離緣石或路面邊緣不得逾 40 公分。</span></li></ol>
+</article><article class="question" data-qid="736" data-search="四輪以上汽車除起駛、準備轉彎、準備停車或臨時停車外，針對行駛於慢車道敘述何者正確？ 可以在設有快慢車道分隔島之道路行駛。 可以在劃有快慢車道分隔線之道路行駛。 以上皆可。">
+<div class="qhead"><span class="qid">題號 736</span></div>
+<div class="stem">四輪以上汽車除起駛、準備轉彎、準備停車或臨時停車外，針對行駛於慢車道敘述何者正確？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>可以在設有快慢車道分隔島之道路行駛。</span></li><li class="choice"><span class="choice-num">(2)</span><span>可以在劃有快慢車道分隔線之道路行駛。</span></li><li class="choice"><span class="choice-num">(3)</span><span>以上皆可。</span></li></ol>
+</article><article class="question" data-qid="746" data-search="汽車倒車時，應如何警告其他車輛或行人？ 應按鳴喇叭 3 長聲。 應顯示倒車燈光，或由駕駛人表示左臂平伸，手掌向後並前後擺動之手勢。 應連續按鳴喇叭。">
+<div class="qhead"><span class="qid">題號 746</span></div>
+<div class="stem">汽車倒車時，應如何警告其他車輛或行人？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>應按鳴喇叭 3 長聲。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>應顯示倒車燈光，或由駕駛人表示左臂平伸，手掌向後並前後擺動之手勢。</span></li><li class="choice"><span class="choice-num">(3)</span><span>應連續按鳴喇叭。</span></li></ol>
+</article><article class="question" data-qid="803" data-search="交岔路口、公共汽車招呼站多少公尺內不得臨時停車： 10 公尺。 20 公尺。 30 公尺。">
+<div class="qhead"><span class="qid">題號 803</span></div>
+<div class="stem">交岔路口、公共汽車招呼站多少公尺內不得臨時停車：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>10 公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>20 公尺。</span></li><li class="choice"><span class="choice-num">(3)</span><span>30 公尺。</span></li></ol>
+</article>
+</section><section id="cat07" class="category">
+<div class="cat-title"><h2>07 鐵路平交道與捷運通行</h2><span>8 題</span></div>
+<article class="question" data-qid="144" data-search="汽車行經鐵路平交道，遇車輛拋錨等突發狀況卡在鐵軌上無法駛離時，駕駛人應如何處置最為正確？ 立即按下平交道旁之紅色「緊急按鈕」，並設法將車輛推離軌道。 只要平交道感應器啟動，火車會自動煞停，人留在車上即可。 立即撥打 110。">
+<div class="qhead"><span class="qid">題號 144</span></div>
+<div class="stem">汽車行經鐵路平交道，遇車輛拋錨等突發狀況卡在鐵軌上無法駛離時，駕駛人應如何處置最為正確？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>立即按下平交道旁之紅色「緊急按鈕」，並設法將車輛推離軌道。</span></li><li class="choice"><span class="choice-num">(2)</span><span>只要平交道感應器啟動，火車會自動煞停，人留在車上即可。</span></li><li class="choice"><span class="choice-num">(3)</span><span>立即撥打 110。</span></li></ol>
+</article><article class="question" data-qid="148" data-search="下列何項在鐵路平交道的行為，違者可處新臺幣 15,000 元以上 90,000 元以下罰鍰？ 不將時速減至十五公里以下。 在平交道前 10 公尺處停車。 在平交道上超車、迴轉、 倒車或臨時停車。">
+<div class="qhead"><span class="qid">題號 148</span></div>
+<div class="stem">下列何項在鐵路平交道的行為，違者可處新臺幣 15,000 元以上 90,000 元以下罰鍰？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>不將時速減至十五公里以下。</span></li><li class="choice"><span class="choice-num">(2)</span><span>在平交道前 10 公尺處停車。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>在平交道上超車、迴轉、 倒車或臨時停車。</span></li></ol>
+</article><article class="question" data-qid="149" data-search="關於在鐵路平交道違規之處罰，下列敘述何者正確？ 在鐵路平交道超車或臨時停車，因屬一般違規停車行為，處新臺幣 600 元至 1,200 元罰鍰。 在鐵路平交道迴車或倒車，比照「在禁止迴車路段迴車」之規定，處新臺幣 600 元至 1,800 元罰鍰。 在鐵路平交道超車、迴車、倒車、臨時停車或停車，因涉及列車碰撞之重大風險，處新臺幣 15,000 元至 90,000 元罰鍰並吊扣駕照 1 年。">
+<div class="qhead"><span class="qid">題號 149</span></div>
+<div class="stem">關於在鐵路平交道違規之處罰，下列敘述何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>在鐵路平交道超車或臨時停車，因屬一般違規停車行為，處新臺幣 600 元至 1,200 元罰鍰。</span></li><li class="choice"><span class="choice-num">(2)</span><span>在鐵路平交道迴車或倒車，比照「在禁止迴車路段迴車」之規定，處新臺幣 600 元至 1,800 元罰鍰。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>在鐵路平交道超車、迴車、倒車、臨時停車或停車，因涉及列車碰撞之重大風險，處新臺幣 15,000 元至 90,000 元罰鍰並吊扣駕照 1 年。</span></li></ol>
+</article><article class="question" data-qid="152" data-search="若車輛在鐵路平交道上熄火時，緊急應變的正確順序為何？ 撥打 119、將車推離、按下平交道旁緊急按鈕 。 按下平交道旁緊急按鈕、將車推離、人員儘快離開平交道。 連續按鳴喇叭、將車推離、撥打 119。">
+<div class="qhead"><span class="qid">題號 152</span></div>
+<div class="stem">若車輛在鐵路平交道上熄火時，緊急應變的正確順序為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>撥打 119、將車推離、按下平交道旁緊急按鈕 。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>按下平交道旁緊急按鈕、將車推離、人員儘快離開平交道。</span></li><li class="choice"><span class="choice-num">(3)</span><span>連續按鳴喇叭、將車推離、撥打 119。</span></li></ol>
+</article><article class="question" data-qid="166" data-search="鐵路平交道上無看守人員管理或無遮斷器、警鈴、閃光號誌之設備者駕駛人應在軌道外多少公尺前暫停、看、聽鐵路兩方無火車來時，始得通過： 1～2 公尺前。 3～6 公尺前。 4 ～8 公尺前。">
+<div class="qhead"><span class="qid">題號 166</span></div>
+<div class="stem">鐵路平交道上無看守人員管理或無遮斷器、警鈴、閃光號誌之設備者駕駛人應在軌道外多少公尺前暫停、看、聽鐵路兩方無火車來時，始得通過：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>1～2 公尺前。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>3～6 公尺前。</span></li><li class="choice"><span class="choice-num">(3)</span><span>4 ～8 公尺前。</span></li></ol>
+</article><article class="question" data-qid="615" data-search="在設有彎道、坡路、狹橋、隧道標誌路段或鐵路平交道處： 可以迴車。 減速至 5 公里左右始可迴車。 不得迴車。">
+<div class="qhead"><span class="qid">題號 615</span></div>
+<div class="stem">在設有彎道、坡路、狹橋、隧道標誌路段或鐵路平交道處：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>可以迴車。</span></li><li class="choice"><span class="choice-num">(2)</span><span>減速至 5 公里左右始可迴車。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>不得迴車。</span></li></ol>
+</article><article class="question" data-qid="788" data-search="汽車駛至鐵路平交道前，如前面有車輛時，應俟前車駛離鐵路平交道多少公尺始得通過： 5 公尺。 適當距離而後車能安全通過後。 15 公尺。">
+<div class="qhead"><span class="qid">題號 788</span></div>
+<div class="stem">汽車駛至鐵路平交道前，如前面有車輛時，應俟前車駛離鐵路平交道多少公尺始得通過：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>5 公尺。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>適當距離而後車能安全通過後。</span></li><li class="choice"><span class="choice-num">(3)</span><span>15 公尺。</span></li></ol>
+</article><article class="question" data-qid="789" data-search="行車中，駕駛人看到鐵路平交道標誌或標線後，應即將車速減低至時速： 15 公里以下。 20 公里以下。 30 公里以下。">
+<div class="qhead"><span class="qid">題號 789</span></div>
+<div class="stem">行車中，駕駛人看到鐵路平交道標誌或標線後，應即將車速減低至時速：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>15 公里以下。</span></li><li class="choice"><span class="choice-num">(2)</span><span>20 公里以下。</span></li><li class="choice"><span class="choice-num">(3)</span><span>30 公里以下。</span></li></ol>
+</article>
+</section><section id="cat08" class="category">
+<div class="cat-title"><h2>08 兒童、乘客、安全帶與載人</h2><span>5 題</span></div>
+<article class="question" data-qid="87" data-search="汽車駕駛人對於 6 歲以下或需要特別看護之兒童，單獨留置車內者，處駕駛人： 罰鍰。 罰鍰並施以 4 小時道路交通安全講習。 罰鍰並予違規記點。">
+<div class="qhead"><span class="qid">題號 87</span></div>
+<div class="stem">汽車駕駛人對於 6 歲以下或需要特別看護之兒童，單獨留置車內者，處駕駛人：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>罰鍰。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>罰鍰並施以 4 小時道路交通安全講習。</span></li><li class="choice"><span class="choice-num">(3)</span><span>罰鍰並予違規記點。</span></li></ol>
+</article><article class="question" data-qid="88" data-search="汽車駕駛人對幾歲以下或需要特別看護之兒童，單獨留置於車內者，處駕駛人新臺幣 3,000 元罰鍰，並施以 4 小時道路交通安全講習： 4 歲。 5 歲。 6 歲。">
+<div class="qhead"><span class="qid">題號 88</span></div>
+<div class="stem">汽車駕駛人對幾歲以下或需要特別看護之兒童，單獨留置於車內者，處駕駛人新臺幣 3,000 元罰鍰，並施以 4 小時道路交通安全講習：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>4 歲。</span></li><li class="choice"><span class="choice-num">(2)</span><span>5 歲。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>6 歲。</span></li></ol>
+</article><article class="question" data-qid="296" data-search="小貨車因業務需求必須附載隨車作業人員時，其人數規定為何？ 包含駕駛人在內，最多不得超過 4 人。 車廂內有多寬，即可乘坐多少人。 除駕駛人外，不得超過 2 人。">
+<div class="qhead"><span class="qid">題號 296</span></div>
+<div class="stem">小貨車因業務需求必須附載隨車作業人員時，其人數規定為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>包含駕駛人在內，最多不得超過 4 人。</span></li><li class="choice"><span class="choice-num">(2)</span><span>車廂內有多寬，即可乘坐多少人。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>除駕駛人外，不得超過 2 人。</span></li></ol>
+</article><article class="question" data-qid="308" data-search="小客車駕駛人附載幼童行駛於市區一般道路時，若未依規定將幼童安置於兒童安全椅上，下列何者為正確處分？ 處新臺幣 600～1,200 元罰鍰，並記違規點數 1 點。 處新臺幣 1,500 ～3,000 元罰鍰。 處新臺幣 3,000～6,000 元罰鍰，並吊扣駕駛執照 1 個月。">
+<div class="qhead"><span class="qid">題號 308</span></div>
+<div class="stem">小客車駕駛人附載幼童行駛於市區一般道路時，若未依規定將幼童安置於兒童安全椅上，下列何者為正確處分？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>處新臺幣 600～1,200 元罰鍰，並記違規點數 1 點。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>處新臺幣 1,500 ～3,000 元罰鍰。</span></li><li class="choice"><span class="choice-num">(3)</span><span>處新臺幣 3,000～6,000 元罰鍰，並吊扣駕駛執照 1 個月。</span></li></ol>
+</article><article class="question" data-qid="311" data-search="乘客遺留財物在車上，應： 通知乘客並可索取其物價值十分之一以上的報酬捐贈公益團體幫助弱勢。 送交附近警察機關招領。">
+<div class="qhead"><span class="qid">題號 311</span></div>
+<div class="stem">乘客遺留財物在車上，應：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>通知乘客並可索取其物價值十分之一以上的報酬</span></li><li class="choice"><span class="choice-num">(2)</span><span>捐贈公益團體幫助弱勢。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>送交附近警察機關招領。</span></li></ol>
+</article>
+</section><section id="cat09" class="category">
+<div class="cat-title"><h2>09 手機、疲勞、喇叭與危險駕駛</h2><span>10 題</span></div>
+<article class="question" data-qid="40" data-search="汽車駕駛人於行駛道路時，手持香菸、吸食、點燃，有影響他人安全者，下列何者正確？ 個人嗜好不處罰。 違反道路交通管理處罰條例處新臺幣 1,200 元罰鍰。 屬於違反環保法規問題。">
+<div class="qhead"><span class="qid">題號 40</span></div>
+<div class="stem">汽車駕駛人於行駛道路時，手持香菸、吸食、點燃，有影響他人安全者，下列何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>個人嗜好不處罰。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>違反道路交通管理處罰條例處新臺幣 1,200 元罰鍰。</span></li><li class="choice"><span class="choice-num">(3)</span><span>屬於違反環保法規問題。</span></li></ol>
+</article><article class="question" data-qid="48" data-search="汽車駕駛人連續駕車超過 8 小時，如應歸責於汽車所有人者，應受到何種處分？ 吊銷汽車牌照。 吊扣汽車牌照 3 個月。 罰鍰 3 萬元。">
+<div class="qhead"><span class="qid">題號 48</span></div>
+<div class="stem">汽車駕駛人連續駕車超過 8 小時，如應歸責於汽車所有人者，應受到何種處分？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>吊銷汽車牌照。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>吊扣汽車牌照 3 個月。</span></li><li class="choice"><span class="choice-num">(3)</span><span>罰鍰 3 萬元。</span></li></ol>
+</article><article class="question" data-qid="73" data-search="汽車駕駛人於行駛道路時，以手持方式使用行動電話、電腦或其他相類功能裝置進行撥接、 通話、數據通訊或其他有礙駕駛安全之行為者，處罰鍰新臺幣： 3,000 元。 2,000 元。 1,000 元。">
+<div class="qhead"><span class="qid">題號 73</span></div>
+<div class="stem">汽車駕駛人於行駛道路時，以手持方式使用行動電話、電腦或其他相類功能裝置進行撥接、 通話、數據通訊或其他有礙駕駛安全之行為者，處罰鍰新臺幣：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>3,000 元。</span></li><li class="choice"><span class="choice-num">(2)</span><span>2,000 元。</span></li><li class="choice"><span class="choice-num">(3)</span><span>1,000 元。</span></li></ol>
+</article><article class="question" data-qid="81" data-search="汽車駕駛人於道路上蛇行駕駛，應處以： 罰鍰。 講習。 罰鍰及吊扣牌照 6 個月並應接受道路交通安全講習。">
+<div class="qhead"><span class="qid">題號 81</span></div>
+<div class="stem">汽車駕駛人於道路上蛇行駕駛，應處以：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>罰鍰。</span></li><li class="choice"><span class="choice-num">(2)</span><span>講習。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>罰鍰及吊扣牌照 6 個月並應接受道路交通安全講習。</span></li></ol>
+</article><article class="question" data-qid="345" data-search="汽車駛近學校、醫院等處時： 多按鳴喇叭，使學生或病人等注意。 除遇有緊急或危險情況外，不得按鳴喇叭。 只能按喇叭 1 短聲。">
+<div class="qhead"><span class="qid">題號 345</span></div>
+<div class="stem">汽車駛近學校、醫院等處時：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>多按鳴喇叭，使學生或病人等注意。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>除遇有緊急或危險情況外，不得按鳴喇叭。</span></li><li class="choice"><span class="choice-num">(3)</span><span>只能按喇叭 1 短聲。</span></li></ol>
+</article><article class="question" data-qid="601" data-search="在哪種情形下，汽車駕駛人可按鳴喇叭？ 行至急彎。 在郊外同一車道欲超越前車時。 以上皆可。">
+<div class="qhead"><span class="qid">題號 601</span></div>
+<div class="stem">在哪種情形下，汽車駕駛人可按鳴喇叭？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>行至急彎。</span></li><li class="choice"><span class="choice-num">(2)</span><span>在郊外同一車道欲超越前車時。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>以上皆可。</span></li></ol>
+</article><article class="question" data-qid="792" data-search="汽車按鳴喇叭規定： 不得連續按鳴 3 次以上。 不得連續按鳴 4 次以上。 不得連續按鳴 5 次以上。">
+<div class="qhead"><span class="qid">題號 792</span></div>
+<div class="stem">汽車按鳴喇叭規定：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>不得連續按鳴 3 次以上。</span></li><li class="choice"><span class="choice-num">(2)</span><span>不得連續按鳴 4 次以上。</span></li><li class="choice"><span class="choice-num">(3)</span><span>不得連續按鳴 5 次以上。</span></li></ol>
+</article><article class="question" data-qid="793" data-search="汽車按鳴喇叭時間，每次： 不得超過 2 秒。 不得超過 1 秒。 不得超過半秒。">
+<div class="qhead"><span class="qid">題號 793</span></div>
+<div class="stem">汽車按鳴喇叭時間，每次：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>不得超過 2 秒。</span></li><li class="choice"><span class="choice-num">(2)</span><span>不得超過 1 秒。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>不得超過半秒。</span></li></ol>
+</article><article class="question" data-qid="932" data-search="汽車駕駛人駕車： 可連續駕駛 10 小時。 連續駕駛不可超過 8 小時。 可依體力決定。">
+<div class="qhead"><span class="qid">題號 932</span></div>
+<div class="stem">汽車駕駛人駕車：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>可連續駕駛 10 小時。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>連續駕駛不可超過 8 小時。</span></li><li class="choice"><span class="choice-num">(3)</span><span>可依體力決定。</span></li></ol>
+</article><article class="question" data-qid="979" data-search="電腦控制汽油噴射引擎低溫發動時，正確的操作方式為何？ 不踩油門直接啟動。 連踩油門三次後啟動。 邊踩油門邊啟動。">
+<div class="qhead"><span class="qid">題號 979</span></div>
+<div class="stem">電腦控制汽油噴射引擎低溫發動時，正確的操作方式為何？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>不踩油門直接啟動。</span></li><li class="choice"><span class="choice-num">(2)</span><span>連踩油門三次後啟動。</span></li><li class="choice"><span class="choice-num">(3)</span><span>邊踩油門邊啟動。</span></li></ol>
+</article>
+</section><section id="cat10" class="category">
+<div class="cat-title"><h2>10 肇事、事故處理、刑責與保險</h2><span>13 題</span></div>
+<article class="question" data-qid="168" data-search="汽車駕駛人駕駛汽車肇事，無人受傷或死亡而未依規定處置且逃逸者，除處新臺幣 1,000 元以上 3,000 元以下罰鍰外，應併予何種處分？ 吊銷其駕駛執照。 吊扣駕駛執照 1~3 個月。 吊扣汽車牌照 1~3 個月。">
+<div class="qhead"><span class="qid">題號 168</span></div>
+<div class="stem">汽車駕駛人駕駛汽車肇事，無人受傷或死亡而未依規定處置且逃逸者，除處新臺幣 1,000 元以上 3,000 元以下罰鍰外，應併予何種處分？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>吊銷其駕駛執照。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>吊扣駕駛執照 1~3 個月。</span></li><li class="choice"><span class="choice-num">(3)</span><span>吊扣汽車牌照 1~3 個月。</span></li></ol>
+</article><article class="question" data-qid="190" data-search="汽車駕駛人因違反道路交通安全規則，致人重傷者，除罰鍰外還會受到何種處分？ 吊扣駕照 3 個月至 6 個月。 吊銷駕照。 沒入車輛。">
+<div class="qhead"><span class="qid">題號 190</span></div>
+<div class="stem">汽車駕駛人因違反道路交通安全規則，致人重傷者，除罰鍰外還會受到何種處分？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>吊扣駕照 3 個月至 6 個月。</span></li><li class="choice"><span class="choice-num">(2)</span><span>吊銷駕照。</span></li><li class="choice"><span class="choice-num">(3)</span><span>沒入車輛。</span></li></ol>
+</article><article class="question" data-qid="230" data-search="汽車駕駛人駕駛汽車肇事，無人受傷或死亡而未依規定處置者，罰鍰是多少？ 1,000~3,000 元。 3,000~5,000 元。 5,000~10,000 元。">
+<div class="qhead"><span class="qid">題號 230</span></div>
+<div class="stem">汽車駕駛人駕駛汽車肇事，無人受傷或死亡而未依規定處置者，罰鍰是多少？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>1,000~3,000 元。</span></li><li class="choice"><span class="choice-num">(2)</span><span>3,000~5,000 元。</span></li><li class="choice"><span class="choice-num">(3)</span><span>5,000~10,000 元。</span></li></ol>
+</article><article class="question" data-qid="239" data-search="汽車駕駛人駕駛汽車肇事，若無人受傷或死亡且汽車尚能行駛，卻不儘速將汽車位置標繪並移置路邊，導致妨礙交通者，依規定應如何處罰？ 處駕駛人新臺幣 3,000 元以上 6,000 元以下罰鍰。 處駕駛人新臺幣 600 元以上 1,800 元以下罰鍰。 處汽車所有人新臺幣 1,200 元以上 3,600 元以下罰鍰。">
+<div class="qhead"><span class="qid">題號 239</span></div>
+<div class="stem">汽車駕駛人駕駛汽車肇事，若無人受傷或死亡且汽車尚能行駛，卻不儘速將汽車位置標繪並移置路邊，導致妨礙交通者，依規定應如何處罰？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>處駕駛人新臺幣 3,000 元以上 6,000 元以下罰鍰。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>處駕駛人新臺幣 600 元以上 1,800 元以下罰鍰。</span></li><li class="choice"><span class="choice-num">(3)</span><span>處汽車所有人新臺幣 1,200 元以上 3,600 元以下罰鍰。</span></li></ol>
+</article><article class="question" data-qid="327" data-search="汽車駕駛人駕駛汽車肇事致人受傷或死亡，應即時處理，如肇事致人重傷或死亡而逃逸者： 吊銷駕駛執照，並終身不得再考領。 應予罰鍰。 吊扣駕照 1 年。">
+<div class="qhead"><span class="qid">題號 327</span></div>
+<div class="stem">汽車駕駛人駕駛汽車肇事致人受傷或死亡，應即時處理，如肇事致人重傷或死亡而逃逸者：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>吊銷駕駛執照，並終身不得再考領。</span></li><li class="choice"><span class="choice-num">(2)</span><span>應予罰鍰。</span></li><li class="choice"><span class="choice-num">(3)</span><span>吊扣駕照 1 年。</span></li></ol>
+</article><article class="question" data-qid="890" data-search="當車輛發生道路交通事故時，依規定應於車後方放置車輛故障標誌或其他明顯警告設施，其距離何者正確？ 在快速道路於事故地點後方 70 公尺處。 在高速公路於事故地點後方 100 公尺處。 在最高速限 50 公里以下之路段於事故地點後方 20 公尺處。">
+<div class="qhead"><span class="qid">題號 890</span></div>
+<div class="stem">當車輛發生道路交通事故時，依規定應於車後方放置車輛故障標誌或其他明顯警告設施，其距離何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>在快速道路於事故地點後方 70 公尺處。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>在高速公路於事故地點後方 100 公尺處。</span></li><li class="choice"><span class="choice-num">(3)</span><span>在最高速限 50 公里以下之路段於事故地點後方 20 公尺處。</span></li></ol>
+</article><article class="question" data-qid="894" data-search="發生交通事故後，放置「車輛故障標誌」的主要目的是什麼？ 警告後方來車，防止警察開單警告後方來車，預防二次事故追撞作為理賠時計算車損的基準點">
+<div class="qhead"><span class="qid">題號 894</span></div>
+<div class="stem">發生交通事故後，放置「車輛故障標誌」的主要目的是什麼？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>警告後方來車，防止警察開單</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>警告後方來車，預防二次事故追撞</span></li><li class="choice"><span class="choice-num">(3)</span><span>作為理賠時計算車損的基準點</span></li></ol>
+</article><article class="question" data-qid="896" data-search="駕駛人發生交通事故，若無人傷亡且車輛尚能行駛，應如何初步處理以防止二次事故？ 應先標繪或攝、錄影車輛位置及衝撞點，並將車輛移置路邊。 留在原地等待警察到場，不得移動車輛直接離開現場，事後再報警即可">
+<div class="qhead"><span class="qid">題號 896</span></div>
+<div class="stem">駕駛人發生交通事故，若無人傷亡且車輛尚能行駛，應如何初步處理以防止二次事故？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>應先標繪或攝、錄影車輛位置及衝撞點，並將車輛移置路邊。</span></li><li class="choice"><span class="choice-num">(2)</span><span>留在原地等待警察到場，不得移動車輛</span></li><li class="choice"><span class="choice-num">(3)</span><span>直接離開現場，事後再報警即可</span></li></ol>
+</article><article class="question" data-qid="922" data-search="交通事故當事人若對於「車輛行車事故鑑定會」之鑑定結果不服時，得於接到鑑定責任意見書之翌日起幾日內，向覆議會申請覆議？ 10 日內。 15 日內。 30 日內。">
+<div class="qhead"><span class="qid">題號 922</span></div>
+<div class="stem">交通事故當事人若對於「車輛行車事故鑑定會」之鑑定結果不服時，得於接到鑑定責任意見書之翌日起幾日內，向覆議會申請覆議？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>10 日內。</span></li><li class="choice"><span class="choice-num">(2)</span><span>15 日內。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>30 日內。</span></li></ol>
+</article><article class="question" data-qid="955" data-search="汽車肇事後在最高速限超過 50~60 公里之路段，應在車後多少公尺處放置車輛故障標誌： 30 公尺。 50 公尺。 100 公尺 。">
+<div class="qhead"><span class="qid">題號 955</span></div>
+<div class="stem">汽車肇事後在最高速限超過 50~60 公里之路段，應在車後多少公尺處放置車輛故障標誌：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>30 公尺。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>50 公尺。</span></li><li class="choice"><span class="choice-num">(3)</span><span>100 公尺 。</span></li></ol>
+</article><article class="question" data-qid="958" data-search="自車禍發生之日起，申請鑑定的期限為： 1 個月。 3 個月。 6 個月。">
+<div class="qhead"><span class="qid">題號 958</span></div>
+<div class="stem">自車禍發生之日起，申請鑑定的期限為：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>1 個月。</span></li><li class="choice"><span class="choice-num">(2)</span><span>3 個月。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>6 個月。</span></li></ol>
+</article><article class="question" data-qid="960" data-search="汽車駕駛人駕駛汽車肇事，無人受傷或死亡汽車尚能行駛，而不儘速將汽車位置標繪移置路邊，致妨礙交通者，處駕駛人新臺幣 600 元以上 1,800 元以下 1,000 元以上 3,000 元以下 1,200 元以上 3,600 元以下罰鍰。">
+<div class="qhead"><span class="qid">題號 960</span></div>
+<div class="stem">汽車駕駛人駕駛汽車肇事，無人受傷或死亡汽車尚能行駛，而不儘速將汽車位置標繪移置路邊，致妨礙交通者，處駕駛人新臺幣</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>600 元以上 1,800 元以下</span></li><li class="choice"><span class="choice-num">(2)</span><span>1,000 元以上 3,000 元以下</span></li><li class="choice"><span class="choice-num">(3)</span><span>1,200 元以上 3,600 元以下罰鍰。</span></li></ol>
+</article><article class="question" data-qid="963" data-search="汽車駕駛人駕駛汽車肇事，無人受傷或死亡而未依規定處置者，處新臺幣 1,000 元以上 3,000 元以下 1,200 元以上 3,600 元以下 1,800 元以上 5,400 元以下罰鍰；逃逸者，並吊扣其駕駛執照一個月至三個月。">
+<div class="qhead"><span class="qid">題號 963</span></div>
+<div class="stem">汽車駕駛人駕駛汽車肇事，無人受傷或死亡而未依規定處置者，處新臺幣</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>1,000 元以上 3,000 元以下</span></li><li class="choice"><span class="choice-num">(2)</span><span>1,200 元以上 3,600 元以下</span></li><li class="choice"><span class="choice-num">(3)</span><span>1,800 元以上 5,400 元以下罰鍰；逃逸者，並吊扣其駕駛執照一個月至三個月。</span></li></ol>
+</article>
+</section><section id="cat11" class="category">
+<div class="cat-title"><h2>11 車輛檢驗、保養、輪胎與機件</h2><span>19 題</span></div>
+<article class="question" data-qid="173" data-search="汽車出廠滿 8 年汽車所有人未依規定期限實施排放空氣污染物定期檢驗之法律責任，下列敘述何者正確？ 記該車違規紀錄 1 次，不需罰鍰。 依法應處以罰鍰並限期完成改善。 屬自主管理項目不具任何法律約束。">
+<div class="qhead"><span class="qid">題號 173</span></div>
+<div class="stem">汽車出廠滿 8 年汽車所有人未依規定期限實施排放空氣污染物定期檢驗之法律責任，下列敘述何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>記該車違規紀錄 1 次，不需罰鍰。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>依法應處以罰鍰並限期完成改善。</span></li><li class="choice"><span class="choice-num">(3)</span><span>屬自主管理項目不具任何法律約束。</span></li></ol>
+</article><article class="question" data-qid="325" data-search="汽車定期檢驗，逾期一個月以上者，應處罰： 罰鍰及吊扣牌照。 吊銷牌照。 罰鍰。">
+<div class="qhead"><span class="qid">題號 325</span></div>
+<div class="stem">汽車定期檢驗，逾期一個月以上者，應處罰：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>罰鍰及吊扣牌照。</span></li><li class="choice"><span class="choice-num">(2)</span><span>吊銷牌照。</span></li><li class="choice"><span class="choice-num">(3)</span><span>罰鍰。</span></li></ol>
+</article><article class="question" data-qid="328" data-search="營業車(營業大客車除外)每年檢驗次數，應為： 出廠年份未滿 5 年者，每年至少檢驗 1 次; 5 年以上者，每年至少檢驗 2 次。 出廠年份滿 3 年以上者，每年至少檢驗 1 次。 出廠年份未滿 5 年者，每年至少檢驗 2 次。">
+<div class="qhead"><span class="qid">題號 328</span></div>
+<div class="stem">營業車(營業大客車除外)每年檢驗次數，應為：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>出廠年份未滿 5 年者，每年至少檢驗 1 次; 5 年以上者，每年至少檢驗 2 次。</span></li><li class="choice"><span class="choice-num">(2)</span><span>出廠年份滿 3 年以上者，每年至少檢驗 1 次。</span></li><li class="choice"><span class="choice-num">(3)</span><span>出廠年份未滿 5 年者，每年至少檢驗 2 次。</span></li></ol>
+</article><article class="question" data-qid="332" data-search="自用小客車領有牌照，其出廠年份未滿幾年者，免予定期檢驗： 4 年。 5 年。 6 年。">
+<div class="qhead"><span class="qid">題號 332</span></div>
+<div class="stem">自用小客車領有牌照，其出廠年份未滿幾年者，免予定期檢驗：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>4 年。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>5 年。</span></li><li class="choice"><span class="choice-num">(3)</span><span>6 年。</span></li></ol>
+</article><article class="question" data-qid="355" data-search="領有牌照之自用小客車，除使用液化石油氣及壓縮天然氣為燃料者外，檢驗次數應為： 出廠年份未滿 5 年者，免定期檢驗；5 年以上未滿 10 年者，每年至少檢驗 1 次；10 年以上者每年至少檢驗 2 次。 出廠年份 10 年以上者每年至少檢驗 3 次。 出廠年份未滿 5 年者， 每年至少檢驗 2 次。">
+<div class="qhead"><span class="qid">題號 355</span></div>
+<div class="stem">領有牌照之自用小客車，除使用液化石油氣及壓縮天然氣為燃料者外，檢驗次數應為：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>出廠年份未滿 5 年者，免定期檢驗；5 年以上未滿 10 年者，每年至少檢驗 1 次；10 年以上者每年至少檢驗 2 次。</span></li><li class="choice"><span class="choice-num">(2)</span><span>出廠年份 10 年以上者每年至少檢驗 3 次。</span></li><li class="choice"><span class="choice-num">(3)</span><span>出廠年份未滿 5 年者， 每年至少檢驗 2 次。</span></li></ol>
+</article><article class="question" data-qid="405" data-search="停車時應依車輛順行方向緊靠道路邊緣，其前後輪胎外側距離緣石或路面邊緣，不得逾： 40 公分。 50 公分。 60 公分。">
+<div class="qhead"><span class="qid">題號 405</span></div>
+<div class="stem">停車時應依車輛順行方向緊靠道路邊緣，其前後輪胎外側距離緣石或路面邊緣，不得逾：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>40 公分。</span></li><li class="choice"><span class="choice-num">(2)</span><span>50 公分。</span></li><li class="choice"><span class="choice-num">(3)</span><span>60 公分。</span></li></ol>
+</article><article class="question" data-qid="406" data-search="小型汽車於路邊臨時停車時，應依車輛順行方向緊靠道路邊緣，其右側前後輪胎外側距離緣石或路面邊緣不得超過： 60 公分。 70 公分。 80 公分。">
+<div class="qhead"><span class="qid">題號 406</span></div>
+<div class="stem">小型汽車於路邊臨時停車時，應依車輛順行方向緊靠道路邊緣，其右側前後輪胎外側距離緣石或路面邊緣不得超過：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>60 公分。</span></li><li class="choice"><span class="choice-num">(2)</span><span>70 公分。</span></li><li class="choice"><span class="choice-num">(3)</span><span>80 公分。</span></li></ol>
+</article><article class="question" data-qid="703" data-search="行駛中胎壓偵測警示燈持續恆亮，代表： 胎壓偵測系統（tpms）故障或通訊異常。 一或二輪以上輪胎沒氣(胎壓不足)，盡快至安全處檢查四輪胎壓是否正常。 剛保養或換胎後，未進行系統重置或傳感器配對。">
+<div class="qhead"><span class="qid">題號 703</span></div>
+<div class="stem">行駛中胎壓偵測警示燈持續恆亮，代表：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>胎壓偵測系統（TPMS）故障或通訊異常。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>一或二輪以上輪胎沒氣(胎壓不足)，盡快至安全處檢查四輪胎壓是否正常。</span></li><li class="choice"><span class="choice-num">(3)</span><span>剛保養或換胎後，未進行系統重置或傳感器配對。</span></li></ol>
+</article><article class="question" data-qid="970" data-search="汽車駕駛人開車前應進行車輛檢查。根據「五油、六燈、三水」及輪胎安全規範，下列哪一項做法是正確且安全的？ 檢查「三水」時，只需確認雨刷水充足即可，引擎冷卻水與電瓶水不影響行車安全。 檢查輪胎時，若發現胎紋深度磨損至低於 1.6mm（或磨損至胎面磨耗指示點），應立即更換以防爆胎或雨天打滑。 「五油」檢查只包括引擎機油與燃汽油，煞車油、變速箱油與動力方向盤油屬於專業維修項目，行車前不必檢查。">
+<div class="qhead"><span class="qid">題號 970</span></div>
+<div class="stem">汽車駕駛人開車前應進行車輛檢查。根據「五油、六燈、三水」及輪胎安全規範，下列哪一項做法是正確且安全的？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>檢查「三水」時，只需確認雨刷水充足即可，引擎冷卻水與電瓶水不影響行車安全。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>檢查輪胎時，若發現胎紋深度磨損至低於 1.6mm（或磨損至胎面磨耗指示點），應立即更換以防爆胎或雨天打滑。</span></li><li class="choice"><span class="choice-num">(3)</span><span>「五油」檢查只包括引擎機油與燃汽油，煞車油、變速箱油與動力方向盤油屬於專業維修項目，行車前不必檢查。</span></li></ol>
+</article><article class="question" data-qid="972" data-search="使用液化石油氣（lpg）或壓縮天然氣（cng）為燃料之自用小客車，若其出廠年份未滿 5 年，法律規定的定期檢驗頻率為何？ 未滿 5 年之小客車免予檢驗。 每 1 年至少檢驗 1 次。 每 1 年至少檢驗 2 次。">
+<div class="qhead"><span class="qid">題號 972</span></div>
+<div class="stem">使用液化石油氣（LPG）或壓縮天然氣（CNG）為燃料之自用小客車，若其出廠年份未滿 5 年，法律規定的定期檢驗頻率為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>未滿 5 年之小客車免予檢驗。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>每 1 年至少檢驗 1 次。</span></li><li class="choice"><span class="choice-num">(3)</span><span>每 1 年至少檢驗 2 次。</span></li></ol>
+</article><article class="question" data-qid="974" data-search="關於自用小客車定期檢驗規定，下列何者正確？ 未滿 5 年免檢驗，5 年以上未滿 10 年每 2 年至少檢驗 1 次，10 年以上每年至少檢驗 1 次。 未滿 5 年免檢驗，5 年以上未滿 10 年每年至少檢驗 1 次，10 年以上每年至少檢驗 2 次。 未滿 5 年免檢驗，5 年以上未滿 10 年每年至少檢驗 2 次。">
+<div class="qhead"><span class="qid">題號 974</span></div>
+<div class="stem">關於自用小客車定期檢驗規定，下列何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>未滿 5 年免檢驗，5 年以上未滿 10 年每 2 年至少檢驗 1 次，10 年以上每年至少檢驗 1 次。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>未滿 5 年免檢驗，5 年以上未滿 10 年每年至少檢驗 1 次，10 年以上每年至少檢驗 2 次。</span></li><li class="choice"><span class="choice-num">(3)</span><span>未滿 5 年免檢驗，5 年以上未滿 10 年每年至少檢驗 2 次。</span></li></ol>
+</article><article class="question" data-qid="995" data-search="領有牌照之自用小客車(使用液化石油氣及壓縮天然氣為燃料者除外)，其出廠年份與定期檢驗規定，下列何者正確？ 未满 3 年者免予定期檢驗，3 年以上未滿 10 年者每年至少檢驗 1 次，10 年以上者每年至少檢驗 2 次。 未滿 5 年者免予定期檢驗，5 年以上未滿 10 年者每年至少檢驗 1 次，10 年以上者每年至少檢驗 2 次。 未滿 5 年者每年至少檢驗 1 次，5 年以上未滿 10 年者每年至少檢驗 2 次，10 年以上者每年至少檢驗 3 次。">
+<div class="qhead"><span class="qid">題號 995</span></div>
+<div class="stem">領有牌照之自用小客車(使用液化石油氣及壓縮天然氣為燃料者除外)，其出廠年份與定期檢驗規定，下列何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>未满 3 年者免予定期檢驗，3 年以上未滿 10 年者每年至少檢驗 1 次，10 年以上者每年至少檢驗 2 次。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>未滿 5 年者免予定期檢驗，5 年以上未滿 10 年者每年至少檢驗 1 次，10 年以上者每年至少檢驗 2 次。</span></li><li class="choice"><span class="choice-num">(3)</span><span>未滿 5 年者每年至少檢驗 1 次，5 年以上未滿 10 年者每年至少檢驗 2 次，10 年以上者每年至少檢驗 3 次。</span></li></ol>
+</article><article class="question" data-qid="1006" data-search="小型車儀錶板上的「引擎轉速錶」，係表示引擎每分鐘之迴轉數（rpm）。當指針指在刻度 「1」的位置時，表示引擎轉速為何？ 每分鐘 100 轉。 每分鐘 1,000 轉。 每分鐘 10,000 轉。">
+<div class="qhead"><span class="qid">題號 1006</span></div>
+<div class="stem">小型車儀錶板上的「引擎轉速錶」，係表示引擎每分鐘之迴轉數（RPM）。當指針指在刻度 「1」的位置時，表示引擎轉速為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>每分鐘 100 轉。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>每分鐘 1,000 轉。</span></li><li class="choice"><span class="choice-num">(3)</span><span>每分鐘 10,000 轉。</span></li></ol>
+</article><article class="question" data-qid="1026" data-search="汽車儀錶板上的「總里程表（odo）」，其功能為何？ 紀錄汽車從出廠以來所行駛的總里程數。 僅紀錄最近一次旅行的單趟里程數。 顯示當下剩餘燃油可行駛之預估里程。">
+<div class="qhead"><span class="qid">題號 1026</span></div>
+<div class="stem">汽車儀錶板上的「總里程表（ODO）」，其功能為何？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>紀錄汽車從出廠以來所行駛的總里程數。</span></li><li class="choice"><span class="choice-num">(2)</span><span>僅紀錄最近一次旅行的單趟里程數。</span></li><li class="choice"><span class="choice-num">(3)</span><span>顯示當下剩餘燃油可行駛之預估里程。</span></li></ol>
+</article><article class="question" data-qid="1040" data-search="汽車駕駛人駕駛汽車，應： 開車前。 每週 1 次。 由於汽車都有定期進場實施保養， 所以不需要。 檢查車輛各項裝置是否正常。">
+<div class="qhead"><span class="qid">題號 1040</span></div>
+<div class="stem">汽車駕駛人駕駛汽車，應：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>開車前。</span></li><li class="choice"><span class="choice-num">(2)</span><span>每週 1 次。</span></li><li class="choice"><span class="choice-num">(3)</span><span>由於汽車都有定期進場實施保養， 所以不需要。 檢查車輛各項裝置是否正常。</span></li></ol>
+</article><article class="question" data-qid="1070" data-search="自排車多數為前輪驅動，拖吊時除先放手煞車外，然後用什麼方式拖吊，才不致造成變速機構損壞： 前輪吊起，後輪著地，由前拖吊的方式。 後輪吊起，前輪著地，由後拖吊的方式。 四輪著地，由後拖吊的方式。">
+<div class="qhead"><span class="qid">題號 1070</span></div>
+<div class="stem">自排車多數為前輪驅動，拖吊時除先放手煞車外，然後用什麼方式拖吊，才不致造成變速機構損壞：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>前輪吊起，後輪著地，由前拖吊的方式。</span></li><li class="choice"><span class="choice-num">(2)</span><span>後輪吊起，前輪著地，由後拖吊的方式。</span></li><li class="choice"><span class="choice-num">(3)</span><span>四輪著地，由後拖吊的方式。</span></li></ol>
+</article><article class="question" data-qid="1082" data-search="使用煞車時，車頭向右偏或左偏，是因為： 煞車油太多。 兩前輪可能有一輪煞車失常。 煞車油管內有空氣。">
+<div class="qhead"><span class="qid">題號 1082</span></div>
+<div class="stem">使用煞車時，車頭向右偏或左偏，是因為：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>煞車油太多。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>兩前輪可能有一輪煞車失常。</span></li><li class="choice"><span class="choice-num">(3)</span><span>煞車油管內有空氣。</span></li></ol>
+</article><article class="question" data-qid="1086" data-search="領有牌照之自用小客車，其出廠年份超過 10 年以上者，每年至少定期檢驗： 2 次。 3 次。 4 次。">
+<div class="qhead"><span class="qid">題號 1086</span></div>
+<div class="stem">領有牌照之自用小客車，其出廠年份超過 10 年以上者，每年至少定期檢驗：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>2 次。</span></li><li class="choice"><span class="choice-num">(2)</span><span>3 次。</span></li><li class="choice"><span class="choice-num">(3)</span><span>4 次。</span></li></ol>
+</article><article class="question" data-qid="1088" data-search="汽車行駛高速公路或快速公路，其輪胎胎面不得磨損至中華民國國家標準 cns 1431 汽車用外胎（輪胎）標準或 cns 4959 卡客車用翻修輪胎標準所訂之任一胎面磨耗指示點。 任一點不足 1.5 公釐。 任一點不足 1 公釐。">
+<div class="qhead"><span class="qid">題號 1088</span></div>
+<div class="stem">汽車行駛高速公路或快速公路，其輪胎胎面不得磨損至中華民國國家標準 CNS 1431 汽車用外胎（輪胎）標準或 CNS 4959 卡客車用翻修輪胎標準所訂之</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>任一胎面磨耗指示點。</span></li><li class="choice"><span class="choice-num">(2)</span><span>任一點不足 1.5 公釐。</span></li><li class="choice"><span class="choice-num">(3)</span><span>任一點不足 1 公釐。</span></li></ol>
+</article>
+</section><section id="cat12" class="category">
+<div class="cat-title"><h2>12 車輛裝載、尺寸、重量與車種規格</h2><span>15 題</span></div>
+<article class="question" data-qid="641" data-search="大型車裝載砂石行駛於設有快慢車道分隔島之道路慢車道，行經無號誌交岔路口且遇路面顛簸時，下列何者最符合規定？ 應確實覆蓋及固定貨物，並依慢車道速限行駛且減速慢行、 隨時準備停車。 只要未超速即可，貨物顛簸屬正常現象無需處理。 僅需符合慢車道速限 40 公里，無須特別覆蓋貨物。">
+<div class="qhead"><span class="qid">題號 641</span></div>
+<div class="stem">大型車裝載砂石行駛於設有快慢車道分隔島之道路慢車道，行經無號誌交岔路口且遇路面顛簸時，下列何者最符合規定？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>應確實覆蓋及固定貨物，並依慢車道速限行駛且減速慢行、 隨時準備停車。</span></li><li class="choice"><span class="choice-num">(2)</span><span>只要未超速即可，貨物顛簸屬正常現象無需處理。</span></li><li class="choice"><span class="choice-num">(3)</span><span>僅需符合慢車道速限 40 公里，無須特別覆蓋貨物。</span></li></ol>
+</article><article class="question" data-qid="704" data-search="8 公噸以上汽車未依規定裝設行車紀錄器及行車視野輔助系統者，處汽車所有人： 罰鍰。 吊扣行車執照吊銷駕照。">
+<div class="qhead"><span class="qid">題號 704</span></div>
+<div class="stem">8 公噸以上汽車未依規定裝設行車紀錄器及行車視野輔助系統者，處汽車所有人：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>罰鍰。</span></li><li class="choice"><span class="choice-num">(2)</span><span>吊扣行車執照</span></li><li class="choice"><span class="choice-num">(3)</span><span>吊銷駕照。</span></li></ol>
+</article><article class="question" data-qid="739" data-search="道路設有「車輛總重限制」標誌，標示限重 10 公噸。下列關於「總重」定義之敘述，何者正確？ 「總重」係指車輛裝載貨物之重量，不含車身本體重量。 「總重」係指車輛本身空車重量加上乘客、貨物等裝載重量之合計。 「總重」係指車輛出廠時之空車重量，不含任何裝載物。">
+<div class="qhead"><span class="qid">題號 739</span></div>
+<div class="stem">道路設有「車輛總重限制」標誌，標示限重 10 公噸。下列關於「總重」定義之敘述，何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>「總重」係指車輛裝載貨物之重量，不含車身本體重量。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>「總重」係指車輛本身空車重量加上乘客、貨物等裝載重量之合計。</span></li><li class="choice"><span class="choice-num">(3)</span><span>「總重」係指車輛出廠時之空車重量，不含任何裝載物。</span></li></ol>
+</article><article class="question" data-qid="859" data-search="關於汽車裝載貨物超過核定總重量之處罰規定，下列敘述何者正確？ 不分超載程度一律處新臺幣 1 萬元罰鍰。 依超載程度採取級距式累進罰鍰。 對於累犯之車輛沒收該車裝載之貨物。">
+<div class="qhead"><span class="qid">題號 859</span></div>
+<div class="stem">關於汽車裝載貨物超過核定總重量之處罰規定，下列敘述何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>不分超載程度一律處新臺幣 1 萬元罰鍰。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>依超載程度採取級距式累進罰鍰。</span></li><li class="choice"><span class="choice-num">(3)</span><span>對於累犯之車輛沒收該車裝載之貨物。</span></li></ol>
+</article><article class="question" data-qid="860" data-search="貨車裝載的規定下列何者正確？ 裝載貨物寬度，可以超出車身半公尺。 裝載依自己方便，沒特別規定。 裝載貨物寬度，不得超過車身。">
+<div class="qhead"><span class="qid">題號 860</span></div>
+<div class="stem">貨車裝載的規定下列何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>裝載貨物寬度，可以超出車身半公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>裝載依自己方便，沒特別規定。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>裝載貨物寬度，不得超過車身。</span></li></ol>
+</article><article class="question" data-qid="861" data-search="汽車裝載貨物行至設有地磅處所 5 公里內路段，未依標誌、標線、號誌指示過磅者，應處汽車駕駛人多少罰鍰，並得強制其過磅？ 新臺幣 3 萬元。 新臺幣 6 萬元。 新臺幣 9 萬元。">
+<div class="qhead"><span class="qid">題號 861</span></div>
+<div class="stem">汽車裝載貨物行至設有地磅處所 5 公里內路段，未依標誌、標線、號誌指示過磅者，應處汽車駕駛人多少罰鍰，並得強制其過磅？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>新臺幣 3 萬元。</span></li><li class="choice"><span class="choice-num">(2)</span><span>新臺幣 6 萬元。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>新臺幣 9 萬元。</span></li></ol>
+</article><article class="question" data-qid="864" data-search="小型貨車（非屬廂型貨車）裝載貨物時，其裝載高度由地面算起，依法不得超過多少公尺？ 2 公尺。 2.5 公尺。 2.85 公尺。">
+<div class="qhead"><span class="qid">題號 864</span></div>
+<div class="stem">小型貨車（非屬廂型貨車）裝載貨物時，其裝載高度由地面算起，依法不得超過多少公尺？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>2 公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>2.5 公尺。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>2.85 公尺。</span></li></ol>
+</article><article class="question" data-qid="865" data-search="關於貨車裝載貨物之長度規定，下列敘述何者正確？ 貨物無論多長皆可裝載，只要有綁緊即可。 長度不得前伸超過車頭。 長度可以前伸超過車頭 2 公尺。">
+<div class="qhead"><span class="qid">題號 865</span></div>
+<div class="stem">關於貨車裝載貨物之長度規定，下列敘述何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>貨物無論多長皆可裝載，只要有綁緊即可。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>長度不得前伸超過車頭。</span></li><li class="choice"><span class="choice-num">(3)</span><span>長度可以前伸超過車頭 2 公尺。</span></li></ol>
+</article><article class="question" data-qid="867" data-search="貨車裝載貨物寬度： 可以超出車身半公尺。 可以超出車身 1 公尺。 不得超出車身。">
+<div class="qhead"><span class="qid">題號 867</span></div>
+<div class="stem">貨車裝載貨物寬度：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>可以超出車身半公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>可以超出車身 1 公尺。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>不得超出車身。</span></li></ol>
+</article><article class="question" data-qid="871" data-search="貨車裝載體積或長度非框式車廂所能容納之貨物，其伸後長度最多不得超過車輛全長： 20% 。 25% 。 30% 。">
+<div class="qhead"><span class="qid">題號 871</span></div>
+<div class="stem">貨車裝載體積或長度非框式車廂所能容納之貨物，其伸後長度最多不得超過車輛全長：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>20% 。</span></li><li class="choice"><span class="choice-num">(2)</span><span>25% 。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>30% 。</span></li></ol>
+</article><article class="question" data-qid="876" data-search="裝載危險物品之車輛，在橋樑、隧道、火場多少公尺範圍內，嚴禁停車： 100 公尺。 200 公尺。 300 公尺。">
+<div class="qhead"><span class="qid">題號 876</span></div>
+<div class="stem">裝載危險物品之車輛，在橋樑、隧道、火場多少公尺範圍內，嚴禁停車：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>100 公尺。</span></li><li class="choice"><span class="choice-num">(2)</span><span>200 公尺。</span></li><li class="choice"><span class="choice-num">(3)</span><span>300 公尺。</span></li></ol>
+</article><article class="question" data-qid="877" data-search="貨車雖未超載但超過所行駛橋樑之載重限制，經當場舉發者，應處以罰鍰並記： 車主。 託運人。 駕駛人。違規點數 2 點。">
+<div class="qhead"><span class="qid">題號 877</span></div>
+<div class="stem">貨車雖未超載但超過所行駛橋樑之載重限制，經當場舉發者，應處以罰鍰並記：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>車主。</span></li><li class="choice"><span class="choice-num">(2)</span><span>託運人。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>駕駛人。違規點數 2 點。</span></li></ol>
+</article><article class="question" data-qid="1030" data-search="小客車係指座位在： 10 座以下。 9 座以下。 11 座以下。 之客車。">
+<div class="qhead"><span class="qid">題號 1030</span></div>
+<div class="stem">小客車係指座位在：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>10 座以下。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>9 座以下。</span></li><li class="choice"><span class="choice-num">(3)</span><span>11 座以下。 之客車。</span></li></ol>
+</article><article class="question" data-qid="1035" data-search="下列何種車輛應配置防止捲入裝置： 3.5 公噸以下小貨車。 大客車。 拖車及大貨車。">
+<div class="qhead"><span class="qid">題號 1035</span></div>
+<div class="stem">下列何種車輛應配置防止捲入裝置：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>3.5 公噸以下小貨車。</span></li><li class="choice"><span class="choice-num">(2)</span><span>大客車。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>拖車及大貨車。</span></li></ol>
+</article><article class="question" data-qid="1087" data-search="小型車輛全高不得超過車輛全寬之 1.5 倍，其最高不得超過： 2.75 公尺。 2.85 公尺。 2.5 公尺。">
+<div class="qhead"><span class="qid">題號 1087</span></div>
+<div class="stem">小型車輛全高不得超過車輛全寬之 1.5 倍，其最高不得超過：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>2.75 公尺。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>2.85 公尺。</span></li><li class="choice"><span class="choice-num">(3)</span><span>2.5 公尺。</span></li></ol>
+</article>
+</section><section id="cat13" class="category">
+<div class="cat-title"><h2>13 車輛設備、燈光、隔熱紙與故障警示</h2><span>6 題</span></div>
+<article class="question" data-qid="158" data-search="自中華民國 115 年 2 月 28 日起新登檢領照之自用小客車有黏貼隔熱紙者，前擋風玻璃可見光透過率應為： 50%以上。 60%以上。 70%以上。">
+<div class="qhead"><span class="qid">題號 158</span></div>
+<div class="stem">自中華民國 115 年 2 月 28 日起新登檢領照之自用小客車有黏貼隔熱紙者，前擋風玻璃可見光透過率應為：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>50%以上。</span></li><li class="choice"><span class="choice-num">(2)</span><span>60%以上。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>70%以上。</span></li></ol>
+</article><article class="question" data-qid="589" data-search="車輛左(右)轉彎時，應先顯示車輛前後之左(右)邊方向燈光；變換車道時，應先顯示欲變換車道方向之燈光，何者正確？ 顯示之方向燈應為 5 秒鐘。 顯示之方向燈光，應至完成轉彎或變換車道之行為。 顯示之方向燈，只要有顯示即可。">
+<div class="qhead"><span class="qid">題號 589</span></div>
+<div class="stem">車輛左(右)轉彎時，應先顯示車輛前後之左(右)邊方向燈光；變換車道時，應先顯示欲變換車道方向之燈光，何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>顯示之方向燈應為 5 秒鐘。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>顯示之方向燈光，應至完成轉彎或變換車道之行為。</span></li><li class="choice"><span class="choice-num">(3)</span><span>顯示之方向燈，只要有顯示即可。</span></li></ol>
+</article><article class="question" data-qid="642" data-search="車輛發生故障不能行駛，應即設法移置於無礙交通之處，在未移置前或移置後之車輛故障標誌處理做法下列何者有誤？ 在行車時速 40 公里以下之路段，應豎立於車身後方 100 公尺之路面上，車前適當位置得視需要設置。 在行車時速逾 40 公里之路段，應豎立於車身後方 30 公尺至 100 公尺之路面上，車前適當位置得視需要設置。 交通擁擠之路段，應懸掛於車身之後部，車前適當位置得視需要設置。">
+<div class="qhead"><span class="qid">題號 642</span></div>
+<div class="stem">車輛發生故障不能行駛，應即設法移置於無礙交通之處，在未移置前或移置後之車輛故障標誌處理做法下列何者有誤？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>在行車時速 40 公里以下之路段，應豎立於車身後方 100 公尺之路面上，車前適當位置得視需要設置。</span></li><li class="choice"><span class="choice-num">(2)</span><span>在行車時速逾 40 公里之路段，應豎立於車身後方 30 公尺至 100 公尺之路面上，車前適當位置得視需要設置。</span></li><li class="choice"><span class="choice-num">(3)</span><span>交通擁擠之路段，應懸掛於車身之後部，車前適當位置得視需要設置。</span></li></ol>
+</article><article class="question" data-qid="901" data-search="發生行車事故後，於後方設置車輛故障標誌之主要目的為何？ 加速通行。 防止二次事故。 減少責任。">
+<div class="qhead"><span class="qid">題號 901</span></div>
+<div class="stem">發生行車事故後，於後方設置車輛故障標誌之主要目的為何？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>加速通行。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>防止二次事故。</span></li><li class="choice"><span class="choice-num">(3)</span><span>減少責任。</span></li></ol>
+</article><article class="question" data-qid="911" data-search="汽車行駛於何種路段時發生故障，無法移置於無礙交通之場所時，應在車身後 5-30 公尺處之路面上設置車輛故障標誌？ 高快速公路。 行車時速逾 40 公里之非高快速公路路段。 行車時速 40 公里以下之路段。">
+<div class="qhead"><span class="qid">題號 911</span></div>
+<div class="stem">汽車行駛於何種路段時發生故障，無法移置於無礙交通之場所時，應在車身後 5-30 公尺處之路面上設置車輛故障標誌？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>高快速公路。</span></li><li class="choice"><span class="choice-num">(2)</span><span>行車時速逾 40 公里之非高快速公路路段。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>行車時速 40 公里以下之路段。</span></li></ol>
+</article><article class="question" data-qid="997" data-search="依《道路交通安全規則》第 89 條規定，下列何者正確？ 小型車後座乘客只有在高、快速公路須強制繫上安全帶。 起駛前需顯示危險警示燈。 起駛前應關閉汽車駕駛人視線範圍內之娛樂性顯示設備。但提供行車輔助顯示，不在此限。">
+<div class="qhead"><span class="qid">題號 997</span></div>
+<div class="stem">依《道路交通安全規則》第 89 條規定，下列何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>小型車後座乘客只有在高、快速公路須強制繫上安全帶。</span></li><li class="choice"><span class="choice-num">(2)</span><span>起駛前需顯示危險警示燈。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>起駛前應關閉汽車駕駛人視線範圍內之娛樂性顯示設備。但提供行車輔助顯示，不在此限。</span></li></ol>
+</article>
+</section><section id="cat14" class="category">
+<div class="cat-title"><h2>14 環保、噪音與排氣規定</h2><span>5 題</span></div>
+<article class="question" data-qid="100" data-search="汽車駕駛人拆除消音器造成噪音，處罰鍰丶當場禁止其行駛丶吊扣汽車牌照 6 個月，於 1 年內再犯者，處： 吊銷駕照。 吊扣駕照 1 個月。 吊扣駕照 6 個月。">
+<div class="qhead"><span class="qid">題號 100</span></div>
+<div class="stem">汽車駕駛人拆除消音器造成噪音，處罰鍰丶當場禁止其行駛丶吊扣汽車牌照 6 個月，於 1 年內再犯者，處：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>吊銷駕照。</span></li><li class="choice"><span class="choice-num">(2)</span><span>吊扣駕照 1 個月。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>吊扣駕照 6 個月。</span></li></ol>
+</article><article class="question" data-qid="223" data-search="汽缸總排氣量超過 250 立方公分以上大型重型機車行駛路權，下列何者正確？ 250cc 以上大型重型機車即可行駛高速公路。 550cc 以上大型重型機車即可行駛高速公路。 550cc 以上大型重型機車僅可行駛於經公告允許之高速公路路段。">
+<div class="qhead"><span class="qid">題號 223</span></div>
+<div class="stem">汽缸總排氣量超過 250 立方公分以上大型重型機車行駛路權，下列何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>250cc 以上大型重型機車即可行駛高速公路。</span></li><li class="choice"><span class="choice-num">(2)</span><span>550cc 以上大型重型機車即可行駛高速公路。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>550cc 以上大型重型機車僅可行駛於經公告允許之高速公路路段。</span></li></ol>
+</article><article class="question" data-qid="263" data-search="汽車駕駛人拆除消音器造成噪音，處罰鍰丶當場禁止其行駛丶吊扣汽車牌照多久? 6 個月。 3 個月。 2 個月。">
+<div class="qhead"><span class="qid">題號 263</span></div>
+<div class="stem">汽車駕駛人拆除消音器造成噪音，處罰鍰丶當場禁止其行駛丶吊扣汽車牌照多久?</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>6 個月。</span></li><li class="choice"><span class="choice-num">(2)</span><span>3 個月。</span></li><li class="choice"><span class="choice-num">(3)</span><span>2 個月。</span></li></ol>
+</article><article class="question" data-qid="280" data-search="汽缸總排氣量 550 立方公分以上之大型重型機車，下列敘述何者正確？ 可於任何道路及時段行駛高速公路。 駕駛技術優良即可不受道路限制行駛。 應依規定之道路及時段行駛， 不得任意進入高速公路。">
+<div class="qhead"><span class="qid">題號 280</span></div>
+<div class="stem">汽缸總排氣量 550 立方公分以上之大型重型機車，下列敘述何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>可於任何道路及時段行駛高速公路。</span></li><li class="choice"><span class="choice-num">(2)</span><span>駕駛技術優良即可不受道路限制行駛。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>應依規定之道路及時段行駛， 不得任意進入高速公路。</span></li></ol>
+</article><article class="question" data-qid="364" data-search="占用道路之廢棄車輛，由環保單位或委託民間單位移置保管，經公告多久無人認領，可依廢棄物清除： 1 個月。 2 個月。 3 個月。">
+<div class="qhead"><span class="qid">題號 364</span></div>
+<div class="stem">占用道路之廢棄車輛，由環保單位或委託民間單位移置保管，經公告多久無人認領，可依廢棄物清除：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>1 個月。</span></li><li class="choice"><span class="choice-num">(2)</span><span>2 個月。</span></li><li class="choice"><span class="choice-num">(3)</span><span>3 個月。</span></li></ol>
+</article>
+</section><section id="cat15" class="category">
+<div class="cat-title"><h2>15 道安講習、裁決與行政期限</h2><span>8 題</span></div>
+<article class="question" data-qid="354" data-search="汽車駕駛人有下列情形之一者，應施以道路交通安全講習： 闖越鐵路平交道。 於交岔路口 10 公尺內臨時停車。 變換車道時，未注意安全距離。">
+<div class="qhead"><span class="qid">題號 354</span></div>
+<div class="stem">汽車駕駛人有下列情形之一者，應施以道路交通安全講習：</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>闖越鐵路平交道。</span></li><li class="choice"><span class="choice-num">(2)</span><span>於交岔路口 10 公尺內臨時停車。</span></li><li class="choice"><span class="choice-num">(3)</span><span>變換車道時，未注意安全距離。</span></li></ol>
+</article><article class="question" data-qid="366" data-search="汽車所有人或汽車駕駛人接獲違反道路交通管理事件通知單後，於 10 日。 30 日。 50 日。 內得不經裁決，逕依處罰條例第 92 條第 4 項之罰鍰基準規定，向指定之處所繳納結案。">
+<div class="qhead"><span class="qid">題號 366</span></div>
+<div class="stem">汽車所有人或汽車駕駛人接獲違反道路交通管理事件通知單後，於</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>10 日。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>30 日。</span></li><li class="choice"><span class="choice-num">(3)</span><span>50 日。 內得不經裁決，逕依處罰條例第 92 條第 4 項之罰鍰基準規定，向指定之處所繳納結案。</span></li></ol>
+</article><article class="question" data-qid="370" data-search="受處分人，如有不服處罰之裁決者，應以原處分機關為被告，逕向管轄之高等行政法院地方行政訴訟庭提起訴訟；其中撤銷訴訟之提起，應於裁決書送達後： 10 日。 20 日。 30 日。之不變期間內為之。">
+<div class="qhead"><span class="qid">題號 370</span></div>
+<div class="stem">受處分人，如有不服處罰之裁決者，應以原處分機關為被告，逕向管轄之高等行政法院地方行政訴訟庭提起訴訟；其中撤銷訴訟之提起，應於裁決書送達後：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>10 日。</span></li><li class="choice"><span class="choice-num">(2)</span><span>20 日。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>30 日。之不變期間內為之。</span></li></ol>
+</article><article class="question" data-qid="378" data-search="汽車駕駛人無正當理由，不依規定接受道路交通安全講習者，處新臺幣 1,800 元罰鍰，經再通知依限參加講習，逾期 6 個月以上仍不參加者，應罰： 吊扣行車執照。 吊銷駕駛執照。 吊扣駕駛執照。">
+<div class="qhead"><span class="qid">題號 378</span></div>
+<div class="stem">汽車駕駛人無正當理由，不依規定接受道路交通安全講習者，處新臺幣 1,800 元罰鍰，經再通知依限參加講習，逾期 6 個月以上仍不參加者，應罰：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>吊扣行車執照。</span></li><li class="choice"><span class="choice-num">(2)</span><span>吊銷駕駛執照。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>吊扣駕駛執照。</span></li></ol>
+</article><article class="question" data-qid="451" data-search="甲為自用小客車駕駛人，乙為營業大貨車職業駕駛人。兩人一年內均有 2 次闖紅燈紀錄，依 115 年新制，下列敘述何者正確？ 甲、乙均已達三項指定違規之累計門檻，兩人皆須參加矯正防制班。 甲尚未達門檻暫免參加；乙因營業大型車適用較低門檻，須參加矯正防制班。 甲、乙門檻相同皆為 3 次，兩人目前均為 2 次，尚未達標，暫無須參加。">
+<div class="qhead"><span class="qid">題號 451</span></div>
+<div class="stem">甲為自用小客車駕駛人，乙為營業大貨車職業駕駛人。兩人一年內均有 2 次闖紅燈紀錄，依 115 年新制，下列敘述何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>甲、乙均已達三項指定違規之累計門檻，兩人皆須參加矯正防制班。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>甲尚未達門檻暫免參加；乙因營業大型車適用較低門檻，須參加矯正防制班。</span></li><li class="choice"><span class="choice-num">(3)</span><span>甲、乙門檻相同皆為 3 次，兩人目前均為 2 次，尚未達標，暫無須參加。</span></li></ol>
+</article><article class="question" data-qid="452" data-search="根據 115 年 3 月 31 日起實施之新制，關於駕駛人須參加矯正防制班講習，下列敘述何者正確？ 汽機車駕駛人於一年內，違反闖紅燈行為累計達三次者。 汽機車駕駛人於兩年內，因不同交通違規行為累計記點達 12 點者。 營業大型車駕駛人於一年內，闖紅燈行為達一次者。">
+<div class="qhead"><span class="qid">題號 452</span></div>
+<div class="stem">根據 115 年 3 月 31 日起實施之新制，關於駕駛人須參加矯正防制班講習，下列敘述何者正確？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>汽機車駕駛人於一年內，違反闖紅燈行為累計達三次者。</span></li><li class="choice"><span class="choice-num">(2)</span><span>汽機車駕駛人於兩年內，因不同交通違規行為累計記點達 12 點者。</span></li><li class="choice"><span class="choice-num">(3)</span><span>營業大型車駕駛人於一年內，闖紅燈行為達一次者。</span></li></ol>
+</article><article class="question" data-qid="453" data-search="自 115 年 3 月 31 日起，營業大型車職業駕駛人 1 年內闖紅燈違規達幾次者，即應自費參加道路交通安全講習？ 1 次。 2 次。 3 次。">
+<div class="qhead"><span class="qid">題號 453</span></div>
+<div class="stem">自 115 年 3 月 31 日起，營業大型車職業駕駛人 1 年內闖紅燈違規達幾次者，即應自費參加道路交通安全講習？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>1 次。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>2 次。</span></li><li class="choice"><span class="choice-num">(3)</span><span>3 次。</span></li></ol>
+</article><article class="question" data-qid="454" data-search="115 年 3 月 31 日起，營業大型車職業駕駛人應納入道安講習對象之特定違規行為？ 無號誌路口未依路權行駛。 行近未設行車管制號誌之行人穿越道、醫院及學校等未依規定減速。 以上皆是。">
+<div class="qhead"><span class="qid">題號 454</span></div>
+<div class="stem">115 年 3 月 31 日起，營業大型車職業駕駛人應納入道安講習對象之特定違規行為？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>無號誌路口未依路權行駛。</span></li><li class="choice"><span class="choice-num">(2)</span><span>行近未設行車管制號誌之行人穿越道、醫院及學校等未依規定減速。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>以上皆是。</span></li></ol>
+</article>
+</section><section id="cat16" class="category">
+<div class="cat-title"><h2>16 其他數字型交通規定與駕駛常識</h2><span>8 題</span></div>
+<article class="question" data-qid="218" data-search="座位數（包括駕駛人在內）幾座以下之客車為小客車？ 5 座。 7 座。 9 座。">
+<div class="qhead"><span class="qid">題號 218</span></div>
+<div class="stem">座位數（包括駕駛人在內）幾座以下之客車為小客車？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>5 座。</span></li><li class="choice"><span class="choice-num">(2)</span><span>7 座。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>9 座。</span></li></ol>
+</article><article class="question" data-qid="241" data-search="汽車行至坡度大約相等的上、下坡道，上坡時若以 2 檔行駛，下坡時應如何選用檔位以達到省油、安全又節省時間的效果？ 以 3 檔或 4 檔行駛。 換入空檔（n檔）。 使用 2 檔或 1 檔行駛。">
+<div class="qhead"><span class="qid">題號 241</span></div>
+<div class="stem">汽車行至坡度大約相等的上、下坡道，上坡時若以 2 檔行駛，下坡時應如何選用檔位以達到省油、安全又節省時間的效果？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>以 3 檔或 4 檔行駛。</span></li><li class="choice"><span class="choice-num">(2)</span><span>換入空檔（N檔）。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>使用 2 檔或 1 檔行駛。</span></li></ol>
+</article><article class="question" data-qid="329" data-search="汽車檢驗分 3 種： 停駛、定期、臨時檢驗。 申請牌照、定期、臨時檢驗。 報廢、排煙(氣)、定期檢驗。">
+<div class="qhead"><span class="qid">題號 329</span></div>
+<div class="stem">汽車檢驗分 3 種：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>停駛、定期、臨時檢驗。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>申請牌照、定期、臨時檢驗。</span></li><li class="choice"><span class="choice-num">(3)</span><span>報廢、排煙(氣)、定期檢驗。</span></li></ol>
+</article><article class="question" data-qid="409" data-search="執行任務完畢的消防車、救護車、警備車、工程救險車及毒性化學物質災害事故應變車其行車速度應： 不受限制。 每小時 50 公里。 依道路交通全規則規定行駛。">
+<div class="qhead"><span class="qid">題號 409</span></div>
+<div class="stem">執行任務完畢的消防車、救護車、警備車、工程救險車及毒性化學物質災害事故應變車其行車速度應：</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>不受限制。</span></li><li class="choice"><span class="choice-num">(2)</span><span>每小時 50 公里。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>依道路交通全規則規定行駛。</span></li></ol>
+</article><article class="question" data-qid="497" data-search="汽車駕駛人行至有號誌之交岔路口，遇交通擁擠而逕行駛入交岔路口範圍內，致妨礙其他車輛通行者，以下何者正確？ 視同闖紅燈處新臺幣 1,800 元至 5,400 元罰鍰，並記駕駛人違規點數 3 點。 處罰鍰新臺幣 600 元至 1,200 元。 情形特殊，不能歸責汽車駕駛人，故不予處罰。">
+<div class="qhead"><span class="qid">題號 497</span></div>
+<div class="stem">汽車駕駛人行至有號誌之交岔路口，遇交通擁擠而逕行駛入交岔路口範圍內，致妨礙其他車輛通行者，以下何者正確？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>視同闖紅燈處新臺幣 1,800 元至 5,400 元罰鍰，並記駕駛人違規點數 3 點。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>處罰鍰新臺幣 600 元至 1,200 元。</span></li><li class="choice"><span class="choice-num">(3)</span><span>情形特殊，不能歸責汽車駕駛人，故不予處罰。</span></li></ol>
+</article><article class="question" data-qid="626" data-search="大型車右轉時，為避免內輪差造成事故，應如何操作最正確？ 車輛右轉時應在距離交岔路口 30 公尺前顯示方向燈，換入外側車道、右轉車道或慢車道，行駛至路口後再行右轉。 靠右直接轉彎以縮短距離。 加速通過避免阻礙交通。">
+<div class="qhead"><span class="qid">題號 626</span></div>
+<div class="stem">大型車右轉時，為避免內輪差造成事故，應如何操作最正確？</div>
+<ol class="choices"><li class="choice correct"><span class="choice-num">(1)</span><span>車輛右轉時應在距離交岔路口 30 公尺前顯示方向燈，換入外側車道、右轉車道或慢車道，行駛至路口後再行右轉。</span></li><li class="choice"><span class="choice-num">(2)</span><span>靠右直接轉彎以縮短距離。</span></li><li class="choice"><span class="choice-num">(3)</span><span>加速通過避免阻礙交通。</span></li></ol>
+</article><article class="question" data-qid="895" data-search="關於夜間行車與路口停等的正確習慣，下列哪一項做法能有效提升安全性並預防事故？ 行經隧道時因為內部有照明，所以不一定要開啟車燈。 夜間在路口停等紅燈時，只要不是第一輛車，可關閉大燈以節省電力。 夜間停等紅燈，應維持開啟大燈，並隨時注意周遭行人與車輛動態。">
+<div class="qhead"><span class="qid">題號 895</span></div>
+<div class="stem">關於夜間行車與路口停等的正確習慣，下列哪一項做法能有效提升安全性並預防事故？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>行經隧道時因為內部有照明，所以不一定要開啟車燈。</span></li><li class="choice"><span class="choice-num">(2)</span><span>夜間在路口停等紅燈時，只要不是第一輛車，可關閉大燈以節省電力。</span></li><li class="choice correct"><span class="choice-num">(3)</span><span>夜間停等紅燈，應維持開啟大燈，並隨時注意周遭行人與車輛動態。</span></li></ol>
+</article><article class="question" data-qid="897" data-search="車輛發生事故後，為防止二次事故，應優先採取何項措施？ 立即移動車輛。 開啟危險警告燈並設置車輛故障標誌。 關閉所有燈光。">
+<div class="qhead"><span class="qid">題號 897</span></div>
+<div class="stem">車輛發生事故後，為防止二次事故，應優先採取何項措施？</div>
+<ol class="choices"><li class="choice"><span class="choice-num">(1)</span><span>立即移動車輛。</span></li><li class="choice correct"><span class="choice-num">(2)</span><span>開啟危險警告燈並設置車輛故障標誌。</span></li><li class="choice"><span class="choice-num">(3)</span><span>關閉所有燈光。</span></li></ol>
+</article>
+</section></div></main>
+<footer>來源：新版汽車筆試題庫 115.5.29｜僅依來源題庫內容分類與視覺整理</footer>
+<script>
+const input=document.getElementById('search'), cards=[...document.querySelectorAll('.question')], cats=[...document.querySelectorAll('.category')], counter=document.getElementById('count');
+function run(){const q=input.value.trim().toLowerCase();let n=0;cards.forEach(c=>{const ok=!q||c.dataset.qid.includes(q)||c.dataset.search.includes(q);c.classList.toggle('hidden',!ok);if(ok)n++;});cats.forEach(s=>{const visible=[...s.querySelectorAll('.question')].some(c=>!c.classList.contains('hidden'));s.classList.toggle('hidden',!visible);});counter.textContent=`顯示 ${n} 題`;}
+input.addEventListener('input',run);
+const mainLayout=document.getElementById('mainLayout'), navToggle=document.getElementById('navToggle');
+function setNav(open){mainLayout.classList.toggle('nav-collapsed',!open);navToggle.setAttribute('aria-expanded',String(open));navToggle.textContent=open?'☰ 收起選單':'☰ 打開選單';}
+navToggle.addEventListener('click',()=>setNav(mainLayout.classList.contains('nav-collapsed')));
+document.getElementById('sideNav').addEventListener('click',e=>{if(window.innerWidth<=800&&e.target.closest('a'))setNav(false);});
+</script></body></html>

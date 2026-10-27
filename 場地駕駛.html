@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>場地駕駛考試扣分標準</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F6F5F1;
+    --surface: #FFFFFF;
+    --ink: #1E2129;
+    --ink-soft: #5B5F6B;
+    --line: #E4E1D8;
+
+    --catA: #2563EB;   /* 檢查與確認 */
+    --catA-bg: #EAF0FE;
+    --catB: #8B29D8;   /* 方向燈與照後鏡 */
+    --catB-bg: #F4EAFC;
+    --catC: #0D8C7E;   /* 車輪壓線／停車位置 */
+    --catC-bg: #E4F5F2;
+    --catD: #B5530E;   /* 交通規則與危險駕駛 */
+    --catD-bg: #FBEEE0;
+    --catE: #1E8E3E;   /* 排檔／手煞車 */
+    --catE-bg: #E7F5EA;
+    --catF: #667085;   /* 基本操作技術 */
+    --catF-bg: #EEF0F3;
+
+    --extra: #C11574;  /* 額外提醒（自行加入） */
+    --extra-bg: #FCE8F3;
+
+    --sev32: #D6293E;
+    --sev32-bg: #FDE7E9;
+    --sev16: #D9720B;
+    --sev16-bg: #FDECD7;
+    --sev8:  #B08900;
+    --sev8-bg: #FBF3D6;
+    --sevlow: #6B7280;
+    --sevlow-bg: #ECEDEF;
+
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    box-sizing: border-box;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15171C;
+      --surface: #1E212A;
+      --ink: #EDEEF2;
+      --ink-soft: #A2A7B4;
+      --line: #313543;
+      --catA-bg: #182643; --catB-bg: #2A1A3B; --catC-bg: #132E2C;
+      --catD-bg: #33230F; --catE-bg: #142B1C; --catF-bg: #262A33;
+      --sev32-bg: #3A1418; --sev16-bg: #3A250D; --sev8-bg: #322A08; --sevlow-bg: #262A33;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15171C; --surface: #1E212A; --ink: #EDEEF2; --ink-soft: #A2A7B4; --line: #313543;
+    --catA-bg: #182643; --catB-bg: #2A1A3B; --catC-bg: #132E2C;
+    --catD-bg: #33230F; --catE-bg: #142B1C; --catF-bg: #262A33; --extra-bg: #3A1030;
+    --sev32-bg: #3A1418; --sev16-bg: #3A250D; --sev8-bg: #322A08; --sevlow-bg: #262A33;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 28px 18px 60px; }
+
+  header.hero { margin-bottom: 22px; }
+  .eyebrow-row { display:flex; align-items:center; gap:10px; margin-bottom: 10px; }
+  .badge-pass {
+    display:inline-flex; align-items:baseline; gap:6px;
+    background: var(--surface); border: 1px solid var(--line);
+    padding: 5px 12px; border-radius: 999px; font-size: 13px; color: var(--ink-soft);
+  }
+  .badge-pass b { color: var(--ink); font-size: 15px; }
+  h1 { font-size: 25px; font-weight: 900; margin: 0 0 6px; letter-spacing: 0.01em; }
+  .sub { color: var(--ink-soft); font-size: 14.5px; margin: 0; }
+
+  .alert {
+    margin-top: 18px;
+    background: var(--sev32-bg);
+    border: 1.5px solid var(--sev32);
+    border-radius: 14px;
+    padding: 14px 16px;
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .alert .mark {
+    flex: none; width: 34px; height: 34px; border-radius: 10px;
+    background: var(--sev32); color: #fff; font-weight: 900; font-size: 15px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .alert p { margin: 0; font-size: 14.5px; }
+  .alert strong { color: var(--sev32); }
+
+  .legend {
+    margin-top: 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 14px 16px;
+  }
+  .legend h2 { font-size: 13px; margin: 0 0 10px; color: var(--ink-soft); font-weight: 700; }
+  .legend-group { display:flex; flex-wrap: wrap; gap: 8px; margin-bottom: 4px; }
+  .legend-group:last-child { margin-bottom: 0; }
+  .chip {
+    display:inline-flex; align-items:center; gap: 6px;
+    font-size: 12.5px; padding: 5px 10px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--bg); color: var(--ink);
+  }
+  .chip .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+  .legend-divider { border: none; border-top: 1px dashed var(--line); margin: 10px 0; }
+
+  section.cat { margin-top: 26px; }
+  .cat-title {
+    display:flex; align-items:baseline; gap: 10px; margin-bottom: 10px;
+  }
+  .cat-num {
+    flex: none; width: 26px; height: 26px; border-radius: 8px;
+    background: var(--ink); color: var(--bg); font-weight: 900; font-size: 13px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .cat-title h2 { font-size: 16.5px; font-weight: 700; margin: 0; }
+  .cat-note { font-size: 12.5px; color: var(--ink-soft); margin: -2px 0 10px 36px; }
+
+  .item {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--item-color, var(--catF));
+    border-radius: 10px;
+    padding: 11px 14px;
+    margin-bottom: 8px;
+    display: flex; gap: 12px; align-items: center; justify-content: space-between;
+  }
+  .item-text { flex: 1; min-width: 0; }
+  .item-text .main { font-size: 14.5px; }
+  .item-text .note { font-size: 12.5px; color: var(--ink-soft); margin-top: 3px; }
+  .tagline { display:flex; gap:6px; align-items:center; margin-bottom: 3px; }
+  .tagline .itemnum { font-size: 11px; font-weight: 900; color: var(--ink-soft); background: var(--bg); border: 1px solid var(--line); border-radius: 5px; padding: 0 5px; }
+  .tagline .catlabel { font-size: 11px; font-weight: 700; color: var(--item-color, var(--catF)); }
+
+  .score {
+    flex: none;
+    min-width: 46px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 15px;
+    padding: 6px 0;
+    border-radius: 10px;
+  }
+  .score small { display:block; font-size: 9.5px; font-weight: 700; opacity: .85; }
+
+  .sc-32 { background: var(--sev32); color: #fff; box-shadow: 0 0 0 3px var(--sev32-bg); }
+  .sc-16 { background: var(--sev16-bg); color: var(--sev16); border: 1.5px solid var(--sev16); }
+  .sc-8  { background: var(--sev8-bg); color: var(--sev8); border: 1.5px solid var(--sev8); }
+  .sc-4, .sc-2 { background: var(--sevlow-bg); color: var(--sevlow); border: 1.5px solid var(--sevlow); }
+  .sc-extra { background: var(--extra-bg); color: var(--extra); border: 1.5px dashed var(--extra); }
+
+  footer { margin-top: 30px; text-align:center; color: var(--ink-soft); font-size: 12px; }
+
+  @media (max-width: 420px) {
+    .item { flex-direction: row; align-items: flex-start; }
+    h1 { font-size: 21px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow-row">
+      <span class="badge-pass">滿分 100 ／ <b>70 分及格</b></span>
+    </div>
+    <h1>場地駕駛考試扣分表</h1>
+
+
+    <div class="legend">
+      <h2>項目類別</h2>
+      <div class="legend-group">
+        <span class="chip"><span class="dot" style="background:var(--catA)"></span>檢查與確認</span>
+        <span class="chip"><span class="dot" style="background:var(--catB)"></span>方向燈／照後鏡</span>
+        <span class="chip"><span class="dot" style="background:var(--catC)"></span>壓線／停車位置</span>
+        <span class="chip"><span class="dot" style="background:var(--catD)"></span>交通規則／危險駕駛</span>
+        <span class="chip"><span class="dot" style="background:var(--catE)"></span>排檔／手煞車</span>
+        <span class="chip"><span class="dot" style="background:var(--catF)"></span>基本操作技術</span>
+        <span class="chip"><span class="dot" style="background:var(--extra)"></span>額外提醒</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1 -->
+  <section class="cat">
+    <div class="cat-title"><span class="cat-num">1</span><h2>起駛前檢查與動作</h2></div>
+    <div class="item" style="--item-color:var(--catA)"><div class="item-text"><div class="tagline"><span class="itemnum">1.1</span><span class="catlabel">檢查與確認</span></div><div class="main">上車前未察看車輛四周、車底及輪胎有無異物</div><div class="note">上車採二段式開門；需口述「左右有無來車」</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--extra)"><div class="item-text"><div class="tagline"><span class="itemnum">1.2</span><span class="catlabel">額外提醒</span></div><div class="main">二段式開門</div><div class="note">需口述「左右有無來車」</div></div><div class="score sc-extra">—</div></div>
+    
+    <div class="item" style="--item-color:var(--catA)"><div class="item-text"><div class="tagline"><span class="itemnum">1.3</span><span class="catlabel">檢查與確認</span></div><div class="main">起駛前未調整座椅、頭枕或照後鏡</div><div class="note">需口誦並做出動作檢查</div></div><div class="score sc-4">4<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catA)"><div class="item-text"><div class="tagline"><span class="itemnum">1.4</span><span class="catlabel">檢查與確認</span></div><div class="main">未依規定繫安全帶</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catA)"><div class="item-text"><div class="tagline"><span class="itemnum">1.5</span><span class="catlabel">檢查與確認</span></div><div class="main">起駛前未檢查儀表（溫度、油量、煞車、充電、機油）</div><div class="note">需口誦並指出檢查項目</div></div><div class="score sc-4">4<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catE)"><div class="item-text"><div class="tagline"><span class="itemnum">1.6</span><span class="catlabel">排檔／手煞車</span></div><div class="main">起駛前發動引擎未入 P 檔或未踩煞車</div></div><div class="score sc-16">16<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catE)"><div class="item-text"><div class="tagline"><span class="itemnum">1.7</span><span class="catlabel">排檔／手煞車</span></div><div class="main">起駛前未鬆開手煞車及檢查煞車作用</div></div><div class="score sc-16">16<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catB)"><div class="item-text"><div class="tagline"><span class="itemnum">1.8</span><span class="catlabel">方向燈／照後鏡</span></div><div class="main">起駛前未依規定顯示方向燈</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catB)"><div class="item-text"><div class="tagline"><span class="itemnum">1.9</span><span class="catlabel">方向燈／照後鏡</span></div><div class="main">起駛前未轉頭察看照後鏡、檢查視野死角及注意前後左右有無障礙或車輛、行人；不暫停讓行人優先通行</div></div><div class="score sc-32">32<small>分</small></div></div>
+  </section>
+
+
+
+  <!-- 2 -->
+  <section class="cat">
+    <div class="cat-title"><span class="cat-num">2</span><h2>行人穿越道線</h2></div>
+    <div class="item" style="--item-color:var(--catD)"><div class="item-text"><div class="tagline"><span class="itemnum">2.1</span><span class="catlabel">交通規則／危險駕駛</span></div><div class="main">不減速慢行或不暫停讓行人優先穿越</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catC)"><div class="item-text"><div class="tagline"><span class="itemnum">2.2</span><span class="catlabel">壓線／停車位置</span></div><div class="main">停車時前懸超越停止線</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catB)"><div class="item-text"><div class="tagline"><span class="itemnum">2.3</span><span class="catlabel">方向燈／照後鏡</span></div><div class="main">起駛前未轉頭察看照後鏡、檢查視野死角並注意有無車輛行人</div></div><div class="score sc-32">32<small>分</small></div></div>
+  </section>
+
+
+
+  <!-- 3 -->
+  <section class="cat">
+    <div class="cat-title"><span class="cat-num">3</span><h2>倒車入庫</h2></div>
+    <div class="item" style="--item-color:var(--catC)"><div class="item-text"><div class="tagline"><span class="itemnum">3.1</span><span class="catlabel">壓線／停車位置</span></div><div class="main">車輪壓管線或未停入指定範圍內</div><div class="note">限倒車 1 次完成，壓管後仍須繼續完成前輪停入指定線內</div></div><div class="score sc-16">16<small>分</small></div></div>
+  </section>
+
+
+
+  <!-- 4 -->
+  <section class="cat">
+    <div class="cat-title"><span class="cat-num">4</span><h2>曲線進退</h2></div>
+    <div class="item" style="--item-color:var(--catC)"><div class="item-text"><div class="tagline"><span class="itemnum">4.1</span><span class="catlabel">壓線／停車位置</span></div><div class="main">前進時車輪壓管線</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catC)"><div class="item-text"><div class="tagline"><span class="itemnum">4.2</span><span class="catlabel">壓線／停車位置</span></div><div class="main">往前修正</div><div class="note">連續扣分，修正後不須由倒車起點開始</div></div><div class="score sc-8">8<small>分</small></div></div>
+  </section>
+
+
+
+  <!-- 5 -->
+  <section class="cat">
+    <div class="cat-title"><span class="cat-num">5</span><h2>平行路邊停車</h2></div>
+    <div class="item" style="--item-color:var(--catC)"><div class="item-text"><div class="tagline"><span class="itemnum">5.1</span><span class="catlabel">壓線／停車位置</span></div><div class="main">車輪壓管線或未停入指定範圍內</div><div class="note">限倒車 1 次完成，壓管後仍須繼續完成前輪停入指定線內</div></div><div class="score sc-16">16<small>分</small></div></div>
+  </section>
+
+
+
+  <!-- 6 -->
+  <section class="cat">
+    <div class="cat-title"><span class="cat-num">6</span><h2>上下坡道</h2></div>
+    <div class="item" style="--item-color:var(--catC)"><div class="item-text"><div class="tagline"><span class="itemnum">6.1</span><span class="catlabel">壓線／停車位置</span></div><div class="main">車輪壓管線</div></div><div class="score sc-16">16<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catD)"><div class="item-text"><div class="tagline"><span class="itemnum">6.2</span><span class="catlabel">交通規則／危險駕駛</span></div><div class="main">上坡倒退 15 公分以上</div><div class="note">連續扣分</div></div><div class="score sc-16">16<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catC)"><div class="item-text"><div class="tagline"><span class="itemnum">6.3</span><span class="catlabel">壓線／停車位置</span></div><div class="main">不在限定範圍內停車</div></div><div class="score sc-16">16<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catD)"><div class="item-text"><div class="tagline"><span class="itemnum">6.4</span><span class="catlabel">交通規則／危險駕駛</span></div><div class="main">下坡放空檔行駛</div></div><div class="score sc-32">32<small>分</small></div></div>
+  </section>
+
+
+<!-- 7 -->
+  <section class="cat">
+    <div class="cat-title"><span class="cat-num">7</span><h2>鐵路平交道</h2></div>
+    <div class="item" style="--item-color:var(--catD)"><div class="item-text"><div class="tagline"><span class="itemnum">7.1</span><span class="catlabel">交通規則／危險駕駛</span></div><div class="main">不停車察看或闖越平交道</div><div class="note">警鈴已響、閃光號誌已顯示仍強行闖越</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catD)"><div class="item-text"><div class="tagline"><span class="itemnum">7.2</span><span class="catlabel">交通規則／危險駕駛</span></div><div class="main">在平交道上停車，車身在軌道範圍內</div><div class="note">車身在鐵軌枕木範圍內</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catC)"><div class="item-text"><div class="tagline"><span class="itemnum">7.3</span><span class="catlabel">壓線／停車位置</span></div><div class="main">停車時前懸超越停止線</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catD)"><div class="item-text"><div class="tagline"><span class="itemnum">7.4</span><span class="catlabel">交通規則／危險駕駛</span></div><div class="main">行近鐵路平交道未減速慢行</div><div class="note">看到標誌或標線後，車速應減至 15 公里以下</div></div><div class="score sc-16">16<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catB)"><div class="item-text"><div class="tagline"><span class="itemnum">7.5</span><span class="catlabel">方向燈／照後鏡</span></div><div class="main">起駛前未轉頭察看照後鏡、檢查視野死角並注意有無障礙或車輛行人</div></div><div class="score sc-32">32<small>分</small></div></div>
+  </section>
+
+
+
+  <!-- 8 -->
+  <section class="cat">
+    <div class="cat-title"><h2>環場道路行駛</h2></div>
+    <div class="item" style="--item-color:var(--catD)"><div class="item-text"><div class="tagline"><span class="catlabel">交通規則／危險駕駛</span></div><div class="main">上、下車開車門前未留意有無人車通過</div><div class="note">下車應以 2 段式開門</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catB)"><div class="item-text"><div class="tagline"><span class="catlabel">方向燈／照後鏡</span></div><div class="main">起駛前未依規定顯示方向燈或未轉頭察看照後鏡、檢查視野死角</div><div class="note">考驗科目二、四適用</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catB)"><div class="item-text"><div class="tagline"><span class="catlabel">方向燈／照後鏡</span></div><div class="main">變換車道、轉彎前未依規定顯示方向燈或未轉頭察看照後鏡、檢查視野死角</div><div class="note">考驗科目五、六適用</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catB)"><div class="item-text"><div class="tagline"><span class="catlabel">方向燈／照後鏡</span></div><div class="main">變換車道、轉彎後仍持續顯示方向燈</div><div class="note">連續扣分</div></div><div class="score sc-16">16<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catC)"><div class="item-text"><div class="tagline"><span class="catlabel">壓線／停車位置</span></div><div class="main">未按規定行駛致車輪壓虛線</div><div class="note">包含黃、白虛線，連續扣分</div></div><div class="score sc-16">16<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catD)"><div class="item-text"><div class="tagline"><span class="catlabel">交通規則／危險駕駛</span></div><div class="main">行駛中車輪壓實線或擦撞車輛、安全島、損壞設施</div><div class="note">分向限制線、禁止變換車道線或路面邊線</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catD)"><div class="item-text"><div class="tagline"><span class="catlabel">交通規則／危險駕駛</span></div><div class="main">未按規定路線行駛或未按規定變換車道</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catD)"><div class="item-text"><div class="tagline"><span class="catlabel">交通規則／危險駕駛</span></div><div class="main">未遵守道路交通法規或道路交通標誌、標線、號誌行車</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catD)"><div class="item-text"><div class="tagline"><span class="catlabel">交通規則／危險駕駛</span></div><div class="main">超速或危險駕駛</div><div class="note">如行駛中使用手持式行動電話撥接、通話</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catF)"><div class="item-text"><div class="tagline"><span class="catlabel">基本操作技術</span></div><div class="main">以左腳控制煞車踏板</div><div class="note">身心障礙者特製車除外，連續扣分</div></div><div class="score sc-16">16<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catF)"><div class="item-text"><div class="tagline"><span class="catlabel">基本操作技術</span></div><div class="main">前進中換至倒檔</div><div class="note">連續扣分</div></div><div class="score sc-16">16<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catF)"><div class="item-text"><div class="tagline"><span class="catlabel">基本操作技術</span></div><div class="main">單手握方向盤</div><div class="note">換檔除外，連續扣分</div></div><div class="score sc-16">16<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catD)"><div class="item-text"><div class="tagline"><span class="catlabel">交通規則／危險駕駛</span></div><div class="main">未能完成考驗或漏考任一科目</div></div><div class="score sc-32">32<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catE)"><div class="item-text"><div class="tagline"><span class="catlabel">排檔／手煞車</span></div><div class="main">考驗終點，停車後下車前未拉緊手煞車或未排入 P 檔</div></div><div class="score sc-16">16<small>分</small></div></div>
+  </section>
+
+
+
+  <!-- 9 -->
+  <section class="cat">
+    <div class="cat-title"><h2>其他技術操作</h2></div>
+    <div class="cat-note">同一項目得連續扣分；各項目合計扣分最高不得超過 18 分</div>
+    <div class="item" style="--item-color:var(--catF)"><div class="item-text"><div class="tagline"><span class="catlabel">基本操作技術</span></div><div class="main">起步動作不當</div></div><div class="score sc-2">2<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catF)"><div class="item-text"><div class="tagline"><span class="catlabel">基本操作技術</span></div><div class="main">油門控制不當</div></div><div class="score sc-2">2<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catF)"><div class="item-text"><div class="tagline"><span class="catlabel">基本操作技術</span></div><div class="main">煞車（含手煞車）操作不當</div></div><div class="score sc-2">2<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catF)"><div class="item-text"><div class="tagline"><span class="catlabel">基本操作技術</span></div><div class="main">車輪已停止轉動，仍繼續轉動方向盤</div></div><div class="score sc-2">2<small>分</small></div></div>
+    <div class="item" style="--item-color:var(--catF)"><div class="item-text"><div class="tagline"><span class="catlabel">基本操作技術</span></div><div class="main">其他操作不當，但對道路使用者無不利影響</div><div class="note">含雨刷等基本操作</div></div><div class="score sc-2">2<small>分</small></div></div>
+  </section>
+
+
+  <footer>資料來源：交通部公路總局高雄區監理所屏東監理站場地考評分標準表 · 已依自排車需求刪減整理</footer>
+</div>
+</body>
+</html>
